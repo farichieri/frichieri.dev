@@ -7,7 +7,7 @@ const general = css.global`
   }
   a[href] {
     text-decoration: none;
-    color: rgba(73, 251, 53, 0.815);
+    color: var(--link-color);
   }
 `;
 

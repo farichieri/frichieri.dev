@@ -54,14 +54,14 @@ const Form = () => {
         type={'text'}
         name='name'
         value={input.name}
-        placeholder='name'
+        placeholder='Name'
       />
       <input
         onChange={handleChange}
         type={'email'}
         name='email'
         value={input.email}
-        placeholder='email'
+        placeholder='Email'
       />
       <textarea
         onChange={handleChange}
@@ -75,6 +75,7 @@ const Form = () => {
         form {
           width: 400px;
           padding: 1rem;
+          max-width: 100%;
         }
         form,
         textarea {
@@ -90,9 +91,15 @@ const Form = () => {
           transition: 0.3s;
           border-bottom: 1px solid var(--textColor);
           padding: 0.3rem 0.5rem;
+          color: var(--textColor);
+          width: 100%;
         }
         form textarea {
           border: 1px solid var(--textColor);
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 5rem;
+          max-height: 50vh;
         }
         form input:focus,
         form textarea:focus {

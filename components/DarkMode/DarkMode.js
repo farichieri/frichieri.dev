@@ -3,14 +3,6 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function DarkMode({ theme, setTheme }) {
-  useEffect(() => {
-    let localTheme = window.localStorage.getItem('theme');
-    if (!localTheme) {
-      window.localStorage.setItem('theme', 'dark');
-    }
-    setTheme(localTheme);
-  }, [theme]);
-
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     window.localStorage.setItem('theme', newTheme);

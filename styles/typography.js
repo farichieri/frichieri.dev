@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { Exo_2, Cinzel, Orbitron, Play } from '@next/font/google';
+import { Exo_2, Cinzel, Orbitron, Play, Space_Mono } from '@next/font/google';
 
 const exo_2 = Exo_2({
   weight: '400',
@@ -12,21 +12,22 @@ const cinzel = Cinzel({
   variable: '--cinzel',
 });
 const orbitron = Orbitron({
-  weight: '800',
+  weight: '400',
   subsets: ['latin'],
   variable: '--orbitron',
 });
 
-const play = Play({
+const spaceMono = Space_Mono({
   weight: '400',
   subsets: ['latin'],
-  variable: '--orbitron',
+  variable: '--space_mono',
 });
 
 export const fonts = {
   exo_2,
   cinzel,
   orbitron,
+  spaceMono,
 };
 
 const style = css.global`
@@ -37,7 +38,12 @@ const style = css.global`
   }
   @media screen and only (max-width: 400px) {
     body {
-      font-size: 80%;
+      font-size: 70%;
+    }
+  }
+  @media screen and only (max-width: 300px) {
+    body {
+      font-size: 60%;
     }
   }
   a {

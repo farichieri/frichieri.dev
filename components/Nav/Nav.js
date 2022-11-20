@@ -32,7 +32,7 @@ export default function Nav({ theme, setTheme }) {
           ul {
             display: flex;
             gap: 1rem;
-            padding: 0 2rem;
+            min-width: fit-content;
           }
         `}
       </style>

@@ -1,29 +1,55 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import MainLayout from '../../components/Layout/MainLayout';
 
 export default function About() {
   return (
-    <section>
-      <div>
-        <span className='img--container'>
-          <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
-        </span>
-        <h1>I am a Web Developer,</h1>
-        <h4>based in Buenos Aires, Argentina</h4>
-      </div>
+    <MainLayout withPadding={true}>
+      <section>
+        <div>
+          <span className='img--container'>
+            <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
+          </span>
+          <h1>👋 I&rsquo;m Fabricio Richieri,</h1>
+          <h1>a Software Engineer</h1>
+          <h4>from Buenos Aires, Argentina</h4>
+        </div>
+        <div className='working'>
+          <p>
+            I&rsquo;m currently working at{' '}
+            <Link href={'https://www.sundevs.com/'} target={'_blank'}>
+              Sundevs Inc
+            </Link>
+            , working with the wabe pages of{' '}
+            <Link href={'https://www.cinemark.com.ec/'} target={'_blank'}>
+              Cinemark Ecuador
+            </Link>{' '}
+            and{' '}
+            <Link href={'https://www.cinemark.com.co/'} target={'_blank'}>
+              Cinemark Colombia
+            </Link>
+          </p>
+        </div>
+        <div className='technologies'>
+          <p>
+            I have experience working with: Next.js, React.js, Node.js,
+            Firebase, JavaScript, HTML, CSS
+          </p>
+        </div>
+        <div className='available'>
+          <p>And I&rsquo;m open to freelance jobs</p>
+        </div>
+      </section>
       <style jsx>{`
         section {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          padding: 2rem;
+          max-width: 600px;
         }
         div {
-          margin: auto;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          margin: 1rem 0;
         }
         .img--container {
           height: 150px;
@@ -32,8 +58,10 @@ export default function About() {
           position: relative;
           border-radius: 50%;
           overflow: auto;
+          box-shadow: 0 0 10px 1px var(--box-shadow);
+          margin: 0.5rem 0;
         }
       `}</style>
-    </section>
+    </MainLayout>
   );
 }
