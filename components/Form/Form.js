@@ -70,7 +70,7 @@ const Form = () => {
         value={input.message}
         placeholder='Wanna say something?'
       />
-      <Button content={'Enviar'} isLoading={isLoading} />
+      <Button content={'Send'} isLoading={isLoading} />
       <style jsx>{`
         form {
           width: 400px;

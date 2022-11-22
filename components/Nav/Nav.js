@@ -21,7 +21,7 @@ export default function Nav({ theme, setTheme }) {
             align-items: center;
             backdrop-filter: blur(12px);
             background: var(--navBgColor);
-            border-bottom: 1px solid gray;
+            box-shadow: 0 0 10px 1px var(--box-shadow-light);
             display: flex;
             height: var(--navHeight);
             justify-content: center;

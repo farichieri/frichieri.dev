@@ -72,6 +72,11 @@ const Slug = ({ project }) => {
         .live {
           background: none;
         }
+        @media and only screen (min-width: 1400px) {
+          .img {
+            max-width: 1200px;
+          }
+        }
         @media and only screen (max-width: 500px) {
           .img {
             max-height: 300px;
