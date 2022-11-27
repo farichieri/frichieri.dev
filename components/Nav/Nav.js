@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { fonts } from '../../styles/typography';
 import { myPages } from '../../utils/myPages';
 import DarkMode from '../DarkMode/DarkMode';
 
@@ -28,6 +29,7 @@ export default function Nav({ theme, setTheme }) {
             position: fixed;
             width: 100%;
             z-index: 999;
+            font-family: ${fonts.orbitron.style.fontFamily};
           }
           ul {
             display: flex;

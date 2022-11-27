@@ -1,50 +1,71 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../Layout/Button';
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
+  const captchaRef = useRef(null);
+  const sitekey = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
   const [input, setInput] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     event.preventDefault();
     setInput({
       ...input,
       [event.target.name]: event.target.value,
     });
+    Object.values(input)
+      .map((i) => i.split('').length > 1)
+      .reduce((a, b) => a && b)
+      ? setIsDisabled(false)
+      : setIsDisabled(true);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    const token = captchaRef.current.getValue();
+    captchaRef.current.reset();
+
     if (isDisabled) return;
-    if (!input.name || !input.email || !input.message) {
-      alert('Please, fill the fields to send the message');
+    if (token === '') {
+      alert(`Please click "I'm not a robot" to send the message`);
       return;
-    } else {
-      setIsLoading(true);
-      setIsDisabled(true);
-      fetch('/api/mailer', {
-        method: 'post',
-        body: JSON.stringify(input),
-      }).then((response) => {
-        setIsLoading(false);
-        setIsDisabled(false);
-        if (response.ok) {
-          setInput({
-            name: '',
-            email: '',
-            message: '',
-          });
-          alert('I received your message successfully');
-        } else {
-          alert('I did not receive your message');
-        }
-      });
     }
+    await fetch('api/recaptcha', { method: 'POST', body: token }).then(
+      (response) => {
+        if (response.status === 401) {
+          return;
+        }
+        if (!input.name || !input.email || !input.message) {
+          alert('Please, fill the fields to send the message');
+          return;
+        } else {
+          setIsLoading(true);
+          setIsDisabled(true);
+          fetch('/api/mailer', {
+            method: 'post',
+            body: JSON.stringify(input),
+          }).then((response) => {
+            setIsLoading(false);
+            if (response.ok) {
+              setInput({
+                name: '',
+                email: '',
+                message: '',
+              });
+              alert('I received your message successfully');
+            } else {
+              alert('I did not receive your message');
+            }
+          });
+        }
+      }
+    );
   };
 
   return (
@@ -70,7 +91,10 @@ const Form = () => {
         value={input.message}
         placeholder='Wanna say something?'
       />
-      <Button content={'Send'} isLoading={isLoading} />
+      <div className='recaptcha'>
+        <ReCAPTCHA size='normal' sitekey={sitekey} ref={captchaRef} hl='en' />
+      </div>
+      <Button content={'Send'} isLoading={isLoading} isDisabled={isDisabled} />
       <style jsx>{`
         form {
           width: 400px;
@@ -100,10 +124,18 @@ const Form = () => {
           min-width: 100%;
           min-height: 5rem;
           max-height: 50vh;
+          color: var(--textColor);
         }
         form input:focus,
         form textarea:focus {
-          background: lightgray;
+          background: #d3d3d3d3;
+        }
+        .recaptcha {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       `}</style>
     </form>
