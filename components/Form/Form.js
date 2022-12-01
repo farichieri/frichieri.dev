@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../Layout/Button';
 
@@ -68,6 +68,15 @@ const Form = () => {
     );
   };
 
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setRender(true);
+      console.log('render');
+    }, 1000);
+  }, []);
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -92,7 +101,9 @@ const Form = () => {
         placeholder='Wanna say something?'
       />
       <div className='recaptcha'>
-        <ReCAPTCHA size='normal' sitekey={sitekey} ref={captchaRef} hl='en' />
+        {render && (
+          <ReCAPTCHA size='normal' sitekey={sitekey} ref={captchaRef} hl='en' />
+        )}
       </div>
       <Button content={'Send'} isLoading={isLoading} isDisabled={isDisabled} />
       <style jsx>{`
@@ -132,6 +143,7 @@ const Form = () => {
         }
         .recaptcha {
           height: 100%;
+          min-height: 78px;
           width: 100%;
           display: flex;
           align-items: center;

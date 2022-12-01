@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 export default function DarkMode({ theme, setTheme }) {
   const switchTheme = () => {
@@ -8,6 +7,7 @@ export default function DarkMode({ theme, setTheme }) {
     window.localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
   };
+
   return (
     <span onClick={switchTheme}>
       {theme === 'dark' ? (
@@ -19,15 +19,18 @@ export default function DarkMode({ theme, setTheme }) {
         {`
           span {
             align-items: center;
-            background: white;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             position: relative;
-            height: 25px;
-            width: 25px;
             margin: 0 1rem;
             cursor: pointer;
+            padding: 0.2rem;
+            box-shadow: 0 0 3px 1px var(--box-shadow-light);
+            transition: 0.3s;
+          }
+          span:hover {
+            filter: brightness(1.5);
           }
         `}
       </style>

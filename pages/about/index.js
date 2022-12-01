@@ -11,7 +11,7 @@ export default function About() {
             <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
           </span>
           <h1>👋 I&rsquo;m Fabricio Richieri,</h1>
-          <h1>a Software Engineer</h1>
+          <h1>a Web Developer</h1>
           <h4>from Buenos Aires, Argentina</h4>
         </div>
         <div className='working'>
@@ -37,7 +37,7 @@ export default function About() {
           </p>
         </div>
         <div className='available'>
-          <p>And I&rsquo;m open to freelance jobs</p>
+          <p>And I&rsquo;m open to freelance projects</p>
         </div>
       </section>
       <style jsx>{`
