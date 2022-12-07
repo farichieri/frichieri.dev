@@ -5,7 +5,7 @@ import MainLayout from '../../components/Layout/MainLayout';
 
 export default function Contact() {
   return (
-    <MainLayout>
+    <MainLayout withPadding={false}>
       <h1>Send me a message 😎</h1>
       <Form />
       <div>

@@ -1,4 +1,6 @@
-export default async function validateCaptcha(req, res) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const secret_key = process.env.RECAPTCHA_SECRETKEY;
     const token = req.body;
@@ -14,11 +16,11 @@ export default async function validateCaptcha(req, res) {
           res.status(401).json({ google_response });
         }
       })
-      .catch((err) => {
+      .catch((error) => {
         console.error(error);
-        res.status(401).json({ google_response });
+        res.status(401).json({ msg: error });
       });
   } catch (error) {
     console.error(error);
   }
-}
+};

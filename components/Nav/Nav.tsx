@@ -1,11 +1,17 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { fonts } from '../../styles/typography';
 import { myPages } from '../../utils/myPages';
 import DarkMode from '../DarkMode/DarkMode';
 import Logo from '../Logo/Logo';
 
-export default function Nav({ theme, setTheme }) {
+const Nav = ({
+  theme,
+  setTheme,
+}: {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const pages = myPages;
 
   const [openDrawer, setOpenDrawer] = useState(true);
@@ -74,4 +80,6 @@ export default function Nav({ theme, setTheme }) {
       </style>
     </nav>
   );
-}
+};
+
+export default Nav;

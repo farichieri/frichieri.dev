@@ -5,17 +5,17 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import typography, { fonts } from '../../styles/typography';
 import general from '../../styles/general';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export default function Layout({ children }) {
-  const [theme, setTheme] = useState('dark');
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<string>('dark');
 
   useEffect(() => {
     let localTheme = window.localStorage.getItem('theme');
     if (!localTheme) {
       window.localStorage.setItem('theme', 'dark');
     }
-    setTheme(localTheme);
+    setTheme(String(localTheme));
   }, [theme]);
 
   return (

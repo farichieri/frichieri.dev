@@ -7,7 +7,7 @@ export default function Projects() {
   const projects = myProjects;
 
   return (
-    <MainLayout>
+    <MainLayout withPadding={false}>
       <div className='projects'>
         {projects.map((project) => (
           <div className='project' key={project.id}>

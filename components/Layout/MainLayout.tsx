@@ -1,4 +1,12 @@
-export default function MainLayout({ children, withPadding }) {
+import React from 'react';
+
+export default function MainLayout({
+  children,
+  withPadding,
+}: {
+  children: React.ReactNode;
+  withPadding: boolean;
+}) {
   const padding = withPadding ? '1rem' : 0;
 
   return (

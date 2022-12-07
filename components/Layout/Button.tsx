@@ -1,4 +1,12 @@
-const Button = ({ content, isLoading, isDisabled }) => {
+const Button = ({
+  content,
+  isLoading,
+  isDisabled,
+}: {
+  content: string;
+  isLoading: boolean;
+  isDisabled: boolean;
+}) => {
   return (
     <button disabled={isDisabled}>
       {isLoading ? <span>Loading...</span> : <span>{content}</span>}

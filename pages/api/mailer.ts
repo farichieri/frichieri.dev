@@ -1,6 +1,7 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export default async function mail(req, res) {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = JSON.parse(req.body);
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -27,7 +28,9 @@ export default async function mail(req, res) {
       `,
     });
   } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() });
+    error instanceof Error
+      ? res.status(500).json({ error: error.message || error.toString() })
+      : res.json({ msg: 'unexpected error' });
   }
   return res.status(200).json({ error: '' });
-}
+};

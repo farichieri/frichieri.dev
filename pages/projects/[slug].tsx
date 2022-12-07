@@ -1,11 +1,13 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ParsedUrlQuery } from 'querystring';
 import MainLayout from '../../components/Layout/MainLayout';
 import { myProjects } from '../../utils/myProjects';
 
 const Slug = ({ project }) => {
   return (
-    <MainLayout>
+    <MainLayout withPadding={false}>
       <p className='title'>Project: {project.name} </p>
       <span className='img'>
         <Image src={project.image} alt={project.name} fill />
@@ -87,8 +89,16 @@ const Slug = ({ project }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const paths = [];
+interface Params extends ParsedUrlQuery {
+  pid: string;
+}
+
+interface IParams extends ParsedUrlQuery {
+  slug: string;
+}
+
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
+  const paths: string[] = [];
   myProjects.forEach((project) =>
     paths.push({ params: { slug: project.slug } })
   );
@@ -98,8 +108,8 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const { slug } = params;
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params as IParams;
   const project = myProjects.find((project) => project.slug === slug);
   return {
     props: { project },

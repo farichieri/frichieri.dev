@@ -1,7 +1,13 @@
 'use client';
 import Image from 'next/image';
 
-export default function DarkMode({ theme, setTheme }) {
+export default function DarkMode({
+  theme,
+  setTheme,
+}: {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}) {
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     window.localStorage.setItem('theme', newTheme);

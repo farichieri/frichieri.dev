@@ -1,11 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  FormEvent,
+  ChangeEvent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../Layout/Button';
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);
-  const captchaRef = useRef(null);
+  const captchaRef = useRef<any>(null);
   const sitekey = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
   const [input, setInput] = useState({
     name: '',
@@ -13,7 +19,9 @@ const Form = () => {
     message: '',
   });
 
-  const handleChange = async (event) => {
+  const handleChange = async (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     event.preventDefault();
     setInput({
       ...input,
@@ -26,46 +34,48 @@ const Form = () => {
       : setIsDisabled(true);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const token = captchaRef.current.getValue();
-    captchaRef.current.reset();
+    if (captchaRef.current !== null) {
+      const token = captchaRef.current.getValue();
+      captchaRef.current.reset();
 
-    if (isDisabled) return;
-    if (token === '') {
-      alert(`Please click "I'm not a robot" to send the message`);
-      return;
-    }
-    await fetch('api/recaptcha', { method: 'POST', body: token }).then(
-      (response) => {
-        if (response.status === 401) {
-          return;
-        }
-        if (!input.name || !input.email || !input.message) {
-          alert('Please, fill the fields to send the message');
-          return;
-        } else {
-          setIsLoading(true);
-          setIsDisabled(true);
-          fetch('/api/mailer', {
-            method: 'post',
-            body: JSON.stringify(input),
-          }).then((response) => {
-            setIsLoading(false);
-            if (response.ok) {
-              setInput({
-                name: '',
-                email: '',
-                message: '',
-              });
-              alert('I received your message successfully');
-            } else {
-              alert('I did not receive your message');
-            }
-          });
-        }
+      if (isDisabled) return;
+      if (token === '') {
+        alert(`Please click "I'm not a robot" to send the message`);
+        return;
       }
-    );
+      await fetch('api/recaptcha', { method: 'POST', body: token }).then(
+        (response) => {
+          if (response.status === 401) {
+            return;
+          }
+          if (!input.name || !input.email || !input.message) {
+            alert('Please, fill the fields to send the message');
+            return;
+          } else {
+            setIsLoading(true);
+            setIsDisabled(true);
+            fetch('/api/mailer', {
+              method: 'post',
+              body: JSON.stringify(input),
+            }).then((response) => {
+              setIsLoading(false);
+              if (response.ok) {
+                setInput({
+                  name: '',
+                  email: '',
+                  message: '',
+                });
+                alert('I received your message successfully');
+              } else {
+                alert('I did not receive your message');
+              }
+            });
+          }
+        }
+      );
+    }
   };
 
   const [render, setRender] = useState(false);
@@ -95,14 +105,18 @@ const Form = () => {
       />
       <textarea
         onChange={handleChange}
-        type={'text'}
         name='message'
         value={input.message}
         placeholder='Wanna say something?'
       />
       <div className='recaptcha'>
         {render && (
-          <ReCAPTCHA size='normal' sitekey={sitekey} ref={captchaRef} hl='en' />
+          <ReCAPTCHA
+            size='normal'
+            sitekey={`${sitekey}`}
+            ref={captchaRef}
+            hl='en'
+          />
         )}
       </div>
       <Button content={'Send'} isLoading={isLoading} isDisabled={isDisabled} />
