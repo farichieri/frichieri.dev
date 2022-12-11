@@ -8,35 +8,42 @@ export default function Page() {
           <p>Hi, my name is</p>
           <h1 className='name'>Fabricio Richieri</h1>
           <h1 className='build'>I build Web Apps</h1>
-          <p>
-            I'm a web developer focused in building beautiful, fast and
-            productive pages to use in the real world.
-          </p>
-          <p>
-            Welcome to my web page, I invite you to sail in this fast website
-            made with Next.js; you can read my blog, see some of my projects,
-            knwo about me and contact me
-          </p>
+          <div className='description'>
+            <p>
+              I'm a web developer focused in building beautiful, fast and
+              productive web pages.
+            </p>
+            <p>Welcome to my personal website!</p>
+          </div>
         </div>
       </div>
       <style jsx>{`
         .home {
-          height: 100%;
-          width: 100%;
-          padding: 5rem 0;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
           font-family: var(--space_mono);
+          height: 100%;
+          justify-content: center;
+          width: 100%;
+          max-width: 1000px;
         }
         .name {
-          font-size: 4rem;
+          font-size: 4vw;
           font-weight: 700;
         }
         .build {
-          font-size: 2rem;
+          font-size: 3vw;
           font-weight: 400;
         }
         .home-header {
           text-align: left;
-          padding: 0 5rem;
+        }
+        .description {
+          padding: 1rem 0;
+        }
+        p {
+          padding: 0.25rem 0;
         }
       `}</style>
     </MainLayout>

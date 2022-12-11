@@ -33,7 +33,7 @@ export const fonts = {
 const style = css.global`
   @media screen and only (max-width: 500px) {
     body {
-      font-size: 100%;
+      font-size: 85%;
     }
   }
   @media screen and only (max-width: 400px) {

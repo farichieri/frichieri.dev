@@ -6,7 +6,6 @@ import MainLayout from '../../components/Layout/MainLayout';
 export default function Contact() {
   return (
     <MainLayout withPadding={false}>
-      <h1>Send me a message 😎</h1>
       <Form />
       <div>
         <Link
@@ -32,7 +31,13 @@ export default function Contact() {
             />
           </span>
         </Link>
+        <Link href='mailto:fabriciorichieri@yahoo.com'>
+          <span className='email'>
+            <Image src='/images/email.png' alt='email' width={32} height={32} />
+          </span>
+        </Link>
       </div>
+
       <style jsx>{`
         div {
           display: flex;
@@ -53,6 +58,9 @@ export default function Contact() {
         }
         .github {
           background: white;
+        }
+        .email {
+          margin-left: 0.15rem;
         }
         span:hover {
           filter: brightness(1.5);

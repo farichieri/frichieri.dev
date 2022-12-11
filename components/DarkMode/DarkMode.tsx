@@ -17,9 +17,9 @@ export default function DarkMode({
   return (
     <span onClick={switchTheme}>
       {theme === 'dark' ? (
-        <Image alt='dark' src={'/images/dark.png'} width={25} height={25} />
+        <Image alt='dark' src={'/images/dark.png'} width={20} height={20} />
       ) : (
-        <Image alt='light' src={'/images/light.png'} width={25} height={25} />
+        <Image alt='light' src={'/images/light.png'} width={20} height={20} />
       )}
       <style jsx>
         {`

@@ -7,7 +7,7 @@ export default function MainLayout({
   children: React.ReactNode;
   withPadding: boolean;
 }) {
-  const padding = withPadding ? '1rem' : 0;
+  const padding = withPadding ? '1.5rem' : 0;
 
   return (
     <section>
@@ -20,6 +20,8 @@ export default function MainLayout({
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding: ${padding};
+            margin: auto;
           }
           @media and only screen (max-width: 500px) {
             section {

@@ -13,8 +13,8 @@ const Button = ({
       <style jsx>{`
         button {
           cursor: pointer;
-          background: green;
-          box-shadow: 0 0 6px 1px var(--box-shadow);
+          background: transparent;
+          box-shadow: 0 0 6px 1px green;
           border: none;
           border-radius: 4px;
           transition: 0.3s;

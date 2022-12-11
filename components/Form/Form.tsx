@@ -1,16 +1,10 @@
-import React, {
-  FormEvent,
-  ChangeEvent,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../Layout/Button';
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const captchaRef = useRef<any>(null);
   const sitekey = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
   const [input, setInput] = useState({
@@ -18,8 +12,12 @@ const Form = () => {
     email: '',
     message: '',
   });
+  const [message, setMessage] = useState({
+    text: '',
+    type: '',
+  });
 
-  const handleChange = async (
+  const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     event.preventDefault();
@@ -27,49 +25,65 @@ const Form = () => {
       ...input,
       [event.target.name]: event.target.value,
     });
-    Object.values(input)
-      .map((i) => i.split('').length > 1)
-      .reduce((a, b) => a && b)
-      ? setIsDisabled(false)
-      : setIsDisabled(true);
+    setMessage({ text: '', type: '' });
   };
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const MESSAGES = {
+    INCOMPLETE: 'Complete all the fields to send the message',
+    NOT_ROBOT: `Please verify that you are a human'`,
+    SUCCESS: 'The message was successfully sent',
+    ERROR: 'The message could not be sent',
+  };
+  const MESSAGE_TYPE = {
+    ERROR: 'error',
+    SUCCESS: 'success',
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    setMessage({ text: '', type: '' });
     event.preventDefault();
     if (captchaRef.current !== null) {
       const token = captchaRef.current.getValue();
       captchaRef.current.reset();
 
       if (isDisabled) return;
-      if (token === '') {
-        alert(`Please click "I'm not a robot" to send the message`);
+      if (!input.name || !input.email || !input.message) {
+        setIsLoading(false);
+        setIsDisabled(false);
+        setMessage({ text: MESSAGES.INCOMPLETE, type: MESSAGE_TYPE.ERROR });
         return;
       }
+      if (token === '') {
+        setMessage({ text: MESSAGES.NOT_ROBOT, type: MESSAGE_TYPE.ERROR });
+        return;
+      }
+      setIsLoading(true);
+      setIsDisabled(true);
       await fetch('api/recaptcha', { method: 'POST', body: token }).then(
         (response) => {
           if (response.status === 401) {
-            return;
-          }
-          if (!input.name || !input.email || !input.message) {
-            alert('Please, fill the fields to send the message');
+            setIsLoading(false);
+            setIsDisabled(false);
             return;
           } else {
-            setIsLoading(true);
-            setIsDisabled(true);
             fetch('/api/mailer', {
               method: 'post',
               body: JSON.stringify(input),
             }).then((response) => {
-              setIsLoading(false);
               if (response.ok) {
+                setIsLoading(false);
+                setIsDisabled(false);
                 setInput({
                   name: '',
                   email: '',
                   message: '',
                 });
-                alert('I received your message successfully');
+                setMessage({
+                  text: MESSAGES.SUCCESS,
+                  type: MESSAGE_TYPE.SUCCESS,
+                });
               } else {
-                alert('I did not receive your message');
+                setMessage({ text: MESSAGES.ERROR, type: MESSAGE_TYPE.ERROR });
               }
             });
           }
@@ -77,15 +91,6 @@ const Form = () => {
       );
     }
   };
-
-  const [render, setRender] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setRender(true);
-      console.log('render');
-    }, 1000);
-  }, []);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -107,23 +112,23 @@ const Form = () => {
         onChange={handleChange}
         name='message'
         value={input.message}
-        placeholder='Wanna say something?'
+        placeholder='Message'
       />
       <div className='recaptcha'>
-        {render && (
-          <ReCAPTCHA
-            size='normal'
-            sitekey={`${sitekey}`}
-            ref={captchaRef}
-            hl='en'
-          />
-        )}
+        <ReCAPTCHA
+          size='normal'
+          sitekey={`${sitekey}`}
+          ref={captchaRef}
+          hl='en'
+          theme='dark'
+        />
       </div>
       <Button content={'Send'} isLoading={isLoading} isDisabled={isDisabled} />
+      <span className={message.type}>{message.text}</span>
       <style jsx>{`
         form {
           width: 400px;
-          padding: 1rem;
+          padding: 0 1rem;
           max-width: 100%;
         }
         form,
@@ -156,12 +161,22 @@ const Form = () => {
           background: #d3d3d3d3;
         }
         .recaptcha {
-          height: 100%;
           min-height: 78px;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
+          -webkit-transform: scale(0.85);
+        }
+        span {
+          min-height: 2rem;
+          font-size: 0.8rem;
+        }
+        span.error {
+          color: red;
+        }
+        span.success {
+          color: green;
         }
       `}</style>
     </form>

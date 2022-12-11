@@ -20,27 +20,23 @@ export default function About() {
             <Link href={'https://www.sundevs.com/'} target={'_blank'}>
               Sundevs Inc
             </Link>
-            , working with the wabe pages of{' '}
-            <Link href={'https://www.cinemark.com.ec/'} target={'_blank'}>
-              Cinemark Ecuador
-            </Link>{' '}
-            and{' '}
-            <Link href={'https://www.cinemark.com.co/'} target={'_blank'}>
-              Cinemark Colombia
-            </Link>
           </p>
         </div>
         <div className='technologies'>
           <p>
-            I have experience working with: JavaScript, TypeScript, Node.js,
-            Next.js, React.js, Redux.js, HTML, CSS and consuming APIs.
+            And I have experience working with JavaScript, TypeScript, Node.js,
+            Next.js, React.js, Redux.js, HTML, CSS, APIs.
           </p>
         </div>
       </section>
       <style jsx>{`
         section {
           max-width: 600px;
-          text-align: left;
+          text-align: center;
+        }
+        h1,
+        h4 {
+          padding: 0.1rem;
         }
         div {
           display: flex;

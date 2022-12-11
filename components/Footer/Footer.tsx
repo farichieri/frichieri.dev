@@ -9,12 +9,15 @@ const Footer = () => {
       <style jsx>{`
         footer {
           align-items: center;
-          box-shadow: 0 0 10px 1px var(--box-shadow-light);
+          border-top: 1px solid var(--box-shadow-light);
           display: flex;
           height: var(--footerHeight);
           justify-content: center;
           margin-top: auto;
           width: 100%;
+        }
+        span {
+          font-size: 0.8em;
         }
       `}</style>
     </footer>

@@ -59,6 +59,7 @@ const style = css.global`
   }
 
   html {
+    background: black;
   }
 
   /* Remove list styles on ul, ol elements */

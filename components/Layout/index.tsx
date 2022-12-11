@@ -46,7 +46,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {`
           main {
             background: var(--bgColor);
-            height: 100%;
             height: 100vh;
             padding-top: var(--footerHeight);
             width: 100%;
