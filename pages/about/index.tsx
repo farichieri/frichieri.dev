@@ -24,7 +24,7 @@ export default function About() {
         </div>
         <div className='technologies'>
           <p>
-            And I have experience working with JavaScript, TypeScript, Node.js,
+            I have experience working with JavaScript, TypeScript, Node.js,
             Next.js, React.js, Redux.js, HTML, CSS, APIs.
           </p>
         </div>

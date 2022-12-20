@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { fonts } from '../../styles/typography';
 import { myPages } from '../../utils/myPages';
 import DarkMode from '../DarkMode/DarkMode';
 import Logo from '../Logo/Logo';
@@ -22,7 +21,9 @@ const Nav = ({
 
   return (
     <nav>
-      <Logo />
+      <Link href={'/'}>
+        <Logo />
+      </Link>
       <DarkMode theme={theme} setTheme={setTheme} />
       <div
         onClick={handleMenu}
@@ -33,9 +34,9 @@ const Nav = ({
       <ul className={`${hamburgerActive && 'active'}`}>
         {pages.map((page) => (
           <li key={page.name}>
-            <a href={page.path} onClick={handleMenu}>
+            <Link href={page.path} onClick={handleMenu}>
               {page.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
