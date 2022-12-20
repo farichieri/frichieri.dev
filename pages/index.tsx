@@ -10,7 +10,7 @@ export default function Page() {
           <h1 className='build'>I build Web Apps</h1>
           <div className='description'>
             <p>
-              I'm a web developer focused in building beautiful, fast and
+              I&apos;m a web developer focused in building beautiful, fast and
               productive web pages.
             </p>
             <p>Welcome to my personal website!</p>
@@ -22,7 +22,6 @@ export default function Page() {
           align-items: center;
           display: flex;
           flex-direction: column;
-          font-family: var(--space_mono);
           height: 100%;
           justify-content: center;
           width: 100%;

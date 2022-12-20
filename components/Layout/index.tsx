@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>frichieri.dev</title>
       </Head>
-      <div className={`${fonts.orbitron.className} ${theme}`}>
+      <div className={`${fonts.raleWay.className} ${theme}`}>
         <Nav theme={theme} setTheme={setTheme} />
         <main>{children}</main>
         <Footer />

@@ -1,16 +1,6 @@
 import css from 'styled-jsx/css';
-import { Exo_2, Cinzel, Orbitron, Play, Space_Mono } from '@next/font/google';
+import { Orbitron, Space_Mono, Raleway } from '@next/font/google';
 
-const exo_2 = Exo_2({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--exo_2',
-});
-const cinzel = Cinzel({
-  weight: '500',
-  subsets: ['latin'],
-  variable: '--cinzel',
-});
 const orbitron = Orbitron({
   weight: '400',
   subsets: ['latin'],
@@ -23,14 +13,25 @@ const spaceMono = Space_Mono({
   variable: '--space_mono',
 });
 
+const raleWay = Raleway({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--rale_way',
+});
+
 export const fonts = {
-  exo_2,
-  cinzel,
   orbitron,
   spaceMono,
+  raleWay,
 };
 
 const style = css.global`
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+  * {
+    font-family: 'Raleway', sans-serif;
+  }
+
   @media screen and only (max-width: 500px) {
     body {
       font-size: 85%;
@@ -45,12 +46,6 @@ const style = css.global`
     body {
       font-size: 60%;
     }
-  }
-  a {
-    font-family: ${orbitron.style.fontFamily};
-  }
-  h1 {
-    font-family: ${orbitron.style.fontFamily};
   }
 `;
 

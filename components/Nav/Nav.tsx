@@ -45,8 +45,7 @@ const Nav = ({
           nav {
             align-items: center;
             backdrop-filter: blur(12px);
-            background: var(--nav-background-color);
-            box-shadow: 0 0 10px 1px var(--box-shadow-light);
+            box-shadow: 0 0 3px 1px var(--box-shadow-light);
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
@@ -82,7 +81,6 @@ const Nav = ({
           ul li a {
             font-size: 1rem;
             min-width: fit-content;
-            font-weight: 500;
             letter-spacing: 0.2rem;
             display: block;
             border-bottom: 2px solid transparent;
@@ -90,7 +88,6 @@ const Nav = ({
           }
 
           li {
-            font-weight: bold;
             text-transform: capitalize;
             margin: 0 0.2rem;
           }

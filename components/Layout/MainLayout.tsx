@@ -22,6 +22,7 @@ export default function MainLayout({
             justify-content: center;
             padding: ${padding};
             margin: auto;
+            max-width: 768px;
           }
           @media and only screen (max-width: 500px) {
             section {

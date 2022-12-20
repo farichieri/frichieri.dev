@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Date from '../../components/Layout/Date';
 import MainLayout from '../../components/Layout/MainLayout';
 import { getSortedPostData } from '../../utils/posts';
 
@@ -6,20 +7,34 @@ const Blog = ({ posts }: { posts: Array<object> }) => {
   return (
     <MainLayout withPadding={true}>
       <div className='posts-container'>
-        {posts.map((post: any) => (
-          <Link href={`blog/${post.id}`}>
-            <div className='post'>
-              <p>{post.date}</p>
-              <p>{post.title}</p>
-            </div>
-          </Link>
-        ))}
+        <table>
+          <thead></thead>
+          <tbody>
+            {posts.map((post: any) => (
+              <tr className='post' key={post.id}>
+                <td>
+                  <Date dateString={post.date} />
+                </td>
+                <td>
+                  <Link href={`blog/${post.id}`}>{post.title}</Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-
       <style jsx>{`
-        .post {
-          display: flex;
-          gap: 1rem;
+        .posts-container,
+        table,
+        tbody {
+          width: 100%;
+        }
+        table {
+        }
+        tr {
+          text-align: left;
+        }
+        td {
         }
       `}</style>
     </MainLayout>

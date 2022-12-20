@@ -5,7 +5,6 @@ import MainLayout from '../../components/Layout/MainLayout';
 import { getAllPostsIds, getPostData } from '../../utils/posts';
 
 const Post = ({ postData }: { postData: any }) => {
-  console.log({ postData });
   return (
     <MainLayout withPadding={true}>
       <Head>

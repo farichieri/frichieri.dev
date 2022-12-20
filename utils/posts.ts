@@ -15,14 +15,12 @@ const getSortedPostData = () => {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
-    console.log({ matterResult });
 
     return {
       id,
       ...matterResult.data,
     };
   });
-  console.log({ allPostsData });
   return allPostsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
