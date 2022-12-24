@@ -2,14 +2,16 @@ const Button = ({
   content,
   isLoading,
   isDisabled,
+  loadingContent,
 }: {
   content: string;
   isLoading: boolean;
   isDisabled: boolean;
+  loadingContent: string;
 }) => {
   return (
     <button disabled={isDisabled}>
-      {isLoading ? <span>Loading...</span> : <span>{content}</span>}
+      {isLoading ? <span>{loadingContent}</span> : <span>{content}</span>}
       <style jsx>{`
         button {
           cursor: pointer;

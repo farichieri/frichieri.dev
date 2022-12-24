@@ -21,25 +21,27 @@ const Nav = ({
 
   return (
     <nav>
-      <Link href={'/'}>
-        <Logo />
-      </Link>
-      <DarkMode theme={theme} setTheme={setTheme} />
-      <div
-        onClick={handleMenu}
-        className={`hamburger ${hamburgerActive && 'active'}`}
-      >
-        <div className='bar'></div>
+      <div className='nav-content'>
+        <Link href={'/'}>
+          <Logo />
+        </Link>
+        <DarkMode theme={theme} setTheme={setTheme} />
+        <div
+          onClick={handleMenu}
+          className={`hamburger ${hamburgerActive && 'active'}`}
+        >
+          <div className='bar'></div>
+        </div>
+        <ul className={`${hamburgerActive && 'active'}`}>
+          {pages.map((page) => (
+            <li key={page.name}>
+              <Link href={page.path} onClick={handleMenu}>
+                {page.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={`${hamburgerActive && 'active'}`}>
-        {pages.map((page) => (
-          <li key={page.name}>
-            <Link href={page.path} onClick={handleMenu}>
-              {page.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
       <style jsx>
         {`
           nav {
@@ -49,11 +51,16 @@ const Nav = ({
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
-            margin: 0 10rem;
             position: fixed;
             width: 100%;
             z-index: 999;
             padding: 0 2rem;
+          }
+          .nav-content {
+            width: 100%;
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
           }
 
           .logo,

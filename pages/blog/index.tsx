@@ -24,6 +24,8 @@ const Blog = ({ posts }: { posts: Array<object> }) => {
         </table>
       </div>
       <style jsx>{`
+        .posts-container {
+        }
         .posts-container,
         table,
         tbody {

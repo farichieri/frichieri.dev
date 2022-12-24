@@ -27,10 +27,11 @@ export default function Projects() {
       <style jsx>
         {`
           .projects {
-            width: 100%;
             display: grid;
-            height: 100%;
-            grid-template-columns: repeat(auto-fit, minmax(33vw, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            min-height: 100vh;
+            padding: 2rem 0;
+            width: 100%;
           }
           .project {
             align-items: center;
@@ -39,8 +40,7 @@ export default function Projects() {
             flex-direction: column;
             justify-content: center;
             position: relative;
-            height: auto;
-            max-height: 50vh;
+            background: red;
           }
           .project:hover > .cape {
             display: flex;
@@ -72,7 +72,7 @@ export default function Projects() {
           }
           .img {
             width: 100%;
-            height: 100%;
+            height: 40vh;
             position: relative;
             display: flex;
             margin: auto;

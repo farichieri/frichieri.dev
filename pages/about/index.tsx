@@ -14,18 +14,10 @@ export default function About() {
           <h1>a Web Developer</h1>
           <h4>from Buenos Aires, Argentina</h4>
         </div>
-        <div className='working'>
-          <p>
-            I&rsquo;m currently working at{' '}
-            <Link href={'https://www.sundevs.com/'} target={'_blank'}>
-              Sundevs Inc
-            </Link>
-          </p>
-        </div>
         <div className='technologies'>
           <p>
-            I have experience working with JavaScript, TypeScript, Node.js,
-            Next.js, React.js, Redux.js, HTML, CSS, APIs.
+            I have experience working with JavaScript, TypeScript, Next.js,
+            React.js, Redux.js, HTML, CSS, Node.js, Express.js, APIs.
           </p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import Date from '../../components/Layout/Date';
 import MainLayout from '../../components/Layout/MainLayout';
@@ -11,10 +12,29 @@ const Post = ({ postData }: { postData: any }) => {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <p>{postData.title}</p>
-        <Date dateString={postData.date} />
+        <div className='post-header'>
+          <p>{postData.title}</p>
+          <Date dateString={postData.date} />
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <div className='post-back'>
+        <Link href={'/blog'}>{'<'} Back</Link>
+      </div>
+      <style jsx>{`
+        article {
+          text-align: left;
+          width: 100%;
+          min-height: 100vh;
+        }
+        .post-header {
+          margin-bottom: 1rem;
+        }
+        .post-back {
+          text-align: left;
+          width: 100%;
+        }
+      `}</style>
     </MainLayout>
   );
 };

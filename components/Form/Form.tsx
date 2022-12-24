@@ -30,7 +30,7 @@ const Form = () => {
 
   const MESSAGES = {
     INCOMPLETE: 'Complete all the fields to send the message',
-    NOT_ROBOT: `Please verify that you are a human'`,
+    NOT_ROBOT: `Please verify that you are a human`,
     SUCCESS: 'The message was successfully sent',
     ERROR: 'The message could not be sent',
   };
@@ -123,7 +123,12 @@ const Form = () => {
           theme='dark'
         />
       </div>
-      <Button content={'Send'} isLoading={isLoading} isDisabled={isDisabled} />
+      <Button
+        content={'Send'}
+        isLoading={isLoading}
+        isDisabled={isDisabled}
+        loadingContent={'Sending...'}
+      />
       <span className={message.type}>{message.text}</span>
       <style jsx>{`
         form {

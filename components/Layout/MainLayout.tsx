@@ -15,14 +15,15 @@ export default function MainLayout({
       <style jsx>
         {`
           section {
-            height: 100%;
+            align-items: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            height: 100%;
             justify-content: center;
-            padding: ${padding};
             margin: auto;
             max-width: 768px;
+            padding: ${padding};
+            width: 100%;
           }
           @media and only screen (max-width: 500px) {
             section {

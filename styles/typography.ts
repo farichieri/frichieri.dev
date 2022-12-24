@@ -26,10 +26,15 @@ export const fonts = {
 };
 
 const style = css.global`
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
   * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Inter', sans-serif;
+  }
+
+  a {
+    font-family: 'Inter', sans-serif;
   }
 
   @media screen and only (max-width: 500px) {
