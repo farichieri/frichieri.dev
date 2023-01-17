@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { myPages } from '../../utils/myPages';
 import DarkMode from '../DarkMode/DarkMode';
-import Logo from '../Logo/Logo';
 
 const Nav = ({
   theme,
@@ -11,21 +11,17 @@ const Nav = ({
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-  const pages = myPages;
-
   const [hamburgerActive, setHamburgerActive] = useState(false);
 
   const handleMenu = () => {
     setHamburgerActive(!hamburgerActive);
   };
 
+  const route = useRouter();
+
   return (
     <nav>
       <div className='nav-content'>
-        <Link href={'/'}>
-          <Logo />
-        </Link>
-        <DarkMode theme={theme} setTheme={setTheme} />
         <div
           onClick={handleMenu}
           className={`hamburger ${hamburgerActive && 'active'}`}
@@ -33,34 +29,45 @@ const Nav = ({
           <div className='bar'></div>
         </div>
         <ul className={`${hamburgerActive && 'active'}`}>
-          {pages.map((page) => (
-            <li key={page.name}>
+          {myPages.map((page) => (
+            <li
+              key={page.name}
+              className={route.pathname === page.path ? 'this-route' : ''}
+            >
               <Link href={page.path} onClick={handleMenu}>
                 {page.name}
               </Link>
             </li>
           ))}
         </ul>
+        <DarkMode theme={theme} setTheme={setTheme} />
       </div>
       <style jsx>
         {`
           nav {
             align-items: center;
             backdrop-filter: blur(12px);
-            box-shadow: 0 0 3px 1px var(--box-shadow-light);
+            border-bottom: 1px solid var(--box-shadow-light);
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
             position: fixed;
             width: 100%;
             z-index: 999;
-            padding: 0 2rem;
+            padding: 2rem;
+            max-width: var(--max-width);
           }
           .nav-content {
             width: 100%;
             display: flex;
             max-width: 1200px;
             margin: auto;
+            align-items: center;
+            height: 100%;
+          }
+
+          .this-route {
+            text-shadow: 0 0 6px var(--link-color);
           }
 
           .logo,
@@ -83,6 +90,12 @@ const Nav = ({
 
           ul li {
             display: inline-block;
+            border-radius: 8px;
+            padding: 0.25rem;
+          }
+
+          ul li:hover {
+            background: #77777747;
           }
 
           ul li a {
@@ -182,7 +195,7 @@ const Nav = ({
               opacity: 0.95;
               width: 100vw;
               height: 100vh;
-              left: 100%;
+              left: -100%;
               top: 0;
               display: flex;
               flex-direction: column;

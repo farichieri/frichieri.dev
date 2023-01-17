@@ -29,7 +29,7 @@ export default function DarkMode({
             display: flex;
             justify-content: center;
             position: relative;
-            margin: 0 auto 0 1rem;
+            margin: 0 0 0 auto;
             cursor: pointer;
             padding: 0.2rem;
             box-shadow: 0 0 3px 1px var(--box-shadow-light);

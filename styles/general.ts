@@ -2,8 +2,9 @@ import css from 'styled-jsx/css';
 
 const general = css.global`
   :root {
-    --footerHeight: 50px;
+    --footerHeight: 170px;
     --navHeight: 50px;
+    --max-width: 900px;
   }
   a[href] {
     text-decoration: none;
