@@ -30,7 +30,7 @@ export default function Projects() {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
             min-height: 100vh;
-            padding: 2rem 0;
+            padding-bottom: 2rem;
             width: 100%;
           }
           .project {
@@ -40,7 +40,6 @@ export default function Projects() {
             flex-direction: column;
             justify-content: center;
             position: relative;
-            background: red;
           }
           .project:hover > .cape {
             display: flex;

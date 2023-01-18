@@ -7,7 +7,9 @@ const Footer = () => {
       <ul className='pages'>
         {myPages.map((page) => (
           <li key={page.name}>
-            <Link href={page.path}>{page.name}</Link>
+            <Link href={page.path}>
+              <span className='link'>{page.name}</span>
+            </Link>
           </li>
         ))}
       </ul>
@@ -37,6 +39,12 @@ const Footer = () => {
         li {
           width: 33%;
           padding: 0.5rem 3rem;
+        }
+        .link {
+          transition: 0.3s;
+        }
+        .link:hover {
+          color: var(--textColor);
         }
       `}</style>
     </footer>

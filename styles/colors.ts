@@ -7,7 +7,7 @@ const colors = css.global`
     --box-shadow: #f5f5f552;
     --box-shadow-light: #f5f5f522;
     --navBgColor: #00000080;
-    --link-color: rgba(73, 251, 53, 0.815);
+    --link-color: gray;
     --nav-background-color: black;
   }
   div.light {
@@ -16,7 +16,7 @@ const colors = css.global`
     --box-shadow: #00000080;
     --box-shadow-light: #00000030;
     --navBgColor: transparent;
-    --link-color: rgba(73, 251, 53, 0.999);
+    --link-color: gray;
     --nav-background-color: white;
   }
 `;

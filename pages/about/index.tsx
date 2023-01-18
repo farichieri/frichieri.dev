@@ -8,7 +8,7 @@ export default function About() {
       <section>
         <div>
           <span className='img--container'>
-            <Image src={'/images/pxArt.png'} alt='Fabricio Richieri' fill />
+            <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
           </span>
           <h1>👋 I&rsquo;m Fabricio Richieri,</h1>
           <h1>a Web Developer</h1>

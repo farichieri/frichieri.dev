@@ -25,6 +25,8 @@ const Blog = ({ posts }: { posts: Array<object> }) => {
       </div>
       <style jsx>{`
         .posts-container {
+          height: 100%;
+          display: flex;
         }
         .posts-container,
         table,

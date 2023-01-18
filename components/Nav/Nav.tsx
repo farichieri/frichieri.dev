@@ -28,18 +28,19 @@ const Nav = ({
         >
           <div className='bar'></div>
         </div>
-        <ul className={`${hamburgerActive && 'active'}`}>
-          {myPages.map((page) => (
-            <li
-              key={page.name}
-              className={route.pathname === page.path ? 'this-route' : ''}
-            >
-              <Link href={page.path} onClick={handleMenu}>
-                {page.name}
+        <div className={`pages ${hamburgerActive ? 'active' : ''}`}>
+          {myPages
+            .filter((page) => page.path !== '/about')
+            .map((page) => (
+              <Link key={page.name} href={page.path} onClick={handleMenu}>
+                <span
+                  className={route.pathname === page.path ? 'this-route' : ''}
+                >
+                  {page.name}
+                </span>
               </Link>
-            </li>
-          ))}
-        </ul>
+            ))}
+        </div>
         <DarkMode theme={theme} setTheme={setTheme} />
       </div>
       <style jsx>
@@ -47,15 +48,15 @@ const Nav = ({
           nav {
             align-items: center;
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--box-shadow-light);
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
             position: fixed;
             width: 100%;
             z-index: 999;
-            padding: 2rem;
+            padding: 0 1rem;
             max-width: var(--max-width);
+            border-bottom: 1px solid #80808030;
           }
           .nav-content {
             width: 100%;
@@ -66,8 +67,19 @@ const Nav = ({
             height: 100%;
           }
 
+          .pages span {
+            padding: 0.4rem;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: 500;
+          }
+
+          .pages span:hover {
+            background: var(--box-shadow-light);
+          }
+
           .this-route {
-            text-shadow: 0 0 6px var(--link-color);
+            color: var(--textColor);
           }
 
           .logo,
@@ -75,41 +87,35 @@ const Nav = ({
             color: inherit;
           }
 
-          ul {
+          .pages {
             display: flex;
             gap: 1rem;
             text-transform: capitalize;
           }
-          a {
-            transition: 0.3s;
-          }
+
           a:hover {
             color: white;
             filter: brightness(2);
           }
 
-          ul li {
+          .pages li {
             display: inline-block;
             border-radius: 8px;
-            padding: 0.25rem;
+            text-transform: capitalize;
+            margin: 0 0.2rem;
+            background: red;
+            padding: 0.4rem;
           }
 
-          ul li:hover {
-            background: #77777747;
-          }
-
-          ul li a {
+          .link {
             font-size: 1rem;
             min-width: fit-content;
             letter-spacing: 0.2rem;
             display: block;
             border-bottom: 2px solid transparent;
             transition: 0.3s;
-          }
-
-          li {
-            text-transform: capitalize;
-            margin: 0 0.2rem;
+            padding: 0.4rem;
+            background: #77777747;
           }
 
           .hamburger {
@@ -188,7 +194,7 @@ const Nav = ({
             h1 {
               font-size: 2vh;
             }
-            ul {
+            .pages {
               position: fixed;
               list-style: none;
               background-color: var(--nav-background-color);
@@ -206,13 +212,13 @@ const Nav = ({
               transition: 0.3s linear left;
               min-width: 100vw;
             }
-            ul.active {
+            .pages.active {
               left: 0;
               margin: 0;
               padding: 0;
               min-width: 100vw;
             }
-            ul a {
+            .pages a {
               font-size: 2.5rem;
               font-weight: 500;
               letter-spacing: 0.2rem;

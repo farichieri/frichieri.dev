@@ -7,7 +7,7 @@ export default function MainLayout({
   children: React.ReactNode;
   withPadding: boolean;
 }) {
-  const padding = withPadding ? '1.5rem' : 0;
+  const padding = withPadding ? '3rem 1.5rem' : 0;
 
   return (
     <section>
@@ -19,9 +19,9 @@ export default function MainLayout({
             display: flex;
             flex-direction: column;
             height: 100%;
-            justify-content: center;
             margin: auto;
             max-width: 768px;
+            min-height: calc(100vh - var(--navHeight));
             padding: ${padding};
             width: 100%;
           }
