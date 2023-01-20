@@ -29,17 +29,15 @@ const Nav = ({
           <div className='bar'></div>
         </div>
         <div className={`pages ${hamburgerActive ? 'active' : ''}`}>
-          {myPages
-            .filter((page) => page.path !== '/about')
-            .map((page) => (
-              <Link key={page.name} href={page.path} onClick={handleMenu}>
-                <span
-                  className={route.pathname === page.path ? 'this-route' : ''}
-                >
-                  {page.name}
-                </span>
-              </Link>
-            ))}
+          {myPages.map((page) => (
+            <Link key={page.name} href={page.path} onClick={handleMenu}>
+              <span
+                className={route.pathname === page.path ? 'this-route' : ''}
+              >
+                {page.name}
+              </span>
+            </Link>
+          ))}
         </div>
         <DarkMode theme={theme} setTheme={setTheme} />
       </div>
@@ -201,7 +199,7 @@ const Nav = ({
               opacity: 0.95;
               width: 100vw;
               height: 100vh;
-              left: -100%;
+              right: 100%;
               top: 0;
               display: flex;
               flex-direction: column;
@@ -209,7 +207,7 @@ const Nav = ({
               align-items: center;
               z-index: 2;
               overflow-x: hidden;
-              transition: 0.3s linear left;
+              transition: 0.3s linear right;
               min-width: 100vw;
             }
             .pages.active {

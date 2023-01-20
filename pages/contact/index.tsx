@@ -6,7 +6,9 @@ import MainLayout from '../../components/Layout/MainLayout';
 export default function Contact() {
   return (
     <MainLayout withPadding={true}>
+      <h1>Contact Me</h1>
       <div className='contact-container'>
+        <br />
         <Form />
         <div className='links'>
           <Link
@@ -51,10 +53,15 @@ export default function Contact() {
             align-items: center;
             margin: auto;
           }
+          p {
+            text-align: left;
+            width: 100%;
+          }
           .links {
             display: flex;
             gap: 1rem;
             align-items: center;
+            margin-top: 1rem;
           }
           span {
             position: relative;

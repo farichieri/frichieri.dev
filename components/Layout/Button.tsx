@@ -16,9 +16,9 @@ const Button = ({
         button {
           cursor: pointer;
           background: transparent;
-          box-shadow: 0 0 6px 1px green;
+          box-shadow: 0 0 6px 1px gray;
           border: none;
-          border-radius: 4px;
+          border-radius: 9999px;
           transition: 0.3s;
           color: var(--text-color);
         }
