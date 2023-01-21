@@ -22,10 +22,9 @@ export default function About() {
         </p>
         <br />
         <p>
-          I started learning programming with freeCodeCamp in May 2021 till now.
-          I graduated from the SoyHenry Bootcamp in May 2022 and reached my
-          first developer job in June 2022 and I'm currently working as a
-          freelance.
+          I started learning programming with freeCodeCamp in May 2021. I
+          graduated from the SoyHenry Bootcamp in May 2022 and reached my first
+          developer job in June 2022 and I'm currently working as a freelance.
         </p>
         <br />
         <p>

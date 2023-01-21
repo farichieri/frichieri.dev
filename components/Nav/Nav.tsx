@@ -54,7 +54,7 @@ const Nav = ({
             z-index: 999;
             padding: 0 1rem;
             max-width: var(--max-width);
-            border-bottom: 1px solid #80808030;
+            border-bottom: 1px solid #80808020;
           }
           .nav-content {
             width: 100%;

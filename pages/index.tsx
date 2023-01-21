@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Date from '../components/Layout/Date';
 import MainLayout from '../components/Layout/MainLayout';
+import Projects from '../components/Projects/Projects';
 import { myProjects } from '../utils/myProjects';
 import { getSortedPostData } from '../utils/posts';
 
@@ -29,30 +30,9 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         </div>
         <div className='featured-projects'>
           <div className='featured-title'>
-            <h1>Featured Projects</h1>
-            <Image
-              alt='star-icon'
-              src={'/images/star.png'}
-              width={25}
-              height={25}
-            />
+            <h1>Last Projects</h1>
           </div>
-          <div className='projects'>
-            {myProjects.slice(0, 3).map((project) => (
-              <div className='project' key={project.id}>
-                <span className='img'>
-                  {/* <Image alt={project.name} src={project.image} fill /> */}
-                </span>
-                <div className='cape'>
-                  <Link href={`/projects/${project.slug}`}>
-                    <div className='name-container'>
-                      <p className='name'>{project.name}</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Projects featured={true} />
           <Link href={'/projects'}>
             <span className='see-all'>See all projects</span>
           </Link>
@@ -60,12 +40,6 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         <div className='featured-posts'>
           <div className='featured-title'>
             <h1>Featured Posts</h1>
-            <Image
-              alt='star-icon'
-              src={'/images/star.png'}
-              width={25}
-              height={25}
-            />
           </div>
           <table className='posts-table'>
             <thead></thead>
