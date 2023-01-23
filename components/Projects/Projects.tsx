@@ -8,7 +8,7 @@ export default function Projects({ featured }: { featured: boolean }) {
   return (
     <div className='projects'>
       {projects.map((project) => (
-        <div className='project-container'>
+        <div key={project.id} className='project-container'>
           <div className='project-image' key={project.id}>
             <span className='img'>
               <Image alt={project.name} src={project.image} fill />
@@ -23,6 +23,7 @@ export default function Projects({ featured }: { featured: boolean }) {
           </div>
           <div className='project-text'>
             <p>{project.name}</p>
+            <Link href={`/projects/${project.slug}`}>See project</Link>
           </div>
         </div>
       ))}
@@ -30,50 +31,56 @@ export default function Projects({ featured }: { featured: boolean }) {
         {`
           .projects {
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
             height: 100%;
             width: 100%;
-            gap: 1rem;
+            gap: 1.5rem;
             margin: 2rem 0;
           }
           .project-container {
             display: flex;
             flex-direction: row;
             gap: 1rem;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
           }
           .project-image {
             align-items: center;
+            border-radius: 0.75rem;
+            box-shadow: 0 0 10px 1px var(--box-shadow-light);
             cursor: pointer;
             display: flex;
             flex-direction: column;
+            height: 30vh;
             justify-content: center;
-            position: relative;
-            border-radius: 0.75rem;
+            max-height: ${featured ? '175px' : '100%'};
+            max-width: ${featured ? '300px' : '100%'};
             overflow: auto;
-            box-shadow: 0 0 10px 1px var(--box-shadow-light);
-            width: 70%;
+            position: relative;
+            width: 70vw;
           }
           .project-image:hover > .cape {
             display: flex;
           }
           .project-image .img {
-            width: 100%;
-            height: 40vh;
-            position: relative;
             display: flex;
+            height: 100%;
             margin: auto;
+            position: relative;
+            width: 100%;
           }
           .cape {
             align-items: center;
+            animation: 0.3s normal appear;
+            background: #000000ed;
             display: none;
             flex-direction: column;
             height: 100%;
             justify-content: center;
             position: absolute;
             width: 100%;
-            background: #000000ed;
-            animation: 0.3s normal appear;
           }
           .name-container {
             height: 100%;
@@ -86,12 +93,29 @@ export default function Projects({ featured }: { featured: boolean }) {
             justify-content: center;
           }
           .name {
-            font-size: 1.5vw;
+            font-size: 1vh;
             z-index: 1;
           }
           .project-text {
-            width: 30%;
             display: flex;
+            flex-direction: column;
+            height: 30vh;
+            justify-content: center;
+            max-height: ${featured ? '150px' : '100%'};
+            width: 30vw;
+            text-align: left;
+          }
+
+          @media screen and (max-width: 768px) {
+            .project-image {
+              width: 70vw;
+              height: 20vh;
+            }
+
+            .project-text {
+              width: 30vw;
+              height: 20vh;
+            }
           }
 
           @keyframes appear {

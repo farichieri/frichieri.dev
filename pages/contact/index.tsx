@@ -6,7 +6,7 @@ import MainLayout from '../../components/Layout/MainLayout';
 export default function Contact() {
   return (
     <MainLayout withPadding={true}>
-      <h1>Contact Me</h1>
+      <h1 style={{ width: '100%', textAlign: 'left' }}>Contact</h1>
       <div className='contact-container'>
         <br />
         <Form />

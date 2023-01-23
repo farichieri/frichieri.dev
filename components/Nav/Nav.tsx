@@ -111,7 +111,6 @@ const Nav = ({
             letter-spacing: 0.2rem;
             display: block;
             border-bottom: 2px solid transparent;
-            transition: 0.3s;
             padding: 0.4rem;
             background: #77777747;
           }

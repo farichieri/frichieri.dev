@@ -5,9 +5,9 @@ import { ParsedUrlQuery } from 'querystring';
 import MainLayout from '../../components/Layout/MainLayout';
 import { myProjects } from '../../utils/myProjects';
 
-const Slug = ({ project }) => {
+const Slug = ({ project }: { project: any }) => {
   return (
-    <MainLayout withPadding={false}>
+    <MainLayout withPadding={true}>
       <p className='title'>Project: {project.name} </p>
       <span className='img'>
         <Image src={project.image} alt={project.name} fill />
@@ -54,6 +54,8 @@ const Slug = ({ project }) => {
           box-shadow: 0 0 6px 1px var(--box-shadow-light);
           border-radius: 5px;
           overflow: auto;
+          background: red;
+          height: 400px;
         }
         p {
           display: flex;
@@ -98,7 +100,7 @@ interface IParams extends ParsedUrlQuery {
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths: string[] = [];
+  const paths: Array<any> = [];
   myProjects.forEach((project) =>
     paths.push({ params: { slug: project.slug } })
   );

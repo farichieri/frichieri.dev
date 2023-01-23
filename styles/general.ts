@@ -6,9 +6,16 @@ const general = css.global`
     --navHeight: 70px;
     --max-width: 768px;
   }
+  h1 {
+    font-size: 2rem;
+  }
   a[href] {
     text-decoration: none;
     color: var(--link-color);
+    transition: 0.3s;
+  }
+  a[href]:hover {
+    color: var(--textColor);
   }
 `;
 

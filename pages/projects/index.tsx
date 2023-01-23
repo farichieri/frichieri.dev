@@ -3,17 +3,9 @@ import Projects from '../../components/Projects/Projects';
 
 export default function Index() {
   return (
-    <MainLayout withPadding={false}>
+    <MainLayout withPadding={true}>
+      <h1 style={{ width: '100%', textAlign: 'left' }}>Projects</h1>
       <Projects featured={false} />
-      <style jsx>
-        {`
-          section {
-            width: 100%;
-            height: 100%;
-            display: flex;
-          }
-        `}
-      </style>
     </MainLayout>
   );
 }

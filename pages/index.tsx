@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Date from '../components/Layout/Date';
 import MainLayout from '../components/Layout/MainLayout';
+import Posts from '../components/Posts/Posts';
 import Projects from '../components/Projects/Projects';
-import { myProjects } from '../utils/myProjects';
 import { getSortedPostData } from '../utils/posts';
 
 const Page = ({ posts }: { posts: Array<object> }) => {
@@ -34,30 +33,16 @@ const Page = ({ posts }: { posts: Array<object> }) => {
           </div>
           <Projects featured={true} />
           <Link href={'/projects'}>
-            <span className='see-all'>See all projects</span>
+            <span>See all projects</span>
           </Link>
         </div>
         <div className='featured-posts'>
           <div className='featured-title'>
             <h1>Featured Posts</h1>
           </div>
-          <table className='posts-table'>
-            <thead></thead>
-            <tbody>
-              {posts.map((post: any) => (
-                <tr className='post' key={post.id}>
-                  <td>
-                    <Date dateString={post.date} />
-                  </td>
-                  <td>
-                    <Link href={`blog/${post.id}`}>{post.title}</Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <Posts posts={posts} />
           <Link href={'/blog'}>
-            <span className='see-all'>Read all posts</span>
+            <span>Read all posts</span>
           </Link>
         </div>
       </div>
@@ -71,7 +56,7 @@ const Page = ({ posts }: { posts: Array<object> }) => {
           width: 100%;
         }
         .name {
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 700;
         }
         .build {
@@ -115,12 +100,6 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         .posts-table {
           margin: 1rem 0;
           width: 100%;
-        }
-        .see-all {
-          transition: 0.3s;
-        }
-        .see-all:hover {
-          color: var(--textColor);
         }
       `}</style>
     </MainLayout>
