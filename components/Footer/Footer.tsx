@@ -1,15 +1,33 @@
 import Link from 'next/link';
 import { myPages } from '../../utils/myPages';
 
+const ExternalLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: JSX.Element;
+}) => (
+  <a target='_blank' rel='noopener noreferrer' href={href}>
+    {children}
+  </a>
+);
+
 const Footer = () => {
   return (
     <footer>
       <ul className='pages'>
         {myPages.map((page) => (
           <li key={page.name}>
-            <Link href={page.path}>
-              <span className='link'>{page.name}</span>
-            </Link>
+            {page.external ? (
+              <ExternalLink href={page.path}>
+                <span className='link'>{page.name}</span>
+              </ExternalLink>
+            ) : (
+              <Link href={page.path} target={page.target} passHref>
+                <span className='link'>{page.name}</span>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

@@ -52,6 +52,7 @@ export default function Contact() {
             flex-direction: column;
             align-items: center;
             margin: auto;
+            width: 100%;
           }
           p {
             text-align: left;

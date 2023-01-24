@@ -21,6 +21,7 @@ const Button = ({
           border-radius: 9999px;
           transition: 0.3s;
           color: var(--text-color);
+          width: 100%;
         }
         button:hover {
           filter: brightness(1.5);

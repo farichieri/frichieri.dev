@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../Layout/Button';
 
@@ -123,18 +123,19 @@ const Form = () => {
           theme='dark'
         />
       </div>
-      <Button
-        content={'Send'}
-        isLoading={isLoading}
-        isDisabled={isDisabled}
-        loadingContent={'Sending...'}
-      />
+      <div className='button-container'>
+        <Button
+          content={'Send'}
+          isLoading={isLoading}
+          isDisabled={isDisabled}
+          loadingContent={'Sending...'}
+        />
+      </div>
       <span className={message.type}>{message.text}</span>
       <style jsx>{`
         form {
-          width: 400px;
-          padding: 0 1rem;
-          max-width: 100%;
+          max-width: 400px;
+          width: 100%;
         }
         form,
         textarea {
@@ -152,6 +153,7 @@ const Form = () => {
           padding: 0.3rem 0.5rem;
           color: var(--textColor);
           width: 100%;
+          display: flex;
         }
         form textarea {
           border: 1px solid var(--textColor);
@@ -160,6 +162,8 @@ const Form = () => {
           min-height: 5rem;
           max-height: 50vh;
           color: var(--textColor);
+          border-radius: 4px;
+          overflow: auto;
         }
         form input:focus,
         form textarea:focus {
@@ -172,6 +176,10 @@ const Form = () => {
           align-items: center;
           justify-content: center;
           -webkit-transform: scale(0.85);
+        }
+        .button-container {
+          width: 250px;
+          margin: auto;
         }
         span {
           min-height: 2rem;
