@@ -8,8 +8,9 @@ export default function Contact() {
     <MainLayout withPadding={true}>
       <h1 style={{ width: '100%', textAlign: 'left' }}>Contact</h1>
       <div className='contact-container'>
-        <br />
-        <Form />
+        <div className='form-container'>
+          <Form />
+        </div>
         <div className='links'>
           <Link
             href={'https://www.linkedin.com/in/frichieri-dev/'}
@@ -54,6 +55,15 @@ export default function Contact() {
             margin: auto;
             width: 100%;
           }
+          .form-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--box-shadow);
+          }
           p {
             text-align: left;
             width: 100%;
@@ -62,7 +72,7 @@ export default function Contact() {
             display: flex;
             gap: 1rem;
             align-items: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
           }
           span {
             position: relative;

@@ -30,9 +30,9 @@ const Nav = ({
         </div>
         <div className={`pages ${hamburgerActive ? 'active' : ''}`}>
           {myPages.map((page) => (
-            <>
+            <div key={page.name}>
               {!page.external && (
-                <Link key={page.name} href={page.path} onClick={handleMenu}>
+                <Link href={page.path} onClick={handleMenu}>
                   <span
                     className={route.pathname === page.path ? 'this-route' : ''}
                   >
@@ -40,7 +40,7 @@ const Nav = ({
                   </span>
                 </Link>
               )}
-            </>
+            </div>
           ))}
         </div>
         <DarkMode theme={theme} setTheme={setTheme} />

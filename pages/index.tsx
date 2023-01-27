@@ -21,7 +21,14 @@ const Page = ({ posts }: { posts: Array<object> }) => {
             </div>
           </div>
           <span className='img--container'>
-            <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
+            <Image
+              src={'/images/frichieri.png'}
+              alt='Fabricio Richieri'
+              fill
+              sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+            />
           </span>
         </div>
         <div className='featured-projects'>

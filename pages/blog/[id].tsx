@@ -19,7 +19,7 @@ const Post = ({ postData }: { postData: any }) => {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <div className='post-back'>
-        <Link href={'/blog'}>{'<'} Back</Link>
+        <Link href={'/blog'}>{'<'} Back to all posts</Link>
       </div>
       <style jsx>{`
         article {

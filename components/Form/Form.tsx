@@ -94,6 +94,9 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2 style={{ marginBottom: '1rem', textAlign: 'left', width: '100%' }}>
+        Contact Form:
+      </h2>
       <input
         onChange={handleChange}
         type={'text'}
@@ -134,7 +137,7 @@ const Form = () => {
       <span className={message.type}>{message.text}</span>
       <style jsx>{`
         form {
-          max-width: 400px;
+          max-width: 500px;
           width: 100%;
         }
         form,
@@ -146,10 +149,10 @@ const Form = () => {
         form input,
         form textarea {
           background: transparent;
-          border: none;
           outline: none;
           transition: 0.3s;
-          border-bottom: 1px solid var(--textColor);
+          border: 1px solid var(--textColor);
+          border-radius: 5px;
           padding: 0.3rem 0.5rem;
           color: var(--textColor);
           width: 100%;
@@ -159,7 +162,7 @@ const Form = () => {
           border: 1px solid var(--textColor);
           max-width: 100%;
           min-width: 100%;
-          min-height: 5rem;
+          min-height: 7rem;
           max-height: 50vh;
           color: var(--textColor);
           border-radius: 4px;

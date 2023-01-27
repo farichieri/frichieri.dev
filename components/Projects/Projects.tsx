@@ -16,7 +16,14 @@ export default function Projects({
         <div key={project.id} className='project-container'>
           <div className='project-image' key={project.id}>
             <span className='img'>
-              <Image alt={project.name} src={project.image} fill />
+              <Image
+                alt={`Project ${project.name}`}
+                src={project.image}
+                fill
+                sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+              />
             </span>
             <div className='cape'>
               <Link href={`/projects/${project.slug}`}>
@@ -52,7 +59,7 @@ export default function Projects({
           }
           .project-image {
             align-items: center;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             border: 2px solid var(--box-shadow-light);
             box-shadow: 0 0 10px 1px var(--box-shadow-light);
             cursor: pointer;
@@ -60,11 +67,10 @@ export default function Projects({
             flex-direction: column;
             height: 30vh;
             justify-content: center;
-            max-height: ${featured ? '175px' : '100%'};
-            max-width: ${featured ? '300px' : '100%'};
+
             overflow: auto;
             position: relative;
-            width: 70vw;
+            width: 80vw;
           }
           .project-image:hover > .cape {
             display: flex;
@@ -107,18 +113,35 @@ export default function Projects({
             height: 30vh;
             justify-content: center;
             max-height: ${featured ? '150px' : '100%'};
-            width: 30vw;
+            width: 20vw;
             text-align: left;
           }
 
           @media screen and (max-width: 768px) {
             .project-image {
               width: 70vw;
-              height: 20vh;
+              height: 40vw;
             }
 
             .project-text {
               width: 30vw;
+              height: 40vw;
+            }
+          }
+
+          @media screen and (max-width: 500px) {
+            .projects {
+              gap: 0.5rem;
+              font-size: 80%;
+            }
+            .project-container {
+              gap: 1rem;
+            }
+            .project-image {
+              width: 70vw;
+            }
+            .project-text {
+              width: 20vw;
               height: 20vh;
             }
           }

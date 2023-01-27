@@ -22,7 +22,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
           </tbody>
         </table>
       ) : (
-        <p style={{ color: 'gray' }}>No posts available.</p>
+        <p style={{ color: 'gray' }}>No posts found.</p>
       )}
       <style jsx>{`
         .posts-container {
@@ -37,7 +37,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
         }
         table {
           border-collapse: separate;
-          border-spacing: 0 1.5rem;
+          border-spacing: 0 1rem;
         }
         tr {
           text-align: left;

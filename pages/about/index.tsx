@@ -8,7 +8,15 @@ export default function About() {
       <section>
         <h1 style={{ width: '100%', textAlign: 'left' }}>About</h1>
         <span className='img--container'>
-          <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
+          <Image
+            src={'/images/frichieri.png'}
+            alt='Fabricio Richieri'
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+            fill
+            priority
+          />
         </span>
         <br />
         <p>
