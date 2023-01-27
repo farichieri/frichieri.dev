@@ -70,18 +70,18 @@ const Nav = ({
           }
 
           .pages span {
-            padding: 0.4rem;
-            border-radius: 8px;
-            transition: 0.3s;
             font-weight: 500;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
           }
 
           .pages span:hover {
-            background: var(--box-shadow-light);
+            box-shadow: 0 0 10px 1px var(--box-shadow);
           }
 
           .this-route {
             color: var(--textColor);
+            box-shadow: 0 0 10px 1px var(--box-shadow);
           }
 
           .logo,

@@ -47,15 +47,15 @@ const Slug = ({ project }: { project: any }) => {
           padding: 1rem;
         }
         .img {
+          align-items: center;
+          border-radius: 1rem;
+          border: 2px solid var(--box-shadow-light);
+          box-shadow: 0 0 10px 1px var(--box-shadow-light);
+          height: 400px;
+          max-width: 800px;
+          overflow: auto;
           position: relative;
           width: 100%;
-          height: 60%;
-          max-width: 800px;
-          box-shadow: 0 0 6px 1px var(--box-shadow-light);
-          border-radius: 5px;
-          overflow: auto;
-          background: red;
-          height: 400px;
         }
         p {
           display: flex;

@@ -13,7 +13,7 @@ const Post = ({ postData }: { postData: any }) => {
       </Head>
       <article>
         <div className='post-header'>
-          <p>{postData.title}</p>
+          <h1>{postData.title}</h1>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

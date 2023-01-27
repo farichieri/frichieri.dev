@@ -4,6 +4,7 @@ import MainLayout from '../components/Layout/MainLayout';
 import Posts from '../components/Posts/Posts';
 import Projects from '../components/Projects/Projects';
 import { getSortedPostData } from '../utils/posts';
+import { myProjects } from '../utils/myProjects';
 
 const Page = ({ posts }: { posts: Array<object> }) => {
   return (
@@ -12,26 +13,22 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         <div className='home-header'>
           <div>
             <h1 className='name'>Fabricio Richieri</h1>
-            <p className='build'>Web Developer</p>
+            <p className='build'>Full Stack Web Developer</p>
             <div className='description'>
-              <p>Welcome to my personal website!</p>
+              <p style={{ color: 'gray' }}>
+                Building fast, beautiful and productive web apps.
+              </p>
             </div>
           </div>
-          <div>
-            <span className='img--container'>
-              <Image
-                src={'/images/frichieri.jpg'}
-                alt='Fabricio Richieri'
-                fill
-              />
-            </span>
-          </div>
+          <span className='img--container'>
+            <Image src={'/images/frichieri.jpg'} alt='Fabricio Richieri' fill />
+          </span>
         </div>
         <div className='featured-projects'>
           <div className='featured-title'>
-            <h1>Last Projects</h1>
+            <h1>Featured Projects</h1>
           </div>
-          <Projects featured={true} />
+          <Projects projects={myProjects} featured={true} />
           <Link href={'/projects'}>
             <span>See all projects</span>
           </Link>
@@ -77,12 +74,13 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         .img--container {
           height: 125px;
           width: 125px;
+          min-width: 125px;
+          min-height: 125px;
           display: flex;
           position: relative;
           border-radius: 50%;
           overflow: auto;
           box-shadow: 0 0 10px 1px var(--box-shadow);
-          margin: 0.5rem 0;
         }
         .featured-projects,
         .featured-posts {
@@ -115,3 +113,5 @@ export const getStaticProps = async () => {
     props: { posts: allPostData },
   };
 };
+
+// Should implement getStaticProps for projects

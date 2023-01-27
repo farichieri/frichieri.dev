@@ -7,6 +7,7 @@ export const myProjects = [
     github: 'https://github.com/FARichieri/almarichnutricion',
     live: 'https://www.almarichnutricion.com/',
     languages: 'Next.js, Firebase',
+    stack: 'All',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const myProjects = [
     github: 'https://github.com/FARichieri/luxury-presence-test',
     live: 'https://luxury-presence-test.vercel.app/',
     languages: 'Next.js, Firebase',
+    stack: 'Front End',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const myProjects = [
     github: 'https://github.com/FARichieri/PI-Pokemon',
     live: 'https://frichieri-pokemon.vercel.app/',
     languages: 'Next.js, Firebase',
+    stack: 'Front End',
   },
   {
     id: 4,
@@ -34,5 +37,6 @@ export const myProjects = [
     github: 'https://github.com/FARichieri/CompuTechShop',
     live: 'https://computechshop.vercel.app/',
     languages: 'Next.js, Firebase',
+    stack: 'Full Stack',
   },
 ];

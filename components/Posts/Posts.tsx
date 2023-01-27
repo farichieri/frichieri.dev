@@ -2,23 +2,28 @@ import Link from 'next/link';
 import Date from '../../components/Layout/Date';
 
 const Posts = ({ posts }: { posts: Array<object> }) => {
+  console.log({ posts });
   return (
     <div className='posts-container'>
-      <table>
-        <thead></thead>
-        <tbody>
-          {posts.map((post: any) => (
-            <tr className='post' key={post.id}>
-              <td>
-                <Date dateString={post.date} />
-              </td>
-              <td>
-                <Link href={`blog/${post.id}`}>{post.title}</Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {posts.length > 0 ? (
+        <table>
+          <thead></thead>
+          <tbody>
+            {posts.map((post: any) => (
+              <tr className='post' key={post.id}>
+                <td>
+                  <Date dateString={post.date} />
+                </td>
+                <td>
+                  <Link href={`blog/${post.id}`}>{post.title}</Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p style={{ color: 'gray' }}>No posts available.</p>
+      )}
       <style jsx>{`
         .posts-container {
           height: 100%;
@@ -31,6 +36,8 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
           width: 100%;
         }
         table {
+          border-collapse: separate;
+          border-spacing: 0 1.5rem;
         }
         tr {
           text-align: left;

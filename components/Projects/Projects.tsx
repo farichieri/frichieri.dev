@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { myProjects } from '../../utils/myProjects';
 
-export default function Projects({ featured }: { featured: boolean }) {
-  const projects = featured ? myProjects.slice(0, 3) : myProjects;
+export default function Projects({
+  projects,
+  featured,
+}: {
+  projects: { id: number; name: string; image: string; slug: string }[];
+  featured: boolean;
+}) {
+  const myProjects = featured ? projects.slice(0, 3) : projects;
 
   return (
     <div className='projects'>
-      {projects.map((project) => (
+      {myProjects.map((project) => (
         <div key={project.id} className='project-container'>
           <div className='project-image' key={project.id}>
             <span className='img'>
@@ -44,11 +49,11 @@ export default function Projects({ featured }: { featured: boolean }) {
             height: 100%;
             width: 100%;
             align-items: center;
-            justify-content: center;
           }
           .project-image {
             align-items: center;
-            border-radius: 0.75rem;
+            border-radius: 1rem;
+            border: 2px solid var(--box-shadow-light);
             box-shadow: 0 0 10px 1px var(--box-shadow-light);
             cursor: pointer;
             display: flex;
