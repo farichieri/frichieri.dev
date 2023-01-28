@@ -14,6 +14,9 @@ const Searchbar = ({ handleSearch }: { handleSearch: any }) => {
           outline: none;
           color: var(--textColor);
           padding: 0.1rem 0;
+          border: 1px solid var(--textColor);
+          border-radius: 5px;
+          padding: 0.4rem 0.4rem 0.4rem 0.4rem;
         }
       `}</style>
     </>

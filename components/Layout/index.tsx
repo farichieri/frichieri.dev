@@ -8,7 +8,7 @@ import general from '../../styles/general';
 import React, { useEffect, useState } from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<string>('dark');
+  const [theme, setTheme] = useState<string>('');
 
   useEffect(() => {
     let localTheme = window.localStorage.getItem('theme');
@@ -24,11 +24,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>frichieri.dev</title>
       </Head>
-      <div className={`${fonts.raleWay.className} ${theme}`}>
-        <Nav theme={theme} setTheme={setTheme} />
-        <main>{children}</main>
-        <Footer />
-      </div>
+      {theme && (
+        <div className={`${fonts.raleWay.className} ${theme}`}>
+          <Nav theme={theme} setTheme={setTheme} />
+          <main>{children}</main>
+          <Footer />
+        </div>
+      )}
       <style jsx>{`
         div {
           align-content: center;

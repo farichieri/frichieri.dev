@@ -7,17 +7,23 @@ export default function About() {
     <MainLayout withPadding={true}>
       <section>
         <h1 style={{ width: '100%', textAlign: 'left' }}>About</h1>
-        <span className='img--container'>
-          <Image
-            src={'/images/frichieri.png'}
-            alt='Fabricio Richieri'
-            sizes='(max-width: 768px) 100vw,
+        <div className='header'>
+          <span className='img--container'>
+            <Image
+              src={'/images/frichieri.png'}
+              alt='Fabricio Richieri'
+              sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            fill
-            priority
-          />
-        </span>
+              fill
+              priority
+            />
+          </span>
+          <div className='text'>
+            <h1>Fabricio Richieri</h1>
+            <p>Web Developer</p>
+          </div>
+        </div>
         <br />
         <p>
           I&apos;m Fabricio Richieri, a Full Stack Web Developer, Front End
@@ -66,33 +72,50 @@ export default function About() {
               @frichieri-dev
             </Link>
           </li>
+          <li>
+            - Twitter:{' '}
+            <Link href={'https://twitter.com/farichieri'} target='_blank'>
+              @farichieri
+            </Link>
+          </li>
         </ul>
-        <div></div>
       </section>
       <style jsx>{`
         section {
           text-align: left;
         }
-        h1 {
-          padding: 0.1rem;
-          font-size: 2rem;
-        }
+
         div {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin: 1rem 0;
+        }
+        .header {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          gap: 1rem;
+        }
+        .header .text {
+          display: flex;
+          align-items: start;
+        }
+        .header h1 {
+          font-size: 1.5rem;
         }
         .img--container {
           height: 150px;
           width: 150px;
+          min-width: 150px;
           display: flex;
           position: relative;
           border-radius: 50%;
           overflow: auto;
           box-shadow: 0 0 10px 1px var(--box-shadow);
-          margin: 1rem auto;
+          margin: 1rem 0;
         }
       `}</style>
     </MainLayout>

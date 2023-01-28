@@ -45,6 +45,16 @@ export default function Contact() {
               />
             </span>
           </Link>
+          <Link href='https://twitter.com/farichieri'>
+            <span className='twitter'>
+              <Image
+                src='/images/twitter.png'
+                alt='twitter'
+                width={38}
+                height={38}
+              />
+            </span>
+          </Link>
         </div>
 
         <style jsx>{`

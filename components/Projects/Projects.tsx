@@ -65,12 +65,11 @@ export default function Projects({
             cursor: pointer;
             display: flex;
             flex-direction: column;
-            height: 30vh;
             justify-content: center;
-
             overflow: auto;
             position: relative;
-            width: 80vw;
+            height: ${featured ? '216px' : '30vh'};
+            width: ${featured ? '384px' : '80vw'};
           }
           .project-image:hover > .cape {
             display: flex;
@@ -110,11 +109,11 @@ export default function Projects({
           .project-text {
             display: flex;
             flex-direction: column;
-            height: 30vh;
             justify-content: center;
             max-height: ${featured ? '150px' : '100%'};
-            width: 20vw;
             text-align: left;
+            height: ${featured ? '15vh' : '30vh'};
+            width: ${featured ? '10vw' : '20vw'};
           }
 
           @media screen and (max-width: 768px) {
