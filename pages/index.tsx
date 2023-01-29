@@ -13,7 +13,7 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         <div className='home-header'>
           <div>
             <h1 className='name'>Fabricio Richieri</h1>
-            <p className='build'>Full Stack Web Developer</p>
+            <p className='build'>Web Developer</p>
             <div className='description'>
               <p style={{ color: 'gray' }}>
                 Building fast, beautiful and productive web apps.

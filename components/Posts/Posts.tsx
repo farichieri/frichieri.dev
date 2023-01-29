@@ -37,7 +37,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
         }
         table {
           border-collapse: separate;
-          border-spacing: 0 1rem;
+          border-spacing: 0 0.5rem;
         }
         tr {
           text-align: left;

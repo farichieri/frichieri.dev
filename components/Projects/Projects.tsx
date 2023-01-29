@@ -103,7 +103,7 @@ export default function Projects({
             justify-content: center;
           }
           .name {
-            font-size: 1vh;
+            font-size: 1rem;
             z-index: 1;
           }
           .project-text {

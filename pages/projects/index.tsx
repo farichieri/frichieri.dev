@@ -13,7 +13,7 @@ export default function Index() {
     const stack = (event.target as HTMLButtonElement).value;
     const filterProjects = (stack: string) => {
       if (stack !== 'All') {
-        return myProjects.filter((project) => project.stack === stack);
+        return myProjects.filter((project) => project.stack.includes(stack));
       } else {
         return myProjects;
       }

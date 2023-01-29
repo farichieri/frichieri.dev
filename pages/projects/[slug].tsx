@@ -48,16 +48,25 @@ const Slug = ({ project }: { project: any }) => {
           <br />
           <h2>Code: </h2>
           <p>
-            <Link href={project.github} target={'_blank'}>
-              <span className='github'>
-                <Image
-                  src={'/images/github.png'}
-                  alt='source'
-                  height={30}
-                  width={30}
-                />
-              </span>
-            </Link>
+            {project.github ? (
+              <Link href={project.github} target={'_blank'}>
+                <span className='github'>
+                  <Image
+                    src={'/images/github.png'}
+                    alt='source'
+                    height={30}
+                    width={30}
+                  />
+                </span>
+              </Link>
+            ) : (
+              <Image
+                src={'/images/hidden.png'}
+                alt='source'
+                height={30}
+                width={30}
+              />
+            )}
           </p>
           <br />
         </div>
@@ -100,7 +109,12 @@ const Slug = ({ project }: { project: any }) => {
           height: 30px;
           width: 30px;
           border-radius: 50%;
+          transition: 0.3s;
           background: white;
+        }
+        .github:hover,
+        .live:hover {
+          transform: scale(1.1);
         }
         .live {
           background: none;

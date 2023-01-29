@@ -72,7 +72,10 @@ export default function Contact() {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-bottom: 1px solid var(--box-shadow);
+            border-bottom: 1px solid var(--box-shadow-light);
+            border-top: 1px solid var(--box-shadow-light);
+            max-width: 500px;
+            padding-top: 2.5rem;
           }
           p {
             text-align: left;

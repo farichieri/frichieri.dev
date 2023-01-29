@@ -185,7 +185,7 @@ const Nav = ({
             min-width: fit-content;
             font-weight: 400;
           }
-          @media only screen and (max-width: 900px) {
+          @media only screen and (max-width: 768px) {
             .hamburger {
               display: flex;
             }
@@ -212,6 +212,7 @@ const Nav = ({
               overflow-x: hidden;
               transition: 0.3s linear right;
               min-width: 100vw;
+              font-size: 1.5rem;
             }
             .pages.active {
               left: 0;

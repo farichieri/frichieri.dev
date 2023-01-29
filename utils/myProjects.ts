@@ -4,7 +4,7 @@ export const myProjects = [
     name: 'Almarich Nutrición',
     slug: 'almarich-nutricion',
     image: '/images/almarichnutricion.png',
-    github: 'https://github.com/FARichieri/almarichnutricion',
+    github: '',
     live: 'https://www.almarichnutricion.com/',
     languages: 'Next.js, Firebase',
     stack: 'All',
@@ -31,7 +31,7 @@ export const myProjects = [
     github: 'https://github.com/FARichieri/PI-Pokemon',
     live: 'https://frichieri-pokemon.vercel.app/',
     languages: 'Next.js, Firebase',
-    stack: 'Front End',
+    stack: 'Full Stack, freeCodeCamp',
     description:
       'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
   },
@@ -42,9 +42,10 @@ export const myProjects = [
     image: 'https://frichieri.vercel.app/img/compuTechShop.png',
     github: 'https://github.com/FARichieri/CompuTechShop',
     live: 'https://computechshop.vercel.app/',
-    languages: 'Next.js, Firebase',
+    languages:
+      'JavaScript, React, Redux, Material-UI, PostgreSQL, Express, Sequelize, Mercadopago',
     stack: 'Full Stack',
     description:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+      'E-commerce of informatic products built as the final project of the #soyHenry Full Stack Development Bootcamp.',
   },
 ];
