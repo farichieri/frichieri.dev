@@ -68,7 +68,7 @@ export default function Projects({
             justify-content: center;
             overflow: auto;
             position: relative;
-            height: ${featured ? '216px' : '30vh'};
+            height: ${featured ? '216px' : '32vh'};
             width: ${featured ? '384px' : '80vw'};
           }
           .project-image:hover > .cape {
@@ -112,7 +112,7 @@ export default function Projects({
             justify-content: center;
             max-height: ${featured ? '150px' : '100%'};
             text-align: left;
-            height: ${featured ? '15vh' : '30vh'};
+            height: ${featured ? '15vh' : '32vh'};
             width: ${featured ? '10vw' : '20vw'};
           }
 
