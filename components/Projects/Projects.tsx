@@ -68,8 +68,8 @@ export default function Projects({
             justify-content: center;
             overflow: auto;
             position: relative;
-            height: ${featured ? '216px' : '32vh'};
-            width: ${featured ? '384px' : '80vw'};
+            height: ${featured ? '154px' : '270px'};
+            width: ${featured ? '274px' : '480px'};
           }
           .project-image:hover > .cape {
             display: flex;
