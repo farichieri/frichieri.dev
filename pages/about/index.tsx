@@ -37,8 +37,10 @@ export default function About() {
         </p>
         <br />
         <p>
-          I started learning programming with freeCodeCamp in May 2021. I
-          graduated from the SoyHenry Bootcamp in May 2022 and reached my first
+          I started learning programming with in May 2021 own my own. Then, I
+          discovered freeCodeCamp and fell in love (Iaposm still doing
+          certifications because it is super complete and extense). I also
+          studied in a the #soyHenry Bootcamp in May 2022 and reached my first
           developer job in June 2022 and I&apos;m currently working as a
           freelance.
         </p>
@@ -46,13 +48,13 @@ export default function About() {
         <p>
           I published the first version of this website in February 2023 with
           the idea of showing my last projects and to start writing a blog to
-          share my path with the community and learn from the process.
+          share my path with the community.
         </p>
         <br />
         <p>
-          At the moment, I have experience working with JavaScript, TypeScript,
-          Next.js, React.js, Redux.js, HTML, CSS, Node.js, Express.js, MongoDB
-          and Firebase among other technologies.
+          I have experience working with JavaScript, TypeScript, Next.js,
+          React.js, Redux.js, HTML, CSS, Node.js, Express.js, MongoDB and
+          Firebase among other technologies.
         </p>
         <br />
         <p>Follow me on:</p>
@@ -76,6 +78,15 @@ export default function About() {
             - Twitter:{' '}
             <Link href={'https://twitter.com/farichieri'} target='_blank'>
               @farichieri
+            </Link>
+          </li>
+          <li>
+            - freeCodeCamp:{' '}
+            <Link
+              href={'https://www.freecodecamp.org/frichieri'}
+              target='_blank'
+            >
+              @frichieri
             </Link>
           </li>
         </ul>

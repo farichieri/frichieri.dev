@@ -30,7 +30,7 @@ export const myProjects = [
     slug: 'pizza-order-administrator',
     image: '/images/pizza-administrator.png',
     github: 'https://github.com/farichieri/pizza-administrator',
-    live: 'https://www.lucasnazar.com/',
+    live: 'https://pizza-administrator.vercel.app/',
     languages: 'JavaScript, React, CSS, Node.js, MongoDB, Mongoose & Express',
     stack: 'Full Stack',
     description:
@@ -173,7 +173,7 @@ export const myProjects = [
     name: 'Bar Chart Graph',
     slug: 'bar-chart',
     image: '/images/bar-chart.png',
-    github: 'https://github.com/farichieri/pizza-administrator',
+    github: 'https://github.com/farichieri/data-visualization__bar-chart',
     live: 'https://data-visualization-bar-chart.vercel.app/',
     languages: 'D3.js, JavaScript, HTML & CSS.',
     stack: 'freeCodeCamp, Front End',
@@ -288,5 +288,54 @@ export const myProjects = [
     stack: 'freeCodeCamp, Back End',
     description:
       'File Metadata project made for the Back End Development and APIs freeCodeCamp certification.',
+  },
+  {
+    id: 25,
+    name: 'Metric/Imperial Converter',
+    slug: 'metric-imperial-converter',
+    image: '/images/metric-imperial-converter.png',
+    github: 'https://github.com/farichieri/boilerplate-metricimpconverter',
+    live: 'https://boilerplate-metricimpconverter.farichieri.repl.co/',
+    languages: 'Node.js, Express & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'Metric Imperial Converter project made for the Quality Assurance freeCodeCamp certification.',
+  },
+  {
+    id: 26,
+    name: 'Issue Tracker',
+    slug: 'issue-tracker',
+    image: '/images/issue-tracker.png',
+    github: 'https://github.com/farichieri/boilerplate-project-issuetracker',
+    live: 'https://boilerplate-project-issuetracker.farichieri.repl.co/',
+    languages: 'Node.js, Express, MongoDB, mongoose & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'Issue Tracker project made for the Quality Assurance freeCodeCamp certification.',
+  },
+  {
+    id: 27,
+    name: 'Sudoku Solver',
+    slug: 'sudoku-solver',
+    image: '/images/sudoku-solver.png',
+    github: 'https://github.com/farichieri/boilerplate-project-sudoku-solver',
+    live: 'https://boilerplate-project-sudoku-solver.farichieri.repl.co/',
+    languages: 'Node.js, Express & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'Sudoku Solver project made for the Quality Assurance freeCodeCamp certification.',
+  },
+  {
+    id: 28,
+    name: 'American British English Translator',
+    slug: 'american-british-english-translator',
+    image: '/images/american-british-english-translator.png',
+    github:
+      'https://github.com/farichieri/boilerplate-project-american-british-english-translator',
+    live: 'https://boilerplate-project-american-british-english-translator.farichieri.repl.co',
+    languages: 'Node.js, Express & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'American British English Translator project made for the Quality Assurance freeCodeCamp certification.',
   },
 ];
