@@ -114,7 +114,7 @@ export default function Projects({
             max-height: ${featured ? '150px' : '100%'};
             text-align: left;
             height: ${featured ? '15vh' : '240px'};
-            width: ${featured ? '10vw' : 'auto'};
+            width: ${featured ? '10vw' : '10vw'};
           }
 
           @media screen and (max-width: 768px) {

@@ -83,7 +83,7 @@ export default function About() {
         <p>Follow me on:</p>
         <ul>
           {links.map((link) => (
-            <li>
+            <li key={link.name}>
               - {link.name}:{' '}
               <Link href={link.url} target='_blank'>
                 {link.user}

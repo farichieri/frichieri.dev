@@ -1,0 +1,190 @@
+import React from 'react';
+import usePagination, { DOTS } from '../../hooks/usePagination';
+
+const Pagination = ({
+  currentPage,
+  totalCount,
+  pageSize,
+  pageSizeOptions,
+  onPageChange,
+  onPageSizeOptionChange,
+  totalPages,
+}: {
+  currentPage: number;
+  totalCount: number;
+  pageSize: number;
+  pageSizeOptions: number[];
+  onPageChange: any;
+  onPageSizeOptionChange: Function;
+  totalPages: number;
+}) => {
+  const paginationRange: any = usePagination({
+    currentPage,
+    totalCount,
+    totalPages,
+    pageSize,
+  });
+
+  const onNext = () => {
+    onPageChange(currentPage + 1);
+  };
+
+  const onPrevious = () => {
+    onPageChange(currentPage - 1);
+  };
+
+  return (
+    <ul
+      className='wrapper'
+      // Do not modify the aria-label below, it is used for Hatchways automation.
+      aria-label='Blog post pagination list'
+    >
+      <li className='paginationItem'>
+        <button
+          type='button'
+          className='arrowButton left'
+          // Do not modify the aria-label below, it is used for Hatchways automation.
+          aria-label='Goto previous page'
+          onClick={onPrevious}
+          disabled={currentPage === 1} // change this line to disable a button.
+        >
+          {'<'}
+        </button>
+      </li>
+
+      {paginationRange.map((pageNumber: any, index: number) => {
+        if (pageNumber === DOTS) {
+          return (
+            <li key={index} className='dots'>
+              &#8230;
+            </li>
+          );
+        }
+
+        return (
+          <li
+            key={index}
+            className='paginationItem'
+            aria-current={pageNumber === currentPage && 'page'} // change this line to highlight a current page.
+          >
+            <button
+              type='button'
+              // Do not modify the aria-label below, it is used for Hatchways automation.
+              aria-label={`Goto page ${pageNumber}`}
+              onClick={() => onPageChange(pageNumber)}
+            >
+              {pageNumber}
+            </button>
+          </li>
+        );
+      })}
+
+      <li className='paginationItem'>
+        <button
+          type='button'
+          className='arrowButton right'
+          // Do not modify the aria-label below, it is used for Hatchways automation.
+          aria-label='Goto next page'
+          onClick={onNext}
+          disabled={currentPage === totalPages} // change this line to disable a button.
+        >
+          {`>`}
+        </button>
+      </li>
+
+      <select
+        className='paginationSelector'
+        // Do not modify the aria-label below, it is used for Hatchways automation.
+        aria-label='Select page size'
+        value={pageSize}
+        onChange={(e) => {
+          onPageSizeOptionChange(e.target.value);
+        }}
+      >
+        {pageSizeOptions.map((size) => (
+          <option key={size} value={size}>
+            {size}
+          </option>
+        ))}
+      </select>
+      <style jsx>{`
+        .wrapper {
+          display: flex;
+          gap: 0.25rem;
+          align-items: center;
+          list-style-type: none;
+          margin-bottom: 20px;
+          color: var(--textColor);
+        }
+        .paginationItem {
+          display: flex;
+        }
+
+        button {
+          border: 1px solid var(--box-shadow-light);
+          background: transparent;
+          height: 34px;
+          width: 34px;
+          border-radius: 50%;
+          overflow: hidden;
+          color: var(--textColor);
+        }
+
+        button:hover {
+          background-color: rgba(159, 159, 159, 0.295);
+          cursor: pointer;
+        }
+
+        button:disabled {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+
+        [aria-current='page'] button {
+          background-color: rgba(159, 159, 159, 0.295);
+          font-weight: 700;
+          text-decoration: underline;
+        }
+
+        .arrowButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        svg {
+          width: 1em;
+          height: 1em;
+        }
+
+        .dots {
+          line-height: 34px;
+          margin: 5px 10px;
+        }
+
+        .paginationSelector {
+          background-color: var(--bgColor);
+          color: var(--textColor);
+          border: none;
+          outline: none;
+          margin-left: 10px;
+          padding: 0.2rem;
+          border: 1px solid var(--box-shadow-light);
+          border-radius: 4px;
+        }
+
+        @media screen and (max-width: 400px) {
+          .wrapper {
+            gap: 0.1rem;
+          }
+          button {
+            height: 22px;
+            width: 22px;
+          }
+        }
+      `}</style>
+    </ul>
+  );
+};
+
+export default Pagination;
