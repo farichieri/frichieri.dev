@@ -3,6 +3,29 @@ import Link from 'next/link';
 import MainLayout from '../../components/Layout/MainLayout';
 
 export default function About() {
+  const links = [
+    {
+      name: 'Github',
+      url: 'https://github.com/farichieri',
+      user: '@farichieri',
+    },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/frichieri-dev/',
+      user: '@frichieri-dev',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/farichieri',
+      user: '@farichieri',
+    },
+    {
+      name: 'freeCodeCamp',
+      url: 'https://www.freecodecamp.org/frichieri',
+      user: '@farichieri',
+    },
+  ];
+
   return (
     <MainLayout withPadding={true}>
       <section>
@@ -26,7 +49,7 @@ export default function About() {
         </div>
         <br />
         <p>
-          I&apos;m Fabricio Richieri, a Full Stack Web Developer, Front End
+          I&apos;m Fabricio Alan Richieri, a Full Stack Web Developer, Front End
           oriented, who loves building fast, beautiful and productive web
           applications.
         </p>
@@ -59,36 +82,14 @@ export default function About() {
         <br />
         <p>Follow me on:</p>
         <ul>
-          <li>
-            - Github:{' '}
-            <Link href={'https://github.com/farichieri'} target='_blank'>
-              @farichieri
-            </Link>
-          </li>
-          <li>
-            - Linkedin:{' '}
-            <Link
-              href={'https://www.linkedin.com/in/frichieri-dev/'}
-              target='_blank'
-            >
-              @frichieri-dev
-            </Link>
-          </li>
-          <li>
-            - Twitter:{' '}
-            <Link href={'https://twitter.com/farichieri'} target='_blank'>
-              @farichieri
-            </Link>
-          </li>
-          <li>
-            - freeCodeCamp:{' '}
-            <Link
-              href={'https://www.freecodecamp.org/frichieri'}
-              target='_blank'
-            >
-              @frichieri
-            </Link>
-          </li>
+          {links.map((link) => (
+            <li>
+              - {link.name}:{' '}
+              <Link href={link.url} target='_blank'>
+                {link.user}
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
       <style jsx>{`

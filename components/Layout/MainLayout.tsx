@@ -24,6 +24,7 @@ export default function MainLayout({
             min-height: calc(100vh - var(--navHeight));
             padding: ${padding}rem;
             width: 100%;
+            padding-top: 2rem;
           }
           @media and only screen (max-width: 500px) {
             section {

@@ -1,7 +1,7 @@
 export const myProjects = [
   {
     id: 1,
-    name: 'Almarich Nutrición',
+    name: 'almarichnutricion',
     slug: 'almarich-nutricion',
     image: '/images/almarichnutricion.png',
     github: '',
@@ -14,7 +14,7 @@ export const myProjects = [
 
   {
     id: 2,
-    name: 'lucasnazardj.com',
+    name: 'lucasnazardj',
     slug: 'lucasnazardj',
     image: '/images/lucasnazardj.png',
     github: '',

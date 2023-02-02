@@ -32,7 +32,6 @@ const style = css.global`
   * {
     font-family: 'Inter', sans-serif;
   }
-
   a {
     font-family: 'Inter', sans-serif;
   }

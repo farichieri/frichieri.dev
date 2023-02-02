@@ -68,7 +68,7 @@ export default function Projects({
             justify-content: center;
             overflow: auto;
             position: relative;
-            height: ${featured ? '154px' : '240px'};
+            height: ${featured ? '154px' : '270px'};
             width: ${featured ? '274px' : '480px'};
           }
           .project-image:hover > .cape {
@@ -105,6 +105,7 @@ export default function Projects({
           .name {
             font-size: 1rem;
             z-index: 1;
+            color: whitesmoke;
           }
           .project-text {
             display: flex;
@@ -113,7 +114,7 @@ export default function Projects({
             max-height: ${featured ? '150px' : '100%'};
             text-align: left;
             height: ${featured ? '15vh' : '240px'};
-            width: ${featured ? '10vw' : '20vw'};
+            width: ${featured ? '10vw' : 'auto'};
           }
 
           @media screen and (max-width: 768px) {
@@ -134,7 +135,7 @@ export default function Projects({
               font-size: 80%;
             }
             .project-container {
-              gap: 1rem;
+              gap: 0.5rem;
             }
             .project-image {
               width: 70vw;

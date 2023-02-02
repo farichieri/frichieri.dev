@@ -17,8 +17,8 @@ const Slug = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.name}
             fill
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+            sizes='(max-width: 1920px) 100vw,
+              (max-width: 960px) 50vw,
               33vw'
             priority
           />
@@ -70,7 +70,7 @@ const Slug = ({ project }: { project: any }) => {
           </p>
           <br />
         </div>
-        <Link href={'/projects'}>{'<'} Go to all projects</Link>
+        <Link href={'/projects'}>{'<'} Back to all projects</Link>
       </div>
 
       <style jsx>{`

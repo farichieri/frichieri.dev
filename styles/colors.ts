@@ -12,7 +12,7 @@ const colors = css.global`
   }
   div.light {
     --textColor: black;
-    --bgColor: white;
+    --bgColor: #ffffff;
     --box-shadow: #00000080;
     --box-shadow-light: #00000030;
     --navBgColor: transparent;
