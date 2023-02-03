@@ -6,19 +6,25 @@ import Projects from '../components/Projects/Projects';
 import { getSortedPostData } from '../utils/posts';
 import { myProjects } from '../utils/myProjects';
 
-const Page = ({ posts }: { posts: Array<object> }) => {
+const Page = ({
+  posts,
+  projects,
+}: {
+  posts: Array<object>;
+  projects: Array<any>;
+}) => {
   return (
     <MainLayout withPadding={true}>
       <div className='home'>
         <div className='home-header'>
           <div>
             <h1 className='name'>Fabricio Richieri</h1>
-            <p className='build'>Web Developer</p>
-            <div className='description'>
-              <p style={{ color: 'gray' }}>
-                Building fast, beautiful and productive web apps.
-              </p>
-            </div>
+            <p>Web developer</p>
+            <p style={{ color: 'gray' }}>
+              Hello! I&apos;m Fabricio, a Full Stack Web Developer who loves
+              building fast, beautiful and productive web pages. I&apos;m a
+              person in continuous learning.
+            </p>
           </div>
           <span className='img--container'>
             <Image
@@ -33,16 +39,16 @@ const Page = ({ posts }: { posts: Array<object> }) => {
         </div>
         <div className='featured-projects'>
           <div className='featured-title'>
-            <h1>Featured Projects</h1>
+            <h2>Featured Projects</h2>
           </div>
-          <Projects projects={myProjects} featured={true} />
+          <Projects projects={projects} featured={true} />
           <Link href={'/projects'}>
             <span>See all projects</span>
           </Link>
         </div>
         <div className='featured-posts'>
           <div className='featured-title'>
-            <h1>Featured Posts</h1>
+            <h2>Featured Posts</h2>
           </div>
           <Posts posts={posts} />
           <Link href={'/blog'}>
@@ -59,13 +65,19 @@ const Page = ({ posts }: { posts: Array<object> }) => {
           justify-content: center;
           width: 100%;
         }
-        .name {
+        h1 {
           font-size: 2rem;
           font-weight: 700;
         }
-        .build {
+        h2 {
           font-size: 1.5rem;
           font-weight: 400;
+        }
+        h3 {
+          font-weight: 400;
+        }
+        p {
+          padding: 0.25rem 0;
         }
         .home-header {
           text-align: left;
@@ -106,6 +118,14 @@ const Page = ({ posts }: { posts: Array<object> }) => {
           margin: 1rem 0;
           width: 100%;
         }
+        @media screen and (max-width: 500px) {
+          h1 {
+            font-size: 1.5rem;
+          }
+          h2 {
+            font-size: 1.15rem;
+          }
+        }
       `}</style>
     </MainLayout>
   );
@@ -115,10 +135,9 @@ export default Page;
 
 export const getStaticProps = async () => {
   const allPostData = getSortedPostData();
+  const projects = myProjects;
 
   return {
-    props: { posts: allPostData },
+    props: { posts: allPostData, projects },
   };
 };
-
-// Should implement getStaticProps for projects

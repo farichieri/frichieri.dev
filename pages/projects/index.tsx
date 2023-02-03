@@ -7,7 +7,7 @@ import Pagination from '../../components/Pagination/Pagination';
 
 const PAGE_SIZES = [5, 15, 25, 50];
 
-export default function Index() {
+export default function Index({ projects }: { projects: Array<any> }) {
   const [projectsState, setProjectsState] = useState(myProjects);
   const [optionSelected, setOptionSelected] = useState('All');
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -18,9 +18,9 @@ export default function Index() {
     const stack = (event.target as HTMLButtonElement).value;
     const filterProjects = (stack: string) => {
       if (stack !== 'All') {
-        return myProjects.filter((project) => project.stack.includes(stack));
+        return projects.filter((project) => project.stack.includes(stack));
       } else {
-        return myProjects;
+        return projects;
       }
     };
     setOptionSelected(stack);
@@ -61,4 +61,10 @@ export default function Index() {
   );
 }
 
-// Should implement getStaticProps for projects
+export const getStaticProps = async () => {
+  const projects = myProjects;
+
+  return {
+    props: { projects },
+  };
+};

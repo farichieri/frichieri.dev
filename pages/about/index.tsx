@@ -49,9 +49,8 @@ export default function About() {
         </div>
         <br />
         <p>
-          I&apos;m Fabricio Alan Richieri, a Full Stack Web Developer, Front End
-          oriented, who loves building fast, beautiful and productive web
-          applications.
+          I&apos;m Fabricio Richieri, a Full Stack Web Developer, who loves
+          building fast, beautiful and productive web applications.
         </p>
         <br />
         <p>
@@ -60,11 +59,11 @@ export default function About() {
         </p>
         <br />
         <p>
-          I started learning programming with in May 2021 own my own. Then, I
-          discovered freeCodeCamp and fell in love (Iaposm still doing
+          I started learning programming in May 2021 own my own. Then, I
+          discovered freeCodeCamp and fell in love (I&apos;m still doing
           certifications because it is super complete and extense). I also
           studied in a the #soyHenry Bootcamp in May 2022 and reached my first
-          developer job in June 2022 and I&apos;m currently working as a
+          developer job in June 2022. At this momeny, I&apos;m working as a
           freelance.
         </p>
         <br />

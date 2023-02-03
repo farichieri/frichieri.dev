@@ -39,16 +39,15 @@ const Footer = () => {
           width: 100%;
           margin-top: auto;
           max-width: var(--max-width);
-          padding-bottom: 1rem;
+          padding: 1rem 0 2rem 0;
         }
-
         .pages {
           display: flex;
           flex-wrap: wrap;
           text-align: left;
           width: 100%;
           margin: auto;
-          padding: 2rem 0 3rem 0;
+          padding: 2rem 0 2rem 0;
         }
 
         li {

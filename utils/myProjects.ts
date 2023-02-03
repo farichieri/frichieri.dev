@@ -1,5 +1,17 @@
 export const myProjects = [
   {
+    id: 0,
+    name: 'This Website',
+    slug: 'this-website',
+    image: '/images/this-website.png',
+    github: '',
+    live: 'https://frichieri-dev.vercel.app/',
+    languages: 'Next.js, Typescript, React.js, Firebase, mdx & Express',
+    stack: 'Front End',
+    description:
+      'My personal website. This is under construction at the moment, but you can see it in the meantime. I hope you like it',
+  },
+  {
     id: 1,
     name: 'almarichnutricion',
     slug: 'almarich-nutricion',
@@ -7,11 +19,10 @@ export const myProjects = [
     github: '',
     live: 'https://www.almarichnutricion.com/',
     languages: 'Next.js, Typescript, React.js, Firebase & Express',
-    stack: 'All',
+    stack: 'Front End',
     description:
       'Personal website for a nutritionist. It has an /admin panel where you can create new blogs with a markdown editor.',
   },
-
   {
     id: 2,
     name: 'lucasnazardj',

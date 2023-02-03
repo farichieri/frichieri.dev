@@ -34,19 +34,14 @@ const Pagination = ({
   };
 
   return (
-    <ul
-      className='wrapper'
-      // Do not modify the aria-label below, it is used for Hatchways automation.
-      aria-label='Blog post pagination list'
-    >
+    <ul className='wrapper' aria-label='Blog post pagination list'>
       <li className='paginationItem'>
         <button
           type='button'
           className='arrowButton left'
-          // Do not modify the aria-label below, it is used for Hatchways automation.
           aria-label='Goto previous page'
           onClick={onPrevious}
-          disabled={currentPage === 1} // change this line to disable a button.
+          disabled={currentPage === 1}
         >
           {'<'}
         </button>
@@ -65,11 +60,10 @@ const Pagination = ({
           <li
             key={index}
             className='paginationItem'
-            aria-current={pageNumber === currentPage && 'page'} // change this line to highlight a current page.
+            aria-current={pageNumber === currentPage && 'page'}
           >
             <button
               type='button'
-              // Do not modify the aria-label below, it is used for Hatchways automation.
               aria-label={`Goto page ${pageNumber}`}
               onClick={() => onPageChange(pageNumber)}
             >
@@ -83,10 +77,9 @@ const Pagination = ({
         <button
           type='button'
           className='arrowButton right'
-          // Do not modify the aria-label below, it is used for Hatchways automation.
           aria-label='Goto next page'
           onClick={onNext}
-          disabled={currentPage === totalPages} // change this line to disable a button.
+          disabled={currentPage === totalPages}
         >
           {`>`}
         </button>
@@ -94,7 +87,6 @@ const Pagination = ({
 
       <select
         className='paginationSelector'
-        // Do not modify the aria-label below, it is used for Hatchways automation.
         aria-label='Select page size'
         value={pageSize}
         onChange={(e) => {
