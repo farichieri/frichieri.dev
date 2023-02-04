@@ -51,8 +51,10 @@ const Footer = () => {
         }
 
         li {
-          width: 33%;
-          padding: 0.5rem 2rem;
+          width: 25%;
+          padding: 0.25rem 0rem;
+          text-align: center;
+          background: red;
         }
         .link {
           transition: 0.3s;

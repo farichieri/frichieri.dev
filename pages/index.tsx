@@ -21,9 +21,9 @@ const Page = ({
             <h1 className='name'>Fabricio Richieri</h1>
             <p>Web developer</p>
             <p style={{ color: 'gray' }}>
-              Hello! I&apos;m Fabricio, a Full Stack Web Developer who loves
-              building fast, beautiful and productive web pages. I&apos;m a
-              person in continuous learning.
+              Hello! I&apos;m Fabricio, a Full Stack Web Developer in continuous
+              learning who loves building fast, beautiful and productive web
+              pages.
             </p>
           </div>
           <span className='img--container'>
