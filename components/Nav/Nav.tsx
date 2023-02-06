@@ -49,14 +49,10 @@ const Nav = ({
         {`
           nav {
             align-items: center;
-            backdrop-filter: blur(12px);
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
-            position: fixed;
             width: 100%;
-            z-index: 999;
-            padding: 0 1rem;
             max-width: var(--max-width);
             border-bottom: 1px solid var(--box-shadow-light);
           }

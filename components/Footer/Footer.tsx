@@ -31,7 +31,13 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <p>Designed and developed by Fabricio Richieri - © 2023</p>
+      <Link
+        className='copyright'
+        href={'https://github.com/farichieri'}
+        target={'_blank'}
+      >
+        Designed and developed by frichieri - © 2023
+      </Link>
       <style jsx>{`
         footer {
           border-top: 1px solid var(--box-shadow-light);
@@ -59,10 +65,6 @@ const Footer = () => {
         }
         span:hover {
           color: var(--textColor);
-        }
-        p {
-          font-size: 70%;
-          opacity: 0.8;
         }
       `}</style>
     </footer>

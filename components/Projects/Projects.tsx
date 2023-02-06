@@ -48,6 +48,7 @@ export default function Projects({
             width: 100%;
             gap: 1.5rem;
             margin: 1.5rem 0;
+            border-radius: 5px;
           }
           .project-container {
             display: flex;

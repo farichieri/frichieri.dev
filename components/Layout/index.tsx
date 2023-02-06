@@ -48,9 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {`
           main {
             background: var(--bgColor);
-            min-height: 100vh;
             color: var(--textColor);
-            padding-top: var(--navHeight);
             width: 100%;
             display: flex;
             align-items: center;

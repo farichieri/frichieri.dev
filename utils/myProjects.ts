@@ -1,7 +1,7 @@
 export const myProjects = [
   {
     id: 0,
-    name: 'This Website',
+    name: 'frichieri.dev',
     slug: 'this-website',
     image: '/images/projects/this-website.png',
     github: 'https://github.com/farichieri/frichieri.dev',
@@ -336,5 +336,29 @@ export const myProjects = [
     stack: 'freeCodeCamp, Back End',
     description:
       'American British English Translator project made for the Quality Assurance freeCodeCamp certification.',
+  },
+  {
+    id: 29,
+    name: 'Stock-checker',
+    slug: 'stock-checker',
+    image: '/images/projects/stock-checker.png',
+    github: 'https://github.com/farichieri/boilerplate-project-stockchecker',
+    live: 'https://boilerplate-project-stockchecker.farichieri.repl.co',
+    languages: 'Node.js, Express & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'Stock checker project made for the Quality Assurance freeCodeCamp certification.',
+  },
+  {
+    id: 30,
+    name: 'Anonymous Message Board',
+    slug: 'anonymous-message-board',
+    image: '/images/projects/anonymous-message-board.png',
+    github: 'https://github.com/farichieri/boilerplate-project-messageboard',
+    live: 'https://boilerplate-project-messageboard.farichieri.repl.co',
+    languages: 'Node.js, Express & Chai',
+    stack: 'freeCodeCamp, Back End',
+    description:
+      'Anonymous Message Board project made for the Quality Assurance freeCodeCamp certification.',
   },
 ];

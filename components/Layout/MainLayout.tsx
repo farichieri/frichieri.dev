@@ -20,11 +20,10 @@ export default function MainLayout({
             flex-direction: column;
             height: 100%;
             margin: auto;
-            max-width: 768px;
+            max-width: var(--max-width);
             min-height: calc(100vh - var(--navHeight));
             padding: ${padding}rem;
             width: 100%;
-            padding-top: 2rem;
           }
           @media and only screen (max-width: 500px) {
             section {
