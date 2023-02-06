@@ -10,7 +10,7 @@ const Searchbar = ({ handleSearch }: { handleSearch: any }) => {
           border: none;
           border-bottom: 1px solid gray;
           width: 100%;
-          margin: 2rem 0 0 0;
+          margin: 2rem 0 1rem 0;
           outline: none;
           color: var(--textColor);
           padding: 0.1rem 0;

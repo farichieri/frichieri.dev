@@ -7,7 +7,7 @@ export const myPages = [
   { name: 'Github', path: 'https://github.com/farichieri', external: true },
   {
     name: 'Linkedin',
-    path: 'https://www.linkedin.com/in/frichieri-dev/',
+    path: 'https://www.linkedin.com/in/farichieri/',
     external: true,
   },
 ];

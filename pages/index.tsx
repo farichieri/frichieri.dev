@@ -64,6 +64,7 @@ const Page = ({
           height: 100%;
           justify-content: center;
           width: 100%;
+          gap: 3rem;
         }
         h1 {
           font-size: 2rem;
@@ -85,10 +86,6 @@ const Page = ({
           height: 100%;
           width: 100%;
           justify-content: space-between;
-          margin-bottom: 2rem;
-        }
-        .description {
-          padding: 1rem 0;
         }
         .img--container {
           height: 125px;
@@ -99,24 +96,18 @@ const Page = ({
           position: relative;
           border-radius: 50%;
           overflow: auto;
-          box-shadow: 0 0 10px 1px var(--box-shadow);
+          box-shadow: 0 0 10px 1px var(--box-shadow-light);
+          filter: grayscale(0);
+          transition: 0.3s;
+        }
+        .img--container:hover {
+          filter: grayscale(1);
         }
         .featured-projects,
         .featured-posts {
           height: 100%;
           width: 100%;
           text-align: left;
-          margin: 1.5rem 0;
-        }
-
-        .featured-title {
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
-        }
-        .posts-table {
-          margin: 1rem 0;
-          width: 100%;
         }
         @media screen and (max-width: 500px) {
           h1 {

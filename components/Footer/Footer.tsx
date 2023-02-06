@@ -16,51 +16,53 @@ const ExternalLink = ({
 const Footer = () => {
   return (
     <footer>
-      <ul className='pages'>
+      <ul>
         {myPages.map((page) => (
           <li key={page.name}>
             {page.external ? (
               <ExternalLink href={page.path}>
-                <span className='link'>{page.name}</span>
+                <span>{page.name}</span>
               </ExternalLink>
             ) : (
               <Link href={page.path} target={page.target} passHref>
-                <span className='link'>{page.name}</span>
+                <span>{page.name}</span>
               </Link>
             )}
           </li>
         ))}
       </ul>
+      <p>Designed and developed by Fabricio Richieri - © 2023</p>
       <style jsx>{`
         footer {
           border-top: 1px solid var(--box-shadow-light);
           display: flex;
-          margin-top: auto;
           width: 100%;
           margin-top: auto;
           max-width: var(--max-width);
-          padding: 1rem 0 2rem 0;
+          padding: 2rem;
+          flex-direction: column;
+          gap: 2rem;
         }
-        .pages {
+        ul {
           display: flex;
           flex-wrap: wrap;
           text-align: left;
           width: 100%;
           margin: auto;
-          padding: 2rem 0 2rem 0;
         }
-
         li {
           width: 25%;
-          padding: 0.25rem 0rem;
-          text-align: center;
-          background: red;
+          padding: 0.25rem 1rem;
         }
-        .link {
+        span {
           transition: 0.3s;
         }
-        .link:hover {
+        span:hover {
           color: var(--textColor);
+        }
+        p {
+          font-size: 70%;
+          opacity: 0.8;
         }
       `}</style>
     </footer>

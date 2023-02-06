@@ -30,7 +30,7 @@ const Slug = ({ project }: { project: any }) => {
           <h2>Made with:</h2>
           <p> {project.languages} </p>
           <br />
-          <h2>
+          <h2 style={{ display: 'flex', alignItems: 'center' }}>
             See in live:
             <p>
               <Link href={project.live} target={'_blank'}>
@@ -46,28 +46,30 @@ const Slug = ({ project }: { project: any }) => {
             </p>
           </h2>
           <br />
-          <h2>Code: </h2>
-          <p>
-            {project.github ? (
-              <Link href={project.github} target={'_blank'}>
-                <span className='github'>
-                  <Image
-                    src={'/images/github.png'}
-                    alt='source'
-                    height={30}
-                    width={30}
-                  />
-                </span>
-              </Link>
-            ) : (
-              <Image
-                src={'/images/hidden.png'}
-                alt='source'
-                height={30}
-                width={30}
-              />
-            )}
-          </p>
+          <h2 style={{ display: 'flex', alignItems: 'center' }}>
+            Code:
+            <p>
+              {project.github ? (
+                <Link href={project.github} target={'_blank'}>
+                  <span className='github'>
+                    <Image
+                      src={'/images/github.png'}
+                      alt='source'
+                      height={30}
+                      width={30}
+                    />
+                  </span>
+                </Link>
+              ) : (
+                <Image
+                  src={'/images/hidden.png'}
+                  alt='source'
+                  height={30}
+                  width={30}
+                />
+              )}
+            </p>
+          </h2>
           <br />
         </div>
         <Link href={'/projects'}>{'<'} Back to all projects</Link>

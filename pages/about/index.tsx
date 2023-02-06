@@ -11,8 +11,8 @@ export default function About() {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/frichieri-dev/',
-      user: '@frichieri-dev',
+      url: 'https://www.linkedin.com/in/farichieri/',
+      user: '@farichieri',
     },
     {
       name: 'Twitter',
@@ -22,7 +22,7 @@ export default function About() {
     {
       name: 'freeCodeCamp',
       url: 'https://www.freecodecamp.org/frichieri',
-      user: '@farichieri',
+      user: '@frichieri',
     },
   ];
 
@@ -44,13 +44,14 @@ export default function About() {
           </span>
           <div className='text'>
             <h1>Fabricio Richieri</h1>
-            <p>Web Developer</p>
+            <p>Full Stack Web Developer</p>
           </div>
         </div>
         <br />
         <p>
-          I&apos;m Fabricio Richieri, a Full Stack Web Developer, who loves
-          building fast, beautiful and productive web applications.
+          I&apos;m Fabricio Richieri, a Full Stack Web Developer, from Buenos
+          Aires, Argentina, who loves building fast, beautiful and productive
+          web applications.
         </p>
         <br />
         <p>
@@ -127,6 +128,11 @@ export default function About() {
           overflow: auto;
           box-shadow: 0 0 10px 1px var(--box-shadow);
           margin: 1rem 0;
+          filter: grayscale(0);
+          transition: 0.3s;
+        }
+        .img--container:hover {
+          filter: grayscale(1);
         }
       `}</style>
     </MainLayout>

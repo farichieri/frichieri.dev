@@ -28,7 +28,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
         .posts-container {
           height: 100%;
           display: flex;
-          margin: 1rem 0;
+          margin: 0.5rem 0;
         }
         .posts-container,
         table,

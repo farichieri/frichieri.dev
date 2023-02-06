@@ -11,9 +11,10 @@ export default function Contact() {
         <div className='form-container'>
           <Form />
         </div>
+
         <div className='links'>
           <Link
-            href={'https://www.linkedin.com/in/frichieri-dev/'}
+            href={'https://www.linkedin.com/in/farichieri/'}
             target='_blank'
           >
             <span>
@@ -35,16 +36,6 @@ export default function Contact() {
               />
             </span>
           </Link>
-          <Link href='mailto:fabriciorichieri@yahoo.com'>
-            <span className='email'>
-              <Image
-                src='/images/email.png'
-                alt='email'
-                width={32}
-                height={32}
-              />
-            </span>
-          </Link>
           <Link href='https://twitter.com/farichieri'>
             <span className='twitter'>
               <Image
@@ -52,6 +43,16 @@ export default function Contact() {
                 alt='twitter'
                 width={38}
                 height={38}
+              />
+            </span>
+          </Link>
+          <Link href='mailto:fabriciorichieri@yahoo.com'>
+            <span className='email'>
+              <Image
+                src='/images/email.png'
+                alt='email'
+                width={32}
+                height={32}
               />
             </span>
           </Link>
@@ -76,10 +77,6 @@ export default function Contact() {
             border-top: 1px solid var(--box-shadow-light);
             max-width: 500px;
             padding-top: 2.5rem;
-          }
-          p {
-            text-align: left;
-            width: 100%;
           }
           .links {
             display: flex;

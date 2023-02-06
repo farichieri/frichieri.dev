@@ -30,7 +30,7 @@ const Nav = ({
         </div>
         <div className={`pages ${hamburgerActive ? 'active' : ''}`}>
           {myPages.map((page) => (
-            <div key={page.name}>
+            <div className='link' key={page.name}>
               {!page.external && (
                 <Link href={page.path} onClick={handleMenu}>
                   <span
@@ -68,20 +68,22 @@ const Nav = ({
             align-items: center;
             height: 100%;
           }
+          .link {
+            padding: 0 1rem;
+          }
 
           .pages span {
             font-weight: 500;
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
+            padding: 0.2rem 0;
           }
 
           .pages span:hover {
-            box-shadow: 0 0 10px 1px var(--box-shadow);
+            border-bottom: 2px solid var(--textColor);
           }
 
           .this-route {
             color: var(--textColor);
-            box-shadow: 0 0 10px 1px var(--box-shadow);
+            border-bottom: 2px solid var(--textColor);
           }
 
           .logo,
@@ -107,16 +109,6 @@ const Nav = ({
             margin: 0 0.2rem;
             background: red;
             padding: 0.4rem;
-          }
-
-          .link {
-            font-size: 1rem;
-            min-width: fit-content;
-            letter-spacing: 0.2rem;
-            display: block;
-            border-bottom: 2px solid transparent;
-            padding: 0.4rem;
-            background: #77777747;
           }
 
           .hamburger {

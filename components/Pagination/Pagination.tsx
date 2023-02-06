@@ -43,7 +43,7 @@ const Pagination = ({
           onClick={onPrevious}
           disabled={currentPage === 1}
         >
-          {'<'}
+          {`<`}
         </button>
       </li>
 
@@ -142,6 +142,7 @@ const Pagination = ({
           display: flex;
           align-items: center;
           justify-content: center;
+          line-height: 1.5px;
         }
 
         svg {
