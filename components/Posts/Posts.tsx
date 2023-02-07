@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Date from '../../components/Layout/Date';
 
 const Posts = ({ posts }: { posts: Array<object> }) => {
-  console.log({ posts });
   return (
     <div className='posts-container'>
       {posts.length > 0 ? (

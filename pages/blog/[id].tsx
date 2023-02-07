@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import Date from '../../components/Layout/Date';
 import MainLayout from '../../components/Layout/MainLayout';
+import Views from '../../components/Views/Views';
 import { getAllPostsIds, getPostData } from '../../utils/posts';
 
 const Post = ({ postData }: { postData: any }) => {
@@ -11,6 +12,7 @@ const Post = ({ postData }: { postData: any }) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <Views />
       <article>
         <div className='post-header'>
           <h1>{postData.title}</h1>

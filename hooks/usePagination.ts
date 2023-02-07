@@ -2,13 +2,23 @@ import { useMemo } from 'react';
 
 export const DOTS = '...';
 
-const range = (start, end) => {
+const range = (start: number, end: number) => {
   let length = end - start + 1;
 
   return Array.from({ length }, (_, idx) => idx + start);
 };
 
-function usePagination({ totalCount, currentPage, totalPages, pageSize }) {
+function usePagination({
+  totalCount,
+  currentPage,
+  totalPages,
+  pageSize,
+}: {
+  totalCount: number;
+  currentPage: number;
+  totalPages: number;
+  pageSize: number;
+}) {
   const paginationRange = useMemo(() => {
     const siblings = 1;
     const leftSiblingIndex = Math.max(currentPage - siblings, 1);

@@ -34,6 +34,8 @@ export default Blog;
 export const getStaticProps = async () => {
   const allPostData = getSortedPostData();
 
+  console.log({ allPostData });
+
   return {
     props: { posts: allPostData },
   };
