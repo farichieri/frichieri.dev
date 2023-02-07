@@ -12,10 +12,19 @@ const Post = ({ postData }: { postData: any }) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <Views />
+
       <article>
         <div className='post-header'>
-          <h1>{postData.title}</h1>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '2rem',
+            }}
+          >
+            <h1>{postData.title}</h1>
+            <Views />
+          </div>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

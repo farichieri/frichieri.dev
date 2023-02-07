@@ -70,7 +70,8 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
         tr {
           text-align: left;
         }
-        td {
+        td:last-child {
+          width: 15%;
         }
         td span {
           height: 100%;

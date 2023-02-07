@@ -28,9 +28,9 @@ const Views = () => {
           height: 2rem;
           font-size: 80%;
           color: gray;
-          width: 100%;
           justify-content: flex-end;
           font-style: italic;
+          margin-left: auto;
         }
       `}</style>
     </div>
