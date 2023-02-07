@@ -31,7 +31,7 @@ const Slug = ({ project }: { project: any }) => {
           <p> {project.languages} </p>
           <br />
           <h2 style={{ display: 'flex', alignItems: 'center' }}>
-            See in live:
+            See live:
             <p>
               <Link href={project.live} target={'_blank'}>
                 <span className='live'>

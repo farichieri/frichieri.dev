@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'production') {
       db;
       const analytics = getAnalytics();
       logEvent(analytics, 'screen_view', {

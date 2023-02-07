@@ -8,23 +8,28 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (!slug) {
       return;
     }
+
+    let views: any[] = [];
+    const viewsSnapshot = await getDocs(collection(db, 'analytics'));
+    viewsSnapshot.forEach((doc) => {
+      views.push(doc.data());
+    });
+    const findCounter = views.find((view) => view.slug === slug);
+    const actualViews = findCounter?.counter ? findCounter.counter : 0;
+    const newCounter = actualViews + 1;
     if (req.method === 'POST') {
-      let views: any[] = [];
-      const viewsSnapshot = await getDocs(collection(db, 'analytics'));
-      viewsSnapshot.forEach((doc) => {
-        views.push(doc.data());
-      });
-      const findCounter = views.find((view) => view.slug === slug);
-      const prevViews = findCounter?.counter ? findCounter.counter : 0;
-      const newCounter = prevViews + 1;
       await setDoc(doc(db, 'analytics', slug), {
         slug: slug,
         counter: newCounter,
       });
-      res.status(200).send(newCounter);
+      return res.status(200).send(newCounter);
+    }
+
+    if (req.method === 'GET') {
+      return res.status(200).send(actualViews);
     }
   } catch (error) {
     console.log({ error });
-    res.status(500).json({ error: 'error fetching views' });
+    return res.status(500).json({ error: 'error fetching views' });
   }
 };

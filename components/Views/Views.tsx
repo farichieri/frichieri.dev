@@ -2,29 +2,35 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
 const Views = () => {
+  const router = useRouter();
   const [views, setViews] = useState<any>(0);
 
-  const router = useRouter();
   useEffect(() => {
     const getView = async () => {
+      const envMethod = process.env.NODE_ENV === 'production' ? 'POST' : 'GET';
       fetch(`/api/views/${router.query.id}`, {
-        method: 'POST',
+        method: envMethod,
       })
         .then((res) => res.json())
         .then(setViews);
     };
     getView();
-  }, [router]);
+  }, []);
 
   return (
     <div>
-      {views > 0 && <>Views: {views}</>}
+      {views > 0 && <>views: {views}</>}
       <style jsx>{`
         div {
           display: flex;
           align-items: center;
           justify-content: center;
           height: 2rem;
+          font-size: 80%;
+          color: gray;
+          width: 100%;
+          justify-content: flex-end;
+          font-style: italic;
         }
       `}</style>
     </div>

@@ -65,6 +65,7 @@ const Page = ({
           justify-content: center;
           width: 100%;
           gap: 3rem;
+          padding-bottom: 2rem;
         }
         h1 {
           font-size: 2rem;
