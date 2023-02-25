@@ -80,6 +80,7 @@ const Page = ({
         }
         p {
           padding: 0.25rem 0;
+          margin: 0;
         }
         .home-header {
           text-align: left;

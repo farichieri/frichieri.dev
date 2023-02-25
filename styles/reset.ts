@@ -35,18 +35,7 @@ const style = css.global`
   /* Remove default margin */
   body,
   h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul[class],
-  ol[class],
-  li,
-  figure,
-  figcaption,
-  blockquote,
-  dl,
-  dd {
+  h2 {
     margin: 0;
   }
 
@@ -64,10 +53,10 @@ const style = css.global`
   }
 
   /* Remove list styles on ul, ol elements */
-  ul,
+  /* ul,
   ol {
     list-style: none;
-  }
+  } */
 
   /* A elements that don't have a class get default styles */
   a:not([class]) {

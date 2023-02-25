@@ -19,7 +19,6 @@ const Post = ({ postData }: { postData: any }) => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              marginBottom: '2rem',
             }}
           >
             <h1>{postData.title}</h1>
@@ -30,13 +29,12 @@ const Post = ({ postData }: { postData: any }) => {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <div className='post-back'>
-        <Link href={'/blog'}>{'<'} Back to all posts</Link>
+        <Link href={'/blog'}>{'<'} All Posts</Link>
       </div>
       <style jsx>{`
         article {
           text-align: left;
           width: 100%;
-          min-height: 100vh;
         }
         .post-header {
           margin-bottom: 1rem;
@@ -44,6 +42,7 @@ const Post = ({ postData }: { postData: any }) => {
         .post-back {
           text-align: left;
           width: 100%;
+          margin: 4rem 0;
         }
       `}</style>
     </MainLayout>

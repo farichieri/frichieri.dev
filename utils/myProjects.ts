@@ -4,7 +4,7 @@ export const myProjects = [
     name: 'frichieri.dev',
     slug: 'this-website',
     image: '/images/projects/this-website.png',
-    github: 'https://github.com/farichieri/frichieri.dev',
+    github: '',
     live: 'https://frichieri-dev.vercel.app/',
     languages: 'Next.js, Typescript, React.js, Firebase, mdx & Express',
     stack: 'Front End',

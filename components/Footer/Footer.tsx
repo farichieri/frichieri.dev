@@ -49,6 +49,10 @@ const Footer = () => {
           flex-direction: column;
           gap: 2rem;
         }
+        ul,
+        ol {
+          list-style: none;
+        }
         ul {
           display: flex;
           flex-wrap: wrap;
