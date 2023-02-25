@@ -24,7 +24,9 @@ const Post = ({ postData }: { postData: any }) => {
             <h1>{postData.title}</h1>
             <Views />
           </div>
-          <Date dateString={postData.date} />
+          <span style={{ opacity: '.7' }}>
+            <Date dateString={postData.date} />
+          </span>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
