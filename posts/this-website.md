@@ -15,11 +15,11 @@ I saw many top developers doing this, so I decided to try it. I think it's a gre
 - and third, because these posts could be of help for other people in the future.
 - And also, as a side effect, I will improve my writing english skills (please [let me know](https://frichieri.dev/contact) if you see any mistake).
 
-### My plants for this year:
+### My plans for this year:
 
-This year I will focus full time in developing a business. A website that solves a necessity, serves many people and gets a revenue from it.
+This year I will focus full time on developing a business. A website that solves a necessity and serves many people, and as a result, obtain a revenue.
 
-I've always wanted to build a sucessfuly business. I tried and failed. I think that I wasn't prepared. Rarely one person can build a successful business at the first time.
+I've always wanted to build a successfull business. I tried and failed. I think that I wasn't prepared. Rarely one person can build a successful business at the first time.
 
 Now I think it's time. I will write about it soon.
 
