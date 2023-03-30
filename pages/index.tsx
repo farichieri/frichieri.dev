@@ -19,11 +19,8 @@ const Page = ({
         <div className='home-header'>
           <div>
             <h1 className='name'>Fabricio Richieri</h1>
-            <p>Web developer</p>
             <p style={{ color: 'gray' }}>
-              Hello! I&apos;m Fabricio, a Full Stack Web Developer in continuous
-              learning who loves building fast, beautiful and productive web
-              pages.
+              Hello! I&apos;m Fabricio, and I build Web apps.
             </p>
           </div>
           <span className='img--container'>
@@ -64,7 +61,7 @@ const Page = ({
           height: 100%;
           justify-content: center;
           width: 100%;
-          gap: 3rem;
+          gap: 1.5rem;
           padding-bottom: 2rem;
         }
         h1 {

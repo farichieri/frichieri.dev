@@ -3,25 +3,26 @@ title: 'This Website'
 date: '2023-02-25'
 ---
 
-I built **This website** with the objetive of showing my work to everyone interested, and because I want to register my growing path as a developer.
-It was developed with Next.js a framework of React that I love (just check how fast the pages load) and mdn for the posts.
+I created **this website** with the goal of showing my work to anyone interested, and because I want to register my growing journey as a developer.
+It was developed using Next.js, a React framework that I really appreciate (check out how fast the pages load) and mdn for the posts.
 
 ### And why a blog?
 
-I saw many top developers doing this, so I decided to try it. I think it's a great idea,
+I saw a lot of top developers doing it, so I decided to give it a try. I think it's a great idea,
 
-- first, because I can learn a lot of myself,
+- first, because I can learn a lot about myself,
 - second, because I can get feedback from other people,
-- and third, because these posts could be of help for other people in the future.
-- And also, as a side effect, I will improve my writing english skills (please [let me know](https://frichieri.dev/contact) if you see any mistake).
+- and third, because these contributions might help other people in the future.
+- And as a side effect, I will also improve my English skills (please [let me know](https://frichieri.dev/contact) if you see any mistake).
 
 ### My plans for this year:
 
-This year I will focus full time on developing a business. A website that solves a necessity and serves many people, and as a result, obtain a revenue.
+This year I'll focus entirely on developing a business. A website that solves a need and serves many people, generating an income.
 
-I've always wanted to build a successfull business. I tried and failed. I think that I wasn't prepared. Rarely one person can build a successful business at the first time.
+I've always wanted to build a successful business. I tried and failed. I don't think I was prepared for it. It's rare that a person can build a successful business on the first try.
 
-Now I think it's time. I will write about it soon.
+Now I think it's time. I'll write about it soon.
 
 Best  
 Fabricio
+**This website**

@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { getAnalytics, logEvent } from 'firebase/analytics';
 import { db } from '../utils/firebase.config';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
