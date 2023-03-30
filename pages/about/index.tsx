@@ -53,9 +53,8 @@ export default function About() {
           web applications with high impact on the people.
         </p>
         <p>
-          I have experience working with JavaScript, TypeScript, Next.js,
-          React.js, Redux.js, HTML, CSS, Node.js, Express.js, MongoDB and
-          Firebase among other technologies.
+          I have experience working with Next.js - TypeScript - Tailwind CSS -
+          Redux.js - Firebase | Node.js - Express.js - MongoDB
         </p>
         <p>Follow me on:</p>
         <ul>
