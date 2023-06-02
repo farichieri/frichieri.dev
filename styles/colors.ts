@@ -3,7 +3,7 @@ import css from 'styled-jsx/css';
 const colors = css.global`
   div.dark {
     --textColor: white;
-    --bgColor: #131313;
+    --bgColor: #000;
     --box-shadow: #f5f5f526;
     --box-shadow-light: #f5f5f50a;
     --navBgColor: #00000080;

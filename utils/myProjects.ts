@@ -1,6 +1,18 @@
 export const myProjects = [
   {
     id: 0,
+    name: 'Nutrition Plans',
+    slug: 'nutrition-plans',
+    image: '/images/projects/nutrition-plans.png',
+    github: '',
+    live: 'https://www.nutritionplans.co/',
+    languages: 'Next.js, Typescript, React.js, Firebase, mdx',
+    stack: 'Full Stack',
+    description:
+      'Nutrition Plans is a Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low Carb, Gluten Free, etc), adapt your diet with your body features, goals and meals settings, and get a personalized diet for your days.',
+  },
+  {
+    id: 0,
     name: 'frichieri.dev',
     slug: 'this-website',
     image: '/images/projects/this-website.png',
