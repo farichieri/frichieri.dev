@@ -22,7 +22,7 @@ const Post = ({ postData }: { postData: any }) => {
             }}
           >
             <h1>{postData.title}</h1>
-            <Views />
+            {/* <Views /> */}
           </div>
           <span style={{ opacity: '.7' }}>
             <Date dateString={postData.date} />

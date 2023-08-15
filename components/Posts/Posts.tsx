@@ -43,7 +43,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
                   <Link href={`blog/${post.id}`}>{post.title}</Link>
                 </td>
                 <td>
-                  <span>{post.views > 0 && <>views: {post.views}</>}</span>
+                  {/* <span>{post.views > 0 && <>views: {post.views}</>}</span> */}
                 </td>
               </tr>
             ))}

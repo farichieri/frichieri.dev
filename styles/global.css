@@ -2,8 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer {
-  html {
-    @apply bg-slate-600 text-white font-bold;
+/* p */
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 20px 0;
+  letter-spacing: -0.01rem;
+}
+@media screen and (min-width: 950px) {
+  p {
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
-} */
+}
+
+/* h2 */
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.049375rem;
+  line-height: 2.5rem;
+  margin: 24px 0 0;
+}
+@media screen and (min-width: 950px) {
+  h2 {
+    font-size: 48px;
+    letter-spacing: -0.04em;
+    line-height: 1.25;
+    margin-top: 24px;
+  }
+}
+/* h2 */
+h2 {
+  margin-top: 52px;
+  margin-bottom: 24px;
+  letter-spacing: -0.03rem;
+  line-height: 1.75rem;
+}
+@media screen and (min-width: 950px) {
+  h2 {
+    margin-top: 60px;
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* ul */
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 12px;
+  margin-left: 24px;
+}
+@media screen and (min-width: 950px) {
+}
+
+/* ol */
+ol > li::before {
+  content: '–';
+  display: inline-block;
+  position: absolute;
+  margin-left: -15px;
+  color: #666;
+}
+
+/* li */
+li {
+  font-size: 1em;
+  line-height: 1.625em;
+  margin-bottom: 10px;
+}

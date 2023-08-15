@@ -29,13 +29,11 @@ const style = css.global`
   /* Remove default padding */
   ul[class],
   ol[class] {
-    padding: 0;
+    /* padding: 0; */
   }
 
   /* Remove default margin */
-  body,
-  h1,
-  h2 {
+  body {
     margin: 0;
   }
 

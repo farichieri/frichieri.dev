@@ -47,14 +47,10 @@ export default function About() {
             <p>Full Stack Web Developer</p>
           </div>
         </div>
+        <p>Based in Buenos Aires, Argentina.</p>
         <p>
-          I&apos;m Fabricio Richieri, a Full Stack Web Developer, from Buenos
-          Aires, Argentina, who loves building fast, beautiful and productive
-          web applications with high impact on the people.
-        </p>
-        <p>
-          I have experience working with Next.js - TypeScript - Tailwind CSS -
-          Redux.js - Firebase | Node.js - Express.js - MongoDB
+          Next.js - TypeScript - Tailwind - Redux - Firebase - Node - Express -
+          MongoDB
         </p>
         <p>Follow me on:</p>
         <ul>
