@@ -6,15 +6,8 @@
 p {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   letter-spacing: -0.01rem;
-}
-@media screen and (min-width: 950px) {
-  p {
-    padding: 0.5rem 0;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 }
 
 /* h2 */
@@ -25,27 +18,13 @@ h1 {
   line-height: 2.5rem;
   margin: 24px 0 0;
 }
-@media screen and (min-width: 950px) {
-  h2 {
-    font-size: 48px;
-    letter-spacing: -0.04em;
-    line-height: 1.25;
-    margin-top: 24px;
-  }
-}
+
 /* h2 */
 h2 {
   margin-top: 52px;
   margin-bottom: 24px;
   letter-spacing: -0.03rem;
   line-height: 1.75rem;
-}
-@media screen and (min-width: 950px) {
-  h2 {
-    margin-top: 60px;
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
 }
 
 h3 {
@@ -70,8 +49,6 @@ ul {
   list-style-type: decimal;
   margin: 12px;
   margin-left: 24px;
-}
-@media screen and (min-width: 950px) {
 }
 
 /* ol */
