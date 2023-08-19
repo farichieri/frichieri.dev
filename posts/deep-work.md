@@ -3,7 +3,7 @@ title: 'Deep Work'
 date: '2023-08-20'
 ---
 
-I've read a very good book recently and I wanted to share the ideas that I liked the most.
+I read a very good book recently and I wanted to share the ideas that I liked the most.
 
 This book is called Deep Work, was written by Cal Newport and defines the benefits of working deeply in order to achieve maximum results in a shorter period of time.
 
@@ -16,12 +16,9 @@ The book uis divided in two parts
 
 # **Intro**
 
-#### **_What is Deep Work?_**
+**_What is Deep Work?_** Deep Work is when activities are performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
 
-Deep Work is when activities are performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
-
-###### **_What is Shallow Work?_**
-
+**_What is Shallow Work?_**
 Shallow Work are noncognitively demanding, logistical-style tasks, often performed while distracted. These efforts tend to not create much new value in the world and are easy to replicate.
 
 Spend enough time in a state of frenetic shallowness and you permanently reduce your capacity to perform deep work.
@@ -30,7 +27,7 @@ On the other side, network tools are distracting us from work that requires unbr
 
 Our work culture's shift toward the shallow is exposing a massive economic and personal opportunity for the few that recognize the potential of resisting the trend and prioritizing depth. As a result, deep work is a skill that has great value today.
 
-### **_And why Deep Work is valuable?_**
+##### **And why Deep Work is valuable?**
 
 - You must master the art of quickly learning complicated things. This task requires deep work. If you don't cultivate this ability, you're likely to fall behind as technology advances.
 - The impacts of the digital network revolution cut both ways. If you can create something useful, its reachable audience is essentially limitless-- which greatly magnifies your reward. On the other hand, if you're producing is mediocre, then you're in trouble, as it's too easy for you audience to find a better alternative online. To succeed you have to produce the absolute best stuff you're capable of producing--a task that requires depth.
@@ -55,7 +52,7 @@ Three to four hours a day, five days a week, of uninterrupted and carefully dire
 
 In this new economy, three groups will have a particular advantage: Those who can work well and creatively with intelligent machines, those who are the best at what they do, and those with access to capital.
 
-### **Two Core Abilities for Thriving in the New Economy:**
+##### **Two Core Abilities for Thriving in the New Economy:**
 
 - The ability to quickly master hard things.
 - The ability to produce at an elite level, in terms of both quality and speed.
@@ -68,7 +65,7 @@ If you can't produce, you won't thrive--no matter how skilled or talented you ar
 
 Deep Work helps you quickly learn things: because to learn requiers intense concentration.
 
-### **What deliberate practice actually requires:**
+##### **What deliberate practice actually requires:**
 
 - Your attention is focused tightly on a specific skill you're trying to improve or an idea you're trying to master.
 - You receive feedback so you can correct your approach to keep your attention exactly where it's most productive.
@@ -82,9 +79,9 @@ By contrast, if you're trying to learn a complex new skill (say, SQL database ma
 
 To learn hard things quickly, you must focus intensely without distraction. To learn, in other words, is an act of deep work. If you're comfortable going deep, you'll be comfortable mastering the increasingly complex systems and skills needed to thrive in our economy. If you instead remain one of the many for whom depth is uncomfortable and distraction ubiquitous, you shouldn't expect these systems and skills to come easily to you.
 
-### **High-Quality Work Produced = (Time Spent) \* (Intensity of Focus)**
+##### **High-Quality Work Produced = (Time Spent) \* (Intensity of Focus)**
 
-### **Attention Residue:**
+##### **Attention Residue:**
 
 - When you switch from some Task A to another Task B, your attention doesn't immediately follow--a residue of your attention remains stuck thinking about the original task. This residue gets especially thick if your work on Task A was unbounded and of low intensity before you switched, but even if you finish Task A before moving on, your attention remains divided for a while.
 - People experiencing attention residue after switching tasks are likely to demostrate poor performance on that next task, and the more intense the residue, the worse the performance.
@@ -164,58 +161,58 @@ You need your own philosophy for integrating deep work into your professional li
   This philosophy argues that the easiest way to consistently start deep work sessions is to transform them into a simple regular habit. The goal, in other words, is to generate a rhythm for this work that removes the need for you to invest energy in deciding if and when you're going to go deep.
   Provides an interesting contrast to the bimodal philosophy. It perhaps fails to achieve the most intense levels of deep thinking sought in the daylong concentration sessions favored by the bimodalist. The trade-off, however, is that this approach works better with the reality of human nature. By supporting deep work with rock-solid routines that make sure a little bit gets done on a regular basis, the rhytmic scheduler will often log a larger total number of deep hours per year.
 
-### **THE JOURNALIST PHILOSOPHY OF DEEP WORK SCHEDULING**
+##### **THE JOURNALIST PHILOSOPHY OF DEEP WORK SCHEDULING**
 
 You fit deep work wherever you can into your schedule. This name is a nod to the fact that journalists, are trained to shift into a writing mode on a momnent's notice, as is required by the deadline-driven nature of their profession.
 This ability to rapidly switch your mind from shallow to deep mode doesn't come naturally. Without practice, such switchers can seriously deplete your finite willpower reserves. This habit also requires a sense of confidence in your abilities--a conviction that what you're doing is important and will succeed.
 
-### **RITUALIZE**
+##### **RITUALIZE**
 
 To make the most out of your deep work session, build rituals.
 1.Where you'll work and for how long. (If it's quiet, better. Also set a time frame.)
 2.How you'll work once you start to work. (What will measure your work.)
 3.How you'll support your work. (tea, walk between, right food to keep energy, etc.)
 
-### **MAKE GRAND GESTURES**
+##### **MAKE GRAND GESTURES**
 
 By leveraging a radical change to your normal environment, coupled perhaps with a significant investment of effort or money, all dedicated toward supporting a deep work task, you increase the perceived importance of the task. This boost in importance reduces your mind's instinct to procrastinate and delivers an injection of motivation and energy.
 It's not just the change of environment or seeking of quiet that enables more depth. The dominant force is the psychology of commiting so seriously to the task at hand. To put yourself in an exotic location to focus on a writing project, or to take a week off from work just to think, or to lock yourself in a hotel room until you complete an important invention: These gestures push your deep goal to a level of mental priority that helps unlock the needed mental resources. Sometimes to go deep, you must first go big.
 
-### **DON'T WORK ALONE**
+##### **DON'T WORK ALONE**
 
 For many types of work--especially when pursuing innovation--colaborative deep work can yield better results
 
-### **EXECUTE LIKE A BUSINESS**
+##### **EXECUTE LIKE A BUSINESS**
 
 What trips up companies is figuring out how to execute the strategy once identified.
 
 DISCIPLINES (Like a business):
 
-- #### **FOCUS ON THE WILDLY IMPORTANT**
+- **FOCUS ON THE WILDLY IMPORTANT**
 
   Execution should be aimed at a small number of "wildly important goals". This simplicity will help you focus an organization's energy to a sufficient intensity to ignite real results.
   For an individual focused on deep work, the implication is that you should identify a small number of ambitious outcomes to pursue with your deep work hours. To have a specific goal that would return tangible and substantial professional benefits will generate a steady stream of enthusiasm.
 
-- #### **ACT ON THE LEAD MEASURES**
+- **ACT ON THE LEAD MEASURES**
 
   Once you've identified a widly important goal, you need to measure your success. Lag measures and Lead measures.
   It's easy to identify the relevant lead measure: time spent in a state of deep work dedicated toward your wildly important goal.
 
-- #### **KEEP A COMPELLING SCOREBOARD**
+- **KEEP A COMPELLING SCOREBOARD**
 
   People play differently when they're keeping score.
   When attempting to drive your team's engagement toward your organization's wildly important goal, it's important that they have a public place to record and track their lead measures. This scoreboard creates a sense of competition that drives them to focus on these measures, even when other demands vie for their attention. Hours spent working deeply should be the lead measure.
 
-- #### **CREATE A CADENCE OF ACCOUNTABILITY**
+- **CREATE A CADENCE OF ACCOUNTABILITY**
   Put in place "a rhythm of regular and frequent meetings of any team that owns a wildly important goal"
 
-### **DOWNTOWN**
+### **DOWNTIME**
 
 ## **BE LAZY**
 
 At the end of the workday, shut down your consideration of work issues until the next morning--no after dinner email check, no mental replays of conversations, and no scheming about how you'll handle an upcoming challenge; shut down work thinking completely. If you need more time, then extend your workday, but once you shut down, your mind must be left free.
 
-\_\_THREE POSSIBLE EXPLANATIONS OF THE DOWNTIME
+**THREE POSSIBLE EXPLANATIONS OF THE DOWNTIME**
 
 - ## **DOWNTIME AIDS INSIGHTS:**
 
@@ -306,19 +303,22 @@ It's crucial, therefore, that you **figure out in advance what you're going to d
 
 ## **Schedule Every Minute of Your Day.**
 
--Divide the hours of your workday into blocks and assign activities to the blocks.
--As you go through your day, use this schedule to guide you.
+Divide the hours of your workday into blocks and assign activities to the blocks.
+
+As you go through your day, use this schedule to guide you.
 
 ## **Finish Your Work By Five Thirty**
 
--I call this commitment fixed-scheduled productivity
+I call this commitment fixedscheduled productivity
 -By ruthlessly reducing the shallow while preserving the deep, this strategy frees up our time without diminishing the amount of new value we generate. Indeed, I would go so far as to argue that the reduction in shallow frees up
 more energy for the deep alternative, allowing us to produce more than if we had defaulted to a more typical crowded schedule. Second, the limits to our time necessitate more careful thinking about our organizational habits, also leading to more value produced as compared to longer but less organized schedules.
 
 ## **Become Hard to Reach (by Email)**
 
 Tip #1: Make People Who Send You E-mail Do More Work.
+
 Tip #2: Do More Work When You Send or Reply to E-Mails.
+
 Tip #3: Don't respond.
 
 ---

@@ -12,7 +12,6 @@ const Post = ({ postData }: { postData: any }) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-
       <article>
         <div className='post-header'>
           <div
@@ -39,7 +38,7 @@ const Post = ({ postData }: { postData: any }) => {
           width: 100%;
         }
         .post-header {
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
         }
         .post-back {
           text-align: left;
