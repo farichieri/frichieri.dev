@@ -6,34 +6,47 @@ export const myProjects = [
     image: '/images/projects/nutrition-plans.png',
     github: '',
     live: 'https://www.nutritionplans.co/',
-    languages: 'Next.js, Typescript, React.js, Firebase, mdx',
+    languages:
+      'Next.js, Typescript, Redux, TailwindCSS, Firebase, Stripe, Typesense, Mdx,',
     stack: 'Full Stack',
     description:
       'Nutrition Plans is a Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low Carb, Gluten Free, etc), adapt your diet with your body features, goals and meals settings, and get a personalized diet for your days.',
   },
   {
-    id: 0,
-    name: 'frichieri.dev',
-    slug: 'this-website',
-    image: '/images/projects/this-website.png',
-    github: '',
-    live: 'https://frichieri-dev.vercel.app/',
-    languages: 'Next.js, Typescript, React.js, Firebase, mdx & Express',
-    stack: 'Front End',
+    id: 0.1,
+    name: 'improveme',
+    slug: 'improveme',
+    image: '/images/projects/improveme.png',
+    github: 'https://github.com/farichieri/daily-tracker',
+    live: 'https://improveme.vercel.app/',
+    languages: 'Next.js, Typescript, React.js, TailwindCSS, Firebase, Mdx',
+    stack: 'Full Stack',
     description:
-      'This is my personal website. Under construction, but you can see it in the meantime. I hope you like it.',
+      'A Task managment app where you can create tasks, set a goal, and track your progress.',
   },
   {
-    id: 1,
+    id: 0.2,
     name: 'almarichnutricion',
     slug: 'almarich-nutricion',
     image: '/images/projects/almarichnutricion.png',
     github: '',
     live: 'https://www.almarichnutricion.com/',
-    languages: 'Next.js, Typescript, React.js, Firebase & Express',
+    languages: 'Next.js, Typescript, React.js, Firebase',
     stack: 'Front End',
     description:
       'This is a personal website built for a nutritionist. It has an /admin panel where you can create new blogs with a markdown editor.',
+  },
+  {
+    id: 1,
+    name: 'frichieri.dev',
+    slug: 'this-website',
+    image: '/images/projects/this-website.png',
+    github: 'https://github.com/farichieri/frichieri.dev',
+    live: 'https://frichieri-dev.vercel.app/',
+    languages: 'Next.js, Typescript, React.js, Firebase, Mdx',
+    stack: 'Front End',
+    description:
+      'This is my personal website. Under construction, but you can see it in the meantime. I hope you like it.',
   },
   {
     id: 2,
@@ -57,7 +70,7 @@ export const myProjects = [
     languages: 'JavaScript, React, CSS, Node.js, MongoDB, Mongoose & Express',
     stack: 'Full Stack',
     description:
-      'Pizza Order Administrator is a web page made for controlling orders and statistics of a pizza shop. The idea si to have multiple users and if the order is set, the kitchen will see the orders panel and change the status of the order to completed when the order is ready. You can test the app with the user: admin and password: 1234 (superAdmin)',
+      'Pizza Order Administrator is a web page made for controlling orders and statistics of a pizza shop. The idea si to have multiple users and if the order is set, the kitchen will see the orders panel and change the status of the order to completed when the order is ready. (Backend off)',
   },
   {
     id: 4,
@@ -70,7 +83,7 @@ export const myProjects = [
       'JavaScript, React, Redux, Material-UI, PostgreSQL, Express, Sequelize & Mercadopago',
     stack: 'Full Stack',
     description:
-      'An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users.',
+      'An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users. (Backend off)',
   },
   {
     id: 5,
@@ -105,7 +118,7 @@ export const myProjects = [
     languages: 'React.js, JavaScript, PostgreSQL, Sequelize & Express.',
     stack: 'Full Stack',
     description:
-      'Individual project for the #soyHenry Full Stack Development Bootcamp. Implementing CRUD operations.',
+      'Individual project for the #soyHenry Full Stack Development Bootcamp. Implementing CRUD operations. (Backend off)',
   },
   {
     id: 8,

@@ -11,8 +11,8 @@ export default function About() {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/farichieri/',
-      user: '@farichieri',
+      url: 'https://www.linkedin.com/in/frichieri/',
+      user: '@frichieri',
     },
     {
       name: 'Twitter',
@@ -49,8 +49,8 @@ export default function About() {
         </div>
         <p>Based in Buenos Aires, Argentina.</p>
         <p>
-          Next.js - TypeScript - Tailwind - Redux - Firebase - Node - Express -
-          MongoDB
+          Next.js - TypeScript - TailwindCSS - React - Redux - Firebase - Node -
+          MongoDB - Stripe - HTML - CSS
         </p>
         <p>Follow me on:</p>
         <ul>
@@ -63,6 +63,10 @@ export default function About() {
             </li>
           ))}
         </ul>
+        <div className='header'>
+          <p>Contact:</p>
+          <a href='mailto:frichieri.dev@gmail.com'>frichieri.dev@gmail.com</a>
+        </div>
       </section>
       <style jsx>{`
         section {

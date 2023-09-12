@@ -13,7 +13,7 @@ I saw a lot of top developers doing it, so I decided to give it a try. I think i
 - first, because I can learn a lot about myself,
 - second, because I can get feedback from other people,
 - and third, because these contributions might help other people in the future.
-- And as a side effect, I will also improve my English skills (please [let me know](https://frichieri.dev/contact) if you see any mistake).
+- And as a side effect, I will also improve my English skills (please [let me know](https://frichieri.dev/about) if you see any mistake).
 
 ### My plans for this year:
 
