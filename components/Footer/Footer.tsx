@@ -1,17 +1,6 @@
 import Link from 'next/link';
 import { myPages } from '../../utils/myPages';
-
-const ExternalLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: JSX.Element;
-}) => (
-  <a target='_blank' rel='noopener noreferrer' href={href}>
-    {children}
-  </a>
-);
+import ExternalLink from '../ExternalLink/ExternalLink';
 
 const Footer = () => {
   return (
