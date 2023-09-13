@@ -8,21 +8,22 @@ export default function Projects({
   projects: { id: number; name: string; image: string; slug: string }[];
   featured: boolean;
 }) {
-  const myProjects = featured ? projects.slice(0, 3) : projects;
+  const myProjects = featured ? projects.slice(0, 4) : projects;
 
   return (
     <div className='projects'>
       {myProjects.map((project) => (
         <div key={project.id} className='project-container'>
+          <div className='project-text'>
+            <span>{project.name}</span>
+          </div>
           <div className='project-image' key={project.id}>
             <span className='img'>
               <Image
                 alt={`Project ${project.name}`}
                 src={project.image}
-                fill
-                sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
+                width={500}
+                height={500}
               />
             </span>
             <div className='cape'>
@@ -33,10 +34,6 @@ export default function Projects({
               </Link>
             </div>
           </div>
-          <div className='project-text'>
-            <p>{project.name}</p>
-            <Link href={`/projects/${project.slug}`}>See project</Link>
-          </div>
         </div>
       ))}
       <style jsx>
@@ -46,14 +43,15 @@ export default function Projects({
             flex-direction: column;
             height: 100%;
             width: 100%;
-            gap: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
           }
           .project-container {
             display: flex;
-            flex-direction: row;
-            gap: 1rem;
+            flex-direction: column;
             height: 100%;
             width: 100%;
             align-items: center;
@@ -69,8 +67,7 @@ export default function Projects({
             justify-content: center;
             overflow: auto;
             position: relative;
-            height: ${featured ? '154px' : '270px'};
-            width: ${featured ? '274px' : '480px'};
+            height: auto;
           }
           .project-image:hover > .cape {
             display: flex;
@@ -112,38 +109,16 @@ export default function Projects({
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-height: ${featured ? '150px' : '100%'};
-            text-align: left;
-            height: ${featured ? '15vh' : '240px'};
-            width: ${featured ? '10vw' : '10vw'};
+            text-align: center;
+            text-overflow: ellipsis;
+            font-weight: 500;
+            font-size: 20px;
           }
 
           @media screen and (max-width: 768px) {
-            .project-image {
-              width: 70vw;
-              height: 40vw;
-            }
-
-            .project-text {
-              width: 30vw;
-              height: 40vw;
-            }
-          }
-
-          @media screen and (max-width: 500px) {
             .projects {
-              gap: 0.5rem;
-              font-size: 80%;
-            }
-            .project-container {
-              gap: 0.5rem;
-            }
-            .project-image {
-              width: 70vw;
-            }
-            .project-text {
-              width: 20vw;
-              height: 20vh;
+            display: flex;
+          }
             }
           }
 

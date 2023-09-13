@@ -1,16 +1,16 @@
-import Filter from '../../components/Filter/Filter';
-import MainLayout from '../../components/Layout/MainLayout';
-import Projects from '../../components/Projects/Projects';
 import { myProjects } from '../../utils/myProjects';
 import { useState } from 'react';
+import Filter from '../../components/Filter/Filter';
+import MainLayout from '../../components/Layout/MainLayout';
 import Pagination from '../../components/Pagination/Pagination';
+import Projects from '../../components/Projects/Projects';
 
-const PAGE_SIZES = [5, 15, 25, 50];
+const PAGE_SIZES = [6, 12, 18, 24, 32];
 
 export default function Index({ projects }: { projects: Array<any> }) {
   const [projectsState, setProjectsState] = useState(myProjects);
   const [optionSelected, setOptionSelected] = useState('All');
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(PAGE_SIZES[0]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleFilter = (event: Event) => {

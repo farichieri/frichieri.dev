@@ -20,7 +20,9 @@ const Page = ({
           <div>
             <h1 className='name'>Fabricio Richieri</h1>
             <p style={{ color: 'gray' }}>
-              Hello! I&apos;m Fabricio, and I build Web apps.
+              Hello! I&apos;m Fabricio, a Full Stack Web Developer from
+              Argentina passionate about creating and improving web
+              applications.
             </p>
           </div>
           <span className='img--container'>
@@ -107,6 +109,9 @@ const Page = ({
           height: 100%;
           width: 100%;
           text-align: left;
+          gap: 10px;
+          display: flex;
+          flex-direction: column;
         }
         @media screen and (max-width: 500px) {
           h1 {
