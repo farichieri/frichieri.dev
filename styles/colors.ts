@@ -5,10 +5,10 @@ const colors = css.global`
     --textColor: white;
     --bgColor: #000;
     --box-shadow: #f5f5f526;
-    --box-shadow-light: #f5f5f50a;
+    --box-shadow-light: #f5f5f52b;
     --navBgColor: #00000080;
     --link-color: gray;
-    --nav-background-color: black;
+    --nav-background-color: #00000073;
   }
   div.light {
     --textColor: black;
@@ -17,7 +17,7 @@ const colors = css.global`
     --box-shadow-light: #00000014;
     --navBgColor: transparent;
     --link-color: gray;
-    --nav-background-color: white;
+    --nav-background-color: #ffffffc9;
   }
 `;
 

@@ -1,10 +1,10 @@
+import { getSortedPostData } from '../utils/posts';
+import { myProjects } from '../utils/myProjects';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/Layout/MainLayout';
 import Posts from '../components/Posts/Posts';
 import Projects from '../components/Projects/Projects';
-import { getSortedPostData } from '../utils/posts';
-import { myProjects } from '../utils/myProjects';
 
 const Page = ({
   posts,
@@ -18,11 +18,13 @@ const Page = ({
       <div className='home'>
         <div className='home-header'>
           <div>
-            <h1 className='name'>Fabricio Richieri</h1>
+            <h1 className='name'>hey, I&apos;m Fabricio 👋</h1>
             <p style={{ color: 'gray' }}>
-              Hello! I&apos;m Fabricio, a Full Stack Web Developer from
-              Argentina passionate about creating and improving web
-              applications.
+              I&apos;m a Full Stack Web Developer from Argentina, specializing
+              in React, Next.js & TypeScript. I&apos;m passionate about creating
+              and improving web applications, and my motivation is to build a
+              better version of me every day while adding value to others with
+              my work.
             </p>
           </div>
           <span className='img--container'>
@@ -42,7 +44,7 @@ const Page = ({
           </div>
           <Projects projects={projects} featured={true} />
           <Link href={'/projects'}>
-            <span>See all projects</span>
+            <span>See all projects {'>'}</span>
           </Link>
         </div>
         <div className='featured-posts'>
@@ -51,7 +53,7 @@ const Page = ({
           </div>
           <Posts posts={posts} />
           <Link href={'/blog'}>
-            <span>Read all posts</span>
+            <span>Read all posts {'>'}</span>
           </Link>
         </div>
       </div>
@@ -69,13 +71,6 @@ const Page = ({
         h1 {
           font-size: 2rem;
           font-weight: 700;
-        }
-        h2 {
-          font-size: 1.5rem;
-          font-weight: 400;
-        }
-        h3 {
-          font-weight: 400;
         }
         p {
           padding: 0.25rem 0;

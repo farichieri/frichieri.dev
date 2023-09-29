@@ -10,10 +10,14 @@ const style = css.global`
   *::before,
   *::after {
     box-sizing: border-box;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+
     -webkit-tap-highlight-color: transparent;
+    selection-color: red;
+  }
+
+  ::selection {
+    color: white;
+    background: #22c55e;
   }
 
   a {

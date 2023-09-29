@@ -76,7 +76,7 @@ export const myProjects = [
     id: 4,
     name: 'Computechshop',
     slug: 'computechshop',
-    image: 'https://frichieri.vercel.app/img/compuTechShop.png',
+    image: '/images/projects/computechshop.png',
     github: 'https://github.com/FARichieri/CompuTechShop',
     live: 'https://computechshop.vercel.app/',
     languages:

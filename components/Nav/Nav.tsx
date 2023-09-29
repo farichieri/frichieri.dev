@@ -49,12 +49,17 @@ const Nav = ({
         {`
           nav {
             align-items: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--box-shadow-light);
             display: flex;
             height: var(--navHeight);
             justify-content: space-between;
-            width: 100%;
             max-width: var(--max-width);
-            border-bottom: 1px solid var(--box-shadow-light);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background: var(--nav-background-color);
           }
           .nav-content {
             width: 100%;
@@ -74,12 +79,10 @@ const Nav = ({
           }
 
           .pages span:hover {
-            border-bottom: 2px solid var(--textColor);
           }
 
           .this-route {
             color: var(--textColor);
-            border-bottom: 2px solid var(--textColor);
           }
 
           .logo,
@@ -186,8 +189,7 @@ const Nav = ({
             .pages {
               position: fixed;
               list-style: none;
-              background-color: var(--nav-background-color);
-              opacity: 0.95;
+              background-color: var(--bgColor);
               width: 100vw;
               height: 100vh;
               right: 100%;
@@ -214,7 +216,6 @@ const Nav = ({
               letter-spacing: 0.2rem;
               text-transform: uppercase;
               display: block;
-              border-bottom: 2px solid transparent;
               transition: 0.3s;
             }
           }

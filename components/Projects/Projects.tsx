@@ -18,14 +18,13 @@ export default function Projects({
             <span>{project.name}</span>
           </div>
           <div className='project-image' key={project.id}>
-            <span className='img'>
-              <Image
-                alt={`Project ${project.name}`}
-                src={project.image}
-                width={500}
-                height={500}
-              />
-            </span>
+            <Image
+              alt={`Project ${project.name}`}
+              src={project.image}
+              width={500}
+              height={500}
+              className='w-full'
+            />
             <div className='cape'>
               <Link href={`/projects/${project.slug}`}>
                 <div className='name-container'>
@@ -46,7 +45,7 @@ export default function Projects({
             margin: 1.5rem 0;
             border-radius: 5px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 1rem;
           }
           .project-container {
@@ -58,7 +57,7 @@ export default function Projects({
           }
           .project-image {
             align-items: center;
-            border-radius: 0.5rem;
+            border-radius: 20px;
             border: 2px solid var(--box-shadow-light);
             box-shadow: 0 0 10px 1px var(--box-shadow-light);
             cursor: pointer;
@@ -112,7 +111,7 @@ export default function Projects({
             text-align: center;
             text-overflow: ellipsis;
             font-weight: 500;
-            font-size: 20px;
+            font-size: 30px;
           }
 
           @media screen and (max-width: 768px) {

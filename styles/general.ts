@@ -3,7 +3,7 @@ import css from 'styled-jsx/css';
 const general = css.global`
   :root {
     --footerHeight: 170px;
-    --navHeight: 70px;
+    --navHeight: 60px;
     --max-width: 50rem;
   }
   h1 {

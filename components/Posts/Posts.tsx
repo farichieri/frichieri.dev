@@ -1,32 +1,36 @@
 import Link from 'next/link';
 import Date from '../../components/Layout/Date';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 const Posts = ({ posts }: { posts: Array<object> }) => {
-  let [actualPosts, setActualPosts] = useState(posts);
+  // let [actualPosts, setActualPosts] = useState(posts);
 
-  useEffect(() => {
-    const fetchViews = () => {
-      fetch('/api/views', {
-        method: 'GET',
-      })
-        .then((res) => res.json())
-        .then((views) => {
-          const getBlogViews = (post: any) => {
-            const match = views.find((blog: any) => blog.slug === post.id);
-            if (match) {
-              return match.counter;
-            }
-          };
-          const postsWithViews = actualPosts.map((post) => ({
-            ...post,
-            views: getBlogViews(post),
-          }));
-          setActualPosts(postsWithViews);
-        });
-    };
-    fetchViews();
-  }, []);
+  // useEffect(() => {
+  //   const fetchViews = () => {
+  //     fetch('/api/views', {
+  //       method: 'GET',
+  //     })
+  //       .then((res) => res.json())
+  //       .then((views) => {
+  //         const getBlogViews = (post: any) => {
+  //           const match = views.find((blog: any) => blog.slug === post.id);
+  //           if (match) {
+  //             return match.counter;
+  //           }
+  //         };
+  //         const postsWithViews = actualPosts.map((post) => ({
+  //           ...post,
+  //           views: getBlogViews(post),
+  //         }));
+  //         setActualPosts(postsWithViews);
+  //       });
+  //   };
+  //   fetchViews();
+  // }, [posts]);
+
+  const actualPosts = useMemo(() => {
+    return posts;
+  }, [posts]);
 
   return (
     <div className='posts-container'>

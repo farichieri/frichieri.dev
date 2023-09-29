@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       )}
       <style jsx>{`
         div {
-          align-content: center;
+          justify-content: center;
           align-items: center;
           display: flex;
           flex-direction: column;
@@ -53,6 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: var(--navHeight);
           }
         `}
       </style>
