@@ -21,7 +21,7 @@ const Blog = ({
   };
 
   return (
-    <MainLayout withPadding={true}>
+    <MainLayout>
       <h1 style={{ width: '100%', textAlign: 'left' }}>Blog</h1>
       <Searchbar handleSearch={handleSearch} />
       <Posts posts={postsState} />

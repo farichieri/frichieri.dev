@@ -8,7 +8,7 @@ import { getAllPostsIds, getPostData } from '../../utils/posts';
 
 const Post = ({ postData }: { postData: any }) => {
   return (
-    <MainLayout withPadding={true}>
+    <MainLayout>
       <Head>
         <title>{postData.title}</title>
       </Head>

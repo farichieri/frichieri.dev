@@ -44,19 +44,21 @@ export default function Index({ projects }: { projects: Array<any> }) {
   };
 
   return (
-    <MainLayout withPadding={true}>
-      <h1 style={{ width: '100%', textAlign: 'left' }}>Projects</h1>
-      <Filter handleFilter={handleFilter} optionSelected={optionSelected} />
-      <Projects projects={currentPaginationData} featured={false} />
-      <Pagination
-        currentPage={currentPage}
-        totalCount={totalCount}
-        pageSize={rowsPerPage}
-        pageSizeOptions={PAGE_SIZES}
-        onPageChange={updatePage}
-        onPageSizeOptionChange={updateRowsPerPage}
-        totalPages={totalPages}
-      />
+    <MainLayout>
+      <div className='flex flex-col gap-4 items-center'>
+        <h1 style={{ width: '100%', textAlign: 'left' }}>Projects</h1>
+        <Filter handleFilter={handleFilter} optionSelected={optionSelected} />
+        <Projects projects={currentPaginationData} featured={false} />
+        <Pagination
+          currentPage={currentPage}
+          totalCount={totalCount}
+          pageSize={rowsPerPage}
+          pageSizeOptions={PAGE_SIZES}
+          onPageChange={updatePage}
+          onPageSizeOptionChange={updateRowsPerPage}
+          totalPages={totalPages}
+        />
+      </div>
     </MainLayout>
   );
 }

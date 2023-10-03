@@ -3,7 +3,7 @@ const ExternalLink = ({
   children,
 }: {
   href: string;
-  children: JSX.Element;
+  children: JSX.Element | string;
 }) => (
   <a target='_blank' rel='noopener noreferrer' href={href}>
     {children}

@@ -1,244 +1,111 @@
-import Link from 'next/link';
+import { FC, useEffect, useState } from 'react';
+import { myPages } from '@/utils/myPages';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { myPages } from '../../utils/myPages';
-import DarkMode from '../DarkMode/DarkMode';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import MobileNav from './MobileNav';
 
-const Nav = ({
-  theme,
-  setTheme,
-}: {
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
-}) => {
-  const [hamburgerActive, setHamburgerActive] = useState(false);
+const ThemeSwitcher = dynamic(
+  () => import('@/components/ThemeSwitcher/ThemeSwitcher'),
+  {
+    ssr: false,
+  }
+);
 
-  const handleMenu = () => {
-    setHamburgerActive(!hamburgerActive);
+interface Props {}
+
+const NavBar: FC<Props> = () => {
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false);
+  const [lastYPos, setLastYPos] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY === 0) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      setLastYPos(window.scrollY);
+    }
   };
 
-  const route = useRouter();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastYPos]);
+
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const genericHamburgerLine = `h-0.5 w-6 my-0.5 rounded-full bg-black dark:bg-white transition ease transform duration-300`;
 
   return (
-    <nav>
-      <div className='nav-content'>
-        <div
-          onClick={handleMenu}
-          className={`hamburger ${hamburgerActive && 'active'}`}
-        >
-          <div className='bar'></div>
+    <nav
+      className={`fixed top-0 z-50 flex duration-300 w-full select-none items-center justify-center border-gray-500/20 px-2 backdrop-blur-md dark:border-gray-400/10   ${
+        show
+          ? 'border-b bg-white/80 dark:bg-black/50'
+          : 'border-none bg-transparent'
+      }`}
+    >
+      <div
+        className={`z-50 flex h-[var(--navHeight)] w-full max-w-7xl items-center justify-between gap-4 border-gray-500/20 px-2 dark:border-gray-400/10`}
+      >
+        <div className='hidden basis-1/3 items-center justify-center gap-4 text-xs font-medium sm:text-base md:flex md:gap-10'>
+          {myPages
+            .filter((page) => !page.external)
+            .map((page) => (
+              <Link
+                href={page.path}
+                key={page.name}
+                className={`rounded-3xl text-sm px-3 py-1 duration-300 hover:opacity-100 ${
+                  router.asPath === page.path ? 'opacity-100' : 'opacity-50'
+                }`}
+              >
+                <span className='text-[var(--textColor)]'>{page.name}</span>
+              </Link>
+            ))}
         </div>
-        <div className={`pages ${hamburgerActive ? 'active' : ''}`}>
-          {myPages.map((page) => (
-            <div className='link' key={page.name}>
-              {!page.external && (
-                <Link href={page.path} onClick={handleMenu}>
-                  <span
-                    className={route.pathname === page.path ? 'this-route' : ''}
-                  >
-                    {page.name}
-                  </span>
-                </Link>
-              )}
-            </div>
-          ))}
+        <div className='flex w-fit min-w-fit basis-1/3 items-center justify-end gap-4 text-xs xs:gap-5 sm:gap-10 sm:text-xl'>
+          <div className='hidden md:flex'>
+            <ThemeSwitcher />
+          </div>
         </div>
-        <DarkMode theme={theme} setTheme={setTheme} />
+        <div className='cursor-pointer md:hidden left-auto'>
+          <button
+            className='flex flex-col h-12 w-12 rounded justify-center items-center group'
+            onClick={(e) => {
+              e.preventDefault();
+              handleMenu();
+            }}
+          >
+            <div
+              className={`${genericHamburgerLine} ${
+                isOpen
+                  ? 'rotate-45 translate-y-0 opacity-50 group-hover:opacity-100'
+                  : 'opacity-50 group-hover:opacity-100'
+              }`}
+            />
+
+            <div
+              className={`${genericHamburgerLine} ${
+                isOpen
+                  ? '-rotate-45 -translate-y-1.5 opacity-50 group-hover:opacity-100'
+                  : 'opacity-50 group-hover:opacity-100'
+              }`}
+            />
+          </button>
+        </div>
+        <MobileNav isOpen={isOpen} />
       </div>
-      <style jsx>
-        {`
-          nav {
-            align-items: center;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--box-shadow-light);
-            display: flex;
-            height: var(--navHeight);
-            justify-content: space-between;
-            max-width: var(--max-width);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-            background: var(--nav-background-color);
-          }
-          .nav-content {
-            width: 100%;
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            align-items: center;
-            height: 100%;
-          }
-          .link {
-            padding: 0 1rem;
-          }
-
-          .pages span {
-            font-weight: 500;
-            padding: 0.2rem 0;
-          }
-
-          .pages span:hover {
-          }
-
-          .this-route {
-            color: var(--textColor);
-          }
-
-          .logo,
-          .logo:hover {
-            color: inherit;
-          }
-
-          .pages {
-            display: flex;
-            gap: 1rem;
-            text-transform: capitalize;
-          }
-
-          a:hover {
-            color: white;
-            filter: brightness(2);
-          }
-
-          .pages li {
-            display: inline-block;
-            border-radius: 8px;
-            text-transform: capitalize;
-            margin: 0 0.2rem;
-            background: red;
-            padding: 0.4rem;
-          }
-
-          .hamburger {
-            height: 60px;
-            width: 60px;
-            display: inline-block;
-            border-radius: 50%;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-            cursor: pointer;
-            transform: scale(0.8);
-            animation-duration: 2s;
-            animation-name: appear;
-            z-index: 3;
-            display: none;
-          }
-
-          .hamburger::after {
-            position: absolute;
-            content: '';
-            height: 100%;
-            width: 100%;
-          }
-
-          .hamburger .bar {
-            height: 2px;
-            width: 30px;
-            position: relative;
-            background-color: var(--link-color);
-            z-index: 4;
-          }
-
-          .hamburger .bar::after,
-          .hamburger .bar::before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            background-color: var(--link-color);
-            transition: 0.3s linear;
-            transition-property: top, bottom;
-          }
-
-          .hamburger .bar::after {
-            top: 8px;
-          }
-
-          .hamburger .bar::before {
-            bottom: 8px;
-          }
-
-          .hamburger.active .bar::before {
-            bottom: 0;
-          }
-
-          .hamburger.active .bar::after {
-            top: 0;
-          }
-
-          h1 {
-            filter: brightness(2);
-            font-size: 2rem;
-            min-width: fit-content;
-            font-weight: 400;
-          }
-          @media only screen and (max-width: 768px) {
-            .hamburger {
-              display: flex;
-            }
-            nav {
-              padding: 0 1rem;
-            }
-            h1 {
-              font-size: 2vh;
-            }
-            .pages {
-              position: fixed;
-              list-style: none;
-              background-color: var(--bgColor);
-              width: 100vw;
-              height: 100vh;
-              right: 100%;
-              top: 0;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              z-index: 2;
-              overflow-x: hidden;
-              transition: 0.3s linear right;
-              min-width: 100vw;
-              font-size: 1.5rem;
-            }
-            .pages.active {
-              left: 0;
-              margin: 0;
-              padding: 0;
-              min-width: 100vw;
-            }
-            .pages a {
-              font-size: 2.5rem;
-              font-weight: 500;
-              letter-spacing: 0.2rem;
-              text-transform: uppercase;
-              display: block;
-              transition: 0.3s;
-            }
-          }
-          @media only screen and (max-width: 400px) {
-            nav {
-              padding: 0 0.5rem;
-            }
-            h1 {
-              font-size: 1.6vh;
-            }
-          }
-          @keyframes appear {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-        `}
-      </style>
     </nav>
   );
 };
 
-export default Nav;
+export default NavBar;

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../../components/Layout/MainLayout';
+import Technologies from '@/components/Technologies/Technologies';
 
 export default function About() {
   const links = [
@@ -26,8 +27,22 @@ export default function About() {
     },
   ];
 
+  const technologies = [
+    'Next.js',
+    'TypeScript',
+    'TailwindCSS',
+    'React',
+    'Redux',
+    'Firebase',
+    'Node',
+    'MongoDB',
+    'Stripe',
+    'HTML',
+    'CSS',
+  ];
+
   return (
-    <MainLayout withPadding={true}>
+    <MainLayout>
       <section>
         <h1 style={{ width: '100%', textAlign: 'left' }}>About</h1>
         <div className='header'>
@@ -49,9 +64,12 @@ export default function About() {
         </div>
         <p>Based in Buenos Aires, Argentina.</p>
         <p>
-          Next.js - TypeScript - TailwindCSS - React - Redux - Firebase - Node -
-          MongoDB - Stripe - HTML - CSS
+          In my free time, I like to do exercise. 💪 I lift weights in the gym
+          and I do spinning for cardio, I also like to eat healthy 🥦
         </p>
+        <div className='flex'>
+          <Technologies technologies={technologies} />
+        </div>
         <p>Follow me on:</p>
         <ul>
           {links.map((link) => (

@@ -1,5 +1,6 @@
 import { getSortedPostData } from '../utils/posts';
 import { myProjects } from '../utils/myProjects';
+import { Projects as ProjectsType } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/Layout/MainLayout';
@@ -11,45 +12,43 @@ const Page = ({
   projects,
 }: {
   posts: Array<object>;
-  projects: Array<any>;
+  projects: ProjectsType;
 }) => {
   return (
-    <MainLayout withPadding={true}>
-      <div className='home'>
-        <div className='home-header'>
-          <div>
-            <h1 className='name'>hey, I&apos;m Fabricio 👋</h1>
-            <p style={{ color: 'gray' }}>
-              I&apos;m a Full Stack Web Developer from Argentina, specializing
-              in React, Next.js & TypeScript. I&apos;m passionate about creating
-              and improving web applications, and my motivation is to build a
-              better version of me every day while adding value to others with
-              my work.
-            </p>
+    <MainLayout>
+      <div className=' flex items-center justify-center w-full h-full pb-4 flex-col'>
+        <div className='rounded-3xl overflow-hidden relative h-auto text-left flex items-center w-full '>
+          <div className='z-10 gap-4 p flex-wrap-reverse sm:flex-nowrap flex justify-between w-full p-4'>
+            <div className=''>
+              <h1 className='text-3xl font-bold'>hey, I&apos;m Fabricio 👋</h1>
+              <p className='opacity-70'>
+                I&apos;m a Full Stack Web Developer from Argentina, specializing
+                in React, Next.js & TypeScript.
+              </p>
+            </div>
+            <span className=''>
+              <Image
+                src={'/images/frichieri.png'}
+                alt='Fabricio Richieri'
+                height={125}
+                width={125}
+                className='flex rounded-full overflow-auto border border-gray-500/50 min-w-[125px] min-h-[125px]'
+              />
+            </span>
           </div>
-          <span className='img--container'>
-            <Image
-              src={'/images/frichieri.png'}
-              alt='Fabricio Richieri'
-              fill
-              sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-            />
-          </span>
         </div>
-        <div className='featured-projects'>
-          <div className='featured-title'>
-            <h2>Featured Projects</h2>
+        <div className='flex flex-col text-left h-full w-full gap-2.5 my-8 '>
+          <div>
+            <h2 className='font-semibold my-0 py-0'>Featured Projects</h2>
           </div>
           <Projects projects={projects} featured={true} />
           <Link href={'/projects'}>
             <span>See all projects {'>'}</span>
           </Link>
         </div>
-        <div className='featured-posts'>
-          <div className='featured-title'>
-            <h2>Featured Posts</h2>
+        <div className='flex flex-col text-left h-full w-full gap-2.5'>
+          <div>
+            <h2 className='font-semibold'>Featured Posts</h2>
           </div>
           <Posts posts={posts} />
           <Link href={'/blog'}>
@@ -57,66 +56,6 @@ const Page = ({
           </Link>
         </div>
       </div>
-      <style jsx>{`
-        .home {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          width: 100%;
-          gap: 1.5rem;
-          padding-bottom: 2rem;
-        }
-        h1 {
-          font-size: 2rem;
-          font-weight: 700;
-        }
-        p {
-          padding: 0.25rem 0;
-          margin: 0;
-        }
-        .home-header {
-          text-align: left;
-          display: flex;
-          height: 100%;
-          width: 100%;
-          justify-content: space-between;
-        }
-        .img--container {
-          height: 125px;
-          width: 125px;
-          min-width: 125px;
-          min-height: 125px;
-          display: flex;
-          position: relative;
-          border-radius: 50%;
-          overflow: auto;
-          box-shadow: 0 0 10px 1px var(--box-shadow-light);
-          filter: grayscale(0);
-          transition: 0.3s;
-        }
-        .img--container:hover {
-          filter: grayscale(1);
-        }
-        .featured-projects,
-        .featured-posts {
-          height: 100%;
-          width: 100%;
-          text-align: left;
-          gap: 10px;
-          display: flex;
-          flex-direction: column;
-        }
-        @media screen and (max-width: 500px) {
-          h1 {
-            font-size: 1.5rem;
-          }
-          h2 {
-            font-size: 1.15rem;
-          }
-        }
-      `}</style>
     </MainLayout>
   );
 };

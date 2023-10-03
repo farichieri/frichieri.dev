@@ -5,7 +5,7 @@ import MainLayout from '../../components/Layout/MainLayout';
 
 export default function Contact() {
   return (
-    <MainLayout withPadding={true}>
+    <MainLayout>
       <h1 style={{ width: '100%', textAlign: 'left' }}>Contact</h1>
       <div className='contact-container'>
         <div className='form-container'>
@@ -13,10 +13,7 @@ export default function Contact() {
         </div>
 
         <div className='links'>
-          <Link
-            href={'https://www.linkedin.com/in/farichieri/'}
-            target='_blank'
-          >
+          <Link href={'https://www.linkedin.com/in/frichieri/'} target='_blank'>
             <span>
               <Image
                 src={'/images/linkedin.png'}

@@ -1,26 +1,25 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { myProjects } from '../../utils/myProjects';
+import { ParsedUrlQuery } from 'querystring';
+import { Project } from '../../types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ParsedUrlQuery } from 'querystring';
 import MainLayout from '../../components/Layout/MainLayout';
-import { myProjects } from '../../utils/myProjects';
+import Technologies from '@/components/Technologies/Technologies';
 
-const Slug = ({ project }: { project: any }) => {
+const Slug = ({ project }: { project: Project }) => {
   return (
-    <MainLayout withPadding={true}>
-      <h1 style={{ width: '100%', textAlign: 'left' }}>
-        Project: {project.name}{' '}
-      </h1>
-      <div className='project-container'>
-        <span className='img'>
+    <MainLayout>
+      <h1 className='font-bold text-xl'>{project.name} </h1>
+      <div className='flex w-full flex-col'>
+        <span className='w-full flex relative h-auto mx-auto '>
           <Image
             src={project.image}
             alt={project.name}
-            fill
-            sizes='(max-width: 1920px) 100vw,
-              (max-width: 960px) 50vw,
-              33vw'
+            height={1200}
+            width={900}
             priority
+            className='rounded-xl flex mx-auto'
           />
         </span>
         <div>
@@ -28,12 +27,12 @@ const Slug = ({ project }: { project: any }) => {
           <p>{project.description}</p>
           <br />
           <h2>Made with:</h2>
-          <p> {project.languages} </p>
+          <Technologies technologies={project.technologies} />
           <br />
           <h2 style={{ display: 'flex', alignItems: 'center' }}>
             See live:
             <p>
-              <Link href={project.live} target={'_blank'}>
+              <Link href={project.websiteUrl} target={'_blank'}>
                 <span className='live'>
                   <Image
                     src={'/images/live.png'}
@@ -49,8 +48,8 @@ const Slug = ({ project }: { project: any }) => {
           <h2 style={{ display: 'flex', alignItems: 'center' }}>
             Code:
             <p>
-              {project.github ? (
-                <Link href={project.github} target={'_blank'}>
+              {project.githubUrl ? (
+                <Link href={project.githubUrl} target={'_blank'}>
                   <span className='github'>
                     <Image
                       src={'/images/github.png'}

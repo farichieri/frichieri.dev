@@ -61,7 +61,7 @@ export default function Page() {
     },
   ];
   return (
-    <MainLayout withPadding={true}>
+    <MainLayout>
       <ul>
         {EXPERIENCES.map((experience) => (
           <li key={experience.company}>
