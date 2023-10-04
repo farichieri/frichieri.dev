@@ -21,7 +21,7 @@ export const myProjects: Projects = [
     ],
     stack: 'Full Stack',
     description:
-      'Nutrition Plans is a Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc), adapt your diet with your body features, goals and meals settings, and get a personalized diet for your days.',
+      'A Saas Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc.), adapt your diet with your body features, goals and meal settings, and get a personalized diet for your days which will be aiming to guide you to your goal.',
   },
   {
     id: 0.1,
@@ -34,6 +34,7 @@ export const myProjects: Projects = [
       'Next.js',
       'Typescript',
       'React.js',
+      'Redux',
       'Tailwind',
       'CSS',
       'Firebase',

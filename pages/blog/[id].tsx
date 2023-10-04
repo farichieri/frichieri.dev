@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import Date from '../../components/Layout/Date';
 import MainLayout from '../../components/Layout/MainLayout';
-import Views from '../../components/Views/Views';
 import { getAllPostsIds, getPostData } from '../../utils/posts';
 
 const Post = ({ postData }: { postData: any }) => {
@@ -30,7 +29,12 @@ const Post = ({ postData }: { postData: any }) => {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <div className='post-back'>
-        <Link href={'/blog'}>{'<'} All Posts</Link>
+        <Link
+          href={'/blog'}
+          className='opacity-50 hover:opacity-100 duration-300'
+        >
+          {'<'} All Posts
+        </Link>
       </div>
       <style jsx>{`
         article {

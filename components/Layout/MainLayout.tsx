@@ -6,7 +6,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className='flex flex-col w-full min-h-screen h-full px-4 pt-8 pb-24 max-w-5xl'>
+    <div className='flex flex-col w-full min-h-screen h-full px-4 pb-24 max-w-5xl'>
       {children}
     </div>
   );

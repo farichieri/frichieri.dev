@@ -50,14 +50,19 @@ const NavBar: FC<Props> = () => {
     <nav
       className={`fixed top-0 z-50 flex duration-300 w-full select-none items-center justify-center border-gray-500/20 px-2 backdrop-blur-md dark:border-gray-400/10   ${
         show
-          ? 'border-b bg-white/80 dark:bg-black/50'
+          ? 'border-b bg-white/50 dark:bg-black/50'
           : 'border-none bg-transparent'
       }`}
     >
       <div
-        className={`z-50 flex h-[var(--navHeight)] w-full max-w-7xl items-center justify-between gap-4 border-gray-500/20 px-2 dark:border-gray-400/10`}
+        className={`z-[100] flex h-[var(--navHeight)] w-full max-w-7xl items-center justify-between gap-4 border-gray-500/20 px-2 dark:border-gray-400/10`}
       >
-        <div className='hidden basis-1/3 items-center justify-center gap-4 text-xs font-medium sm:text-base md:flex md:gap-10'>
+        <div className='z-[100]'>
+          <Link href={'/'}>
+            <span className='text-blue-400 font-bold'>FR</span>
+          </Link>
+        </div>
+        <div className='hidden  items-center justify-center gap-4 text-xs font-medium sm:text-base md:flex md:gap-10'>
           {myPages
             .filter((page) => !page.external)
             .map((page) => (
@@ -72,12 +77,12 @@ const NavBar: FC<Props> = () => {
               </Link>
             ))}
         </div>
-        <div className='flex w-fit min-w-fit basis-1/3 items-center justify-end gap-4 text-xs xs:gap-5 sm:gap-10 sm:text-xl'>
+        <div className='flex w-fit min-w-fit  items-center justify-end gap-4 text-xs xs:gap-5 sm:gap-10 sm:text-xl'>
           <div className='hidden md:flex'>
             <ThemeSwitcher />
           </div>
         </div>
-        <div className='cursor-pointer md:hidden left-auto'>
+        <div className='cursor-pointer md:hidden left-auto z-[100]'>
           <button
             className='flex flex-col h-12 w-12 rounded justify-center items-center group'
             onClick={(e) => {
@@ -102,8 +107,8 @@ const NavBar: FC<Props> = () => {
             />
           </button>
         </div>
-        <MobileNav isOpen={isOpen} />
       </div>
+      <MobileNav onClick={handleMenu} isOpen={isOpen} />
     </nav>
   );
 };

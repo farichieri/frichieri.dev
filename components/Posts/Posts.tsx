@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Date from '../../components/Layout/Date';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 const Posts = ({ posts }: { posts: Array<object> }) => {
   // let [actualPosts, setActualPosts] = useState(posts);
@@ -33,9 +33,9 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
   }, [posts]);
 
   return (
-    <div className='posts-container'>
+    <div className='flex my-2 h-full'>
       {actualPosts.length > 0 ? (
-        <table>
+        <table className=' border-spacing-y-2 border-separate'>
           <thead></thead>
           <tbody>
             {actualPosts.map((post: any) => (
@@ -44,7 +44,12 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
                   <Date dateString={post.date} />
                 </td>
                 <td>
-                  <Link href={`blog/${post.id}`}>{post.title}</Link>
+                  <Link
+                    href={`blog/${post.id}`}
+                    className='opacity-50 hover:opacity-100 duration-300'
+                  >
+                    {post.title}
+                  </Link>
                 </td>
                 <td>
                   {/* <span>{post.views > 0 && <>views: {post.views}</>}</span> */}
@@ -56,41 +61,6 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
       ) : (
         <p style={{ color: 'gray' }}>No posts found.</p>
       )}
-      <style jsx>{`
-        .posts-container {
-          height: 100%;
-          display: flex;
-          margin: 0.5rem 0;
-        }
-        .posts-container,
-        table,
-        tbody {
-          width: 100%;
-        }
-        table {
-          border-collapse: separate;
-          border-spacing: 0 0.5rem;
-        }
-        tr {
-          text-align: left;
-        }
-        td:last-child {
-          width: 15%;
-        }
-        td span {
-          height: 100%;
-          font-size: 80%;
-          color: gray;
-          font-style: italic;
-          justify-content: right;
-          min-width: max-content;
-        }
-        @media screen and (max-width: 500px) {
-          .posts-container {
-            font-size: 80%;
-          }
-        }
-      `}</style>
     </div>
   );
 };

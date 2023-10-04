@@ -6,12 +6,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontSize: {
-      xs: '12px',
-      sm: '15px',
-      xl: '2rem',
-      base: '20px',
-    },
     borderColor: (theme) => ({
       ...theme('colors'),
       DEFAULT: theme('colors.gray.300', 'currentColor'),

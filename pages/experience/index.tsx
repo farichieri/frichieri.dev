@@ -1,3 +1,4 @@
+import Technologies from '@/components/Technologies/Technologies';
 import ExternalLink from '../../components/ExternalLink/ExternalLink';
 import MainLayout from '../../components/Layout/MainLayout';
 
@@ -16,28 +17,14 @@ export default function Page() {
         'Typescript',
         'Typesense',
       ],
-      title: 'Founder - Software Engineer',
-      website: 'https://nutritionplans.com',
-    },
-    {
-      company: 'Improveme',
-      date: 'Jan 2023 - April 2023',
-      description: 'Side project - Task management platform.',
-      technologies: [
-        'Firebase',
-        'Nextjs',
-        'Redux',
-        'Tailwindcss',
-        'Typescript',
-      ],
-      title: 'Software Engineer',
-      website: 'https://improveme.vercel.app/',
+      title: 'Founder - Full Stack Developer',
+      website: 'https://nutritionplans.co',
     },
     {
       company: 'Sundevs Inc.',
       date: 'Jun 2022 - Jan 2023',
       description:
-        'Front end developer. Worked on www.cinemark.com.co and www.cinemark.com.ec projects.',
+        'Worked as a Front end developer on the next sites: www.cinemark.com.co and www.cinemark.com.ec projects, fixing bugs and adding new features.',
       technologies: ['JavaScript', 'MongoDB', 'Nextjs', 'NodeJs', 'Redux'],
       title: 'Front end developer',
       website: 'https://sundevs.com/',
@@ -62,56 +49,29 @@ export default function Page() {
   ];
   return (
     <MainLayout>
-      <ul>
-        {EXPERIENCES.map((experience) => (
-          <li key={experience.company}>
-            <div className='header'>
-              <ExternalLink href={experience.website}>
-                <b>{experience.company}</b>
-              </ExternalLink>
-              <span>{experience.date}</span>
-            </div>
-            <div className='body'>
-              <span>
-                <b>{experience.title}</b>
-              </span>
-              <span>{experience.description}</span>
-              <span>Technologies: {experience.technologies.join(', ')}</span>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <style jsx>{`
-        ul {
-          list-style-type: disc;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 5rem;
-        }
-        li {
-          margin-bottom: 1rem;
-          display: flex;
-          flex-direction: column;
-          list-style-type: disc;
-          list-style: inside;
-          width: 100%;
-          gap: 1rem;
-        }
-        .header {
-          display: flex;
-          align-items: center;
-          width: 100%;
-          justify-content: space-between;
-        }
-        .body {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          text-align: left;
-          gap: 0.5rem;
-        }
-      `}</style>
+      <section className='w-full flex flex-col justify-center items-center'>
+        <div className='list-disc w-full flex flex-col gap-y-20'>
+          {EXPERIENCES.map((experience) => (
+            <ExternalLink href={experience.website} key={experience.company}>
+              <div className='mb-4 flex flex-col list-disc list-inside w-full gap-4 hover:border-gray-500/20 hover:bg-slate-500/20 duration-300 p-4 rounded-md select-none border border-transparent'>
+                <div className='flex items-center w-full justify-between'>
+                  <ExternalLink href={experience.website}>
+                    <b>{experience.company}</b>
+                  </ExternalLink>
+                  <span>{experience.date}</span>
+                </div>
+                <div className='flex flex-col w-full text-left gap-2'>
+                  <span>
+                    <b>{experience.title}</b>
+                  </span>
+                  <span>{experience.description}</span>
+                  <Technologies technologies={experience.technologies} />
+                </div>
+              </div>
+            </ExternalLink>
+          ))}
+        </div>
+      </section>
     </MainLayout>
   );
 }
