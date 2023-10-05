@@ -1,7 +1,7 @@
-import { Projects } from '../../types';
-import ExternalLink from '../ExternalLink/ExternalLink';
-import Image from 'next/image';
-import Technologies from '../Technologies/Technologies';
+import { Projects } from "../../types";
+import ExternalLink from "../ExternalLink/ExternalLink";
+import Image from "next/image";
+import Technologies from "../Technologies/Technologies";
 
 export default function Projects({
   projects,
@@ -13,23 +13,27 @@ export default function Projects({
   const myProjects = featured ? projects.slice(0, 4) : projects;
 
   return (
-    <div className='flex max-w-5xl mx-auto flex-col divide-y '>
+    <div className="mx-auto flex max-w-5xl flex-col divide-y ">
       {myProjects.map((project) => (
         <div key={project.id}>
           <ExternalLink href={project.websiteUrl}>
-            <div className='flex flex-wrap sm:flex-nowrap rounded-3xl my-8 p-4 gap-4 hover:bg-slate-500/20'>
-              <span>
+            <div className="group my-8 flex flex-wrap gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-blue-300/20 md:flex-nowrap">
+              <span className="mx-auto">
                 <Image
                   alt={`Project ${project.name}`}
                   src={project.image}
                   width={500}
                   height={282}
-                  className='border rounded-xl flex sm:basis-1/2 shadow-lg dark:shadow-gray-800/20 w-[500px] '
+                  className="flex rounded-md border shadow-lg dark:shadow-gray-800/20 md:h-[280px] md:w-[500px] md:basis-1/2 "
                 />
               </span>
-              <div className='text-[var(--textColor)] gap-2 w-full sm:basis-1/2 flex flex-col justify-start items-center'>
-                <h4 className='font-semibold p-0 m-0'>{project.name}</h4>
-                <span>{project.description}</span>
+              <div className="flex w-full flex-col items-center justify-start gap-2 text-[var(--textColor)] md:basis-1/2">
+                <h4 className="m-0 p-0 font-semibold group-hover:text-blue-400">
+                  {project.name}
+                </h4>
+                <span className="opacity-50 group-hover:opacity-100">
+                  {project.description}
+                </span>
                 <Technologies technologies={project.technologies} />
               </div>
             </div>

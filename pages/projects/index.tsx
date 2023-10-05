@@ -5,11 +5,22 @@ import MainLayout from '../../components/Layout/MainLayout';
 import Pagination from '../../components/Pagination/Pagination';
 import Projects from '../../components/Projects/Projects';
 
-const PAGE_SIZES = [6, 12, 18, 24, 32];
+const getPageSizes = (length: number): number[] => {
+  if (length <= 5) {
+    return [5];
+  } else {
+    const arr: number[] = [];
+    for (let i = 5; i <= length; i += 5) {
+      arr.push(i);
+    }
+    return arr;
+  }
+};
 
 export default function Index({ projects }: { projects: Array<any> }) {
   const [projectsState, setProjectsState] = useState(myProjects);
   const [optionSelected, setOptionSelected] = useState('All');
+  const PAGE_SIZES = getPageSizes(projectsState.length);
   const [rowsPerPage, setRowsPerPage] = useState(PAGE_SIZES[0]);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -46,7 +57,7 @@ export default function Index({ projects }: { projects: Array<any> }) {
   return (
     <MainLayout>
       <div className='flex flex-col gap-4 items-center'>
-        <h1 style={{ width: '100%', textAlign: 'left' }}>Projects</h1>
+        <h1 className='w-full text-left'>Projects</h1>
         <Filter handleFilter={handleFilter} optionSelected={optionSelected} />
         <Projects projects={currentPaginationData} featured={false} />
         <Pagination

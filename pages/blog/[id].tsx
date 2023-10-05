@@ -1,55 +1,42 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-import Date from '../../components/Layout/Date';
-import MainLayout from '../../components/Layout/MainLayout';
-import { getAllPostsIds, getPostData } from '../../utils/posts';
+import { Post, allPosts } from "@/.contentlayer/generated";
+import Date from "../../components/Layout/Date";
+import Head from "next/head";
+import Link from "next/link";
+import MainLayout from "../../components/Layout/MainLayout";
+import React from "react";
+import { Mdx } from "@/components/Mdx/Mdx";
 
-const Post = ({ postData }: { postData: any }) => {
+const Post = ({ data }: { data: Post }) => {
   return (
     <MainLayout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{data.title}</title>
       </Head>
-      <article>
-        <div className='post-header'>
+      <article className="px-2">
+        <div className="mb-10">
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            <h1>{postData.title}</h1>
+            <h1 className="text-4xl font-bold text-blue-400">{data.title}</h1>
             {/* <Views /> */}
           </div>
-          <span style={{ opacity: '.7' }}>
-            <Date dateString={postData.date} />
+          <span style={{ opacity: ".7" }}>
+            <Date dateString={data.date} />
           </span>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <Mdx code={data.body.code} />
       </article>
-      <div className='post-back'>
+      <div className="my-10">
         <Link
-          href={'/blog'}
-          className='opacity-50 hover:opacity-100 duration-300'
+          href={"/blog"}
+          className="opacity-50 duration-300 hover:opacity-100"
         >
-          {'<'} All Posts
+          {"<"} All Posts
         </Link>
       </div>
-      <style jsx>{`
-        article {
-          text-align: left;
-          width: 100%;
-        }
-        .post-header {
-          margin-bottom: 2rem;
-        }
-        .post-back {
-          text-align: left;
-          width: 100%;
-          margin: 4rem 0;
-        }
-      `}</style>
     </MainLayout>
   );
 };
@@ -57,7 +44,11 @@ const Post = ({ postData }: { postData: any }) => {
 export default Post;
 
 export const getStaticPaths = async () => {
-  const paths = getAllPostsIds();
+  const paths = allPosts.map((doc) => ({
+    params: {
+      id: doc.slugAsParams,
+    },
+  }));
   return {
     paths,
     fallback: false,
@@ -65,10 +56,10 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: { params: any }) => {
-  const postData = await getPostData(params.id);
+  const data = allPosts.find((doc) => doc.slugAsParams === params.id);
   return {
     props: {
-      postData,
+      data,
     },
   };
 };

@@ -21,7 +21,7 @@ export const myProjects: Projects = [
     ],
     stack: 'Full Stack',
     description:
-      'A Saas Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc.), adapt your diet with your body features, goals and meal settings, and get a personalized diet for your days which will be aiming to guide you to your goal.',
+      'A Saas Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc.), adapt your diet with your body features, goals and meal settings, and get a personalized diet for your days which will be aiming to guide you to your goal. Feel free to create an account.',
   },
   {
     id: 0.1,
@@ -42,7 +42,7 @@ export const myProjects: Projects = [
     ],
     stack: 'Full Stack',
     description:
-      'A Task management app where you can create tasks, set a goal, and track your progress.',
+      'A Task management app where you can create tasks, set a goal, and track your progress. Feel free to create an account.',
   },
   {
     id: 0.2,
@@ -53,52 +53,18 @@ export const myProjects: Projects = [
     websiteUrl: 'https://www.almarichnutricion.com/',
     technologies: ['Next.js', 'Typescript', 'React.js', 'Firebase'],
     stack: 'Front End',
-    description:
-      'This is a personal website built for a nutritionist. It has an /admin panel where you can create new blogs with a markdown editor.',
-  },
-  {
-    id: 1,
-    name: 'frichieri.dev',
-    slug: 'this-website',
-    image: '/images/projects/this-website.png',
-    githubUrl: 'https://github.com/farichieri/frichieri.dev',
-    websiteUrl: 'https://frichieri-dev.vercel.app/',
-    technologies: ['Next.js', 'Typescript', 'React.js', 'Firebase', 'Mdx'],
-    stack: 'Front End',
-    description:
-      'This is my personal website. Under construction, but you can see it in the meantime. I hope you like it.',
+    description: 'A Nutritionist personal website.',
   },
   {
     id: 2,
-    name: 'lucasnazardj',
+    name: 'lucasnazar.com',
     slug: 'lucasnazardj',
     image: '/images/projects/lucasnazardj.png',
     githubUrl: '',
     websiteUrl: 'https://www.lucasnazar.com/',
     technologies: ['Next.js', 'TypeScript', 'React', 'Firebase', 'CSS'],
     stack: 'Front End',
-    description:
-      'This is a Dj personal website. It has an /admin panel with auth in order to add and delete next tours.',
-  },
-  {
-    id: 3,
-    name: 'pizza-order admin',
-    slug: 'pizza-order-administrator',
-    image: '/images/projects/pizza-administrator.png',
-    githubUrl: 'https://github.com/farichieri/pizza-administrator',
-    websiteUrl: 'https://pizza-administrator.vercel.app/',
-    technologies: [
-      'JavaScript',
-      'React',
-      'CSS',
-      'Node.js',
-      'MongoDB',
-      'Mongoose',
-      'Express',
-    ],
-    stack: 'Full Stack',
-    description:
-      'Pizza Order Administrator is a web page made for controlling orders and statistics of a pizza shop. The idea si to have multiple users and if the order is set, the kitchen will see the orders panel and change the status of the order to completed when the order is ready. (Backend off)',
+    description: 'A Dj personal website.',
   },
   {
     id: 4,
@@ -119,30 +85,7 @@ export const myProjects: Projects = [
     ],
     stack: 'Full Stack',
     description:
-      'An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users. (Backend off)',
-  },
-  {
-    id: 5,
-    name: 'Comic Book',
-    slug: 'comic-book',
-    image: '/images/projects/comicbook.png',
-    githubUrl: 'https://github.com/farichieri/frichieri-test',
-    websiteUrl: 'https://frichieri-test.vercel.app/',
-    technologies: ['JavaScript', 'React', 'Redux', 'CSS', 'Firebase'],
-    stack: 'Front End',
-    description:
-      'Comic Book app made as a job test. It consumes data from an API, shows comics and details, has a login and register section, a wishlist, a pagination and a searchbar. Read the README in github to test the live demo.',
-  },
-  {
-    id: 6,
-    name: 'Old Personal Website',
-    slug: 'old-personal-website',
-    image: '/images/projects/old-personal-website.png',
-    githubUrl: 'https://github.com/farichieri/CV-Portfolio',
-    websiteUrl: 'https://frichieri.vercel.app/',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    stack: 'Front End',
-    description: 'My old (1 page static) personal website',
+      'An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users. (Backend off).',
   },
   {
     id: 7,

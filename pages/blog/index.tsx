@@ -1,7 +1,7 @@
+import { allPosts } from '@/.contentlayer/generated';
 import MainLayout from '../../components/Layout/MainLayout';
 import Posts from '../../components/Posts/Posts';
 import Searchbar from '../../components/Searchbar/Searchbar';
-import { getSortedPostData } from '../../utils/posts';
 import { useState } from 'react';
 
 const Blog = ({
@@ -32,8 +32,7 @@ const Blog = ({
 export default Blog;
 
 export const getStaticProps = async () => {
-  const allPostData = getSortedPostData();
-
+  const allPostData = allPosts;
   return {
     props: { posts: allPostData },
   };

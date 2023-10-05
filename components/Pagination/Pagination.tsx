@@ -34,11 +34,11 @@ const Pagination = ({
   };
 
   return (
-    <ul className='wrapper' aria-label='Blog post pagination list'>
-      <li className='paginationItem'>
+    <ul className='flex select-none gap-1 items-baseline list-none mb-20 justify-center'>
+      <li className=' flex'>
         <button
           type='button'
-          className='arrowButton left'
+          className='arrowButton left border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden hover:bg-slate-500/20 disabled:opacity-50 disabled:pointer-events-none'
           aria-label='Goto previous page'
           onClick={onPrevious}
           disabled={currentPage === 1}
@@ -50,7 +50,7 @@ const Pagination = ({
       {paginationRange.map((pageNumber: any, index: number) => {
         if (pageNumber === DOTS) {
           return (
-            <li key={index} className='dots'>
+            <li key={index} className='dots line-height-34px mx-2'>
               &#8230;
             </li>
           );
@@ -59,13 +59,17 @@ const Pagination = ({
         return (
           <li
             key={index}
-            className='paginationItem'
-            aria-current={pageNumber === currentPage && 'page'}
+            className={` ${
+              pageNumber === currentPage
+                ? 'font-bold underline opacity-100 bg-slate-500/20 rounded-full '
+                : 'opacity-50 hover:opacity-100'
+            }`}
           >
             <button
               type='button'
               aria-label={`Goto page ${pageNumber}`}
               onClick={() => onPageChange(pageNumber)}
+              className='border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden  hover:bg-slate-500/20'
             >
               {pageNumber}
             </button>
@@ -73,10 +77,10 @@ const Pagination = ({
         );
       })}
 
-      <li className='paginationItem'>
+      <li className=' flex'>
         <button
           type='button'
-          className='arrowButton right'
+          className='arrowButton right border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden hover:bg-slate-500/20 disabled:opacity-50 disabled:pointer-events-none'
           aria-label='Goto next page'
           onClick={onNext}
           disabled={currentPage === totalPages}
@@ -86,7 +90,7 @@ const Pagination = ({
       </li>
 
       <select
-        className='paginationSelector'
+        className='bg-[var(--bgColor)] mx-2 px-2 py-2 text-[var(--textColor)] border border-box-shadow-light rounded-md'
         aria-label='Select page size'
         value={pageSize}
         onChange={(e) => {
@@ -99,83 +103,6 @@ const Pagination = ({
           </option>
         ))}
       </select>
-      <style jsx>{`
-        .wrapper {
-          display: flex;
-          gap: 0.25rem;
-          align-items: center;
-          list-style-type: none;
-          margin-bottom: 20px;
-          color: var(--textColor);
-        }
-        .paginationItem {
-          display: flex;
-        }
-
-        button {
-          border: 1px solid var(--box-shadow-light);
-          background: transparent;
-          height: 34px;
-          width: 34px;
-          border-radius: 50%;
-          overflow: hidden;
-          color: var(--textColor);
-        }
-
-        button:hover {
-          background-color: rgba(159, 159, 159, 0.295);
-          cursor: pointer;
-        }
-
-        button:disabled {
-          pointer-events: none;
-          opacity: 0.5;
-        }
-
-        [aria-current='page'] button {
-          background-color: rgba(159, 159, 159, 0.295);
-          font-weight: 700;
-          text-decoration: underline;
-        }
-
-        .arrowButton {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 1.5px;
-        }
-
-        svg {
-          width: 1em;
-          height: 1em;
-        }
-
-        .dots {
-          line-height: 34px;
-          margin: 5px 10px;
-        }
-
-        .paginationSelector {
-          background-color: var(--bgColor);
-          color: var(--textColor);
-          border: none;
-          outline: none;
-          margin-left: 10px;
-          padding: 0.2rem;
-          border: 1px solid var(--box-shadow-light);
-          border-radius: 4px;
-        }
-
-        @media screen and (max-width: 400px) {
-          .wrapper {
-            gap: 0.1rem;
-          }
-          button {
-            height: 22px;
-            width: 22px;
-          }
-        }
-      `}</style>
     </ul>
   );
 };

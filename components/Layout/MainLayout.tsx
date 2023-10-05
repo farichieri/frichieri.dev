@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function MainLayout({
   children,
@@ -6,7 +6,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className='flex flex-col w-full min-h-screen h-full px-4 pb-24 max-w-5xl'>
+    <div className="flex h-full min-h-screen w-full max-w-5xl flex-col px-4 pb-24">
       {children}
     </div>
   );

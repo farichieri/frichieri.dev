@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Date from '../../components/Layout/Date';
-import { useMemo } from 'react';
+import Link from "next/link";
+import Date from "../../components/Layout/Date";
+import { useMemo } from "react";
 
 const Posts = ({ posts }: { posts: Array<object> }) => {
   // let [actualPosts, setActualPosts] = useState(posts);
@@ -33,20 +33,20 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
   }, [posts]);
 
   return (
-    <div className='flex my-2 h-full'>
+    <div className="my-2 flex h-full">
       {actualPosts.length > 0 ? (
-        <table className=' border-spacing-y-2 border-separate'>
+        <table className=" border-separate border-spacing-y-2">
           <thead></thead>
           <tbody>
             {actualPosts.map((post: any) => (
-              <tr className='post' key={post.id}>
+              <tr className="post" key={post.id}>
                 <td>
                   <Date dateString={post.date} />
                 </td>
                 <td>
                   <Link
-                    href={`blog/${post.id}`}
-                    className='opacity-50 hover:opacity-100 duration-300'
+                    href={`blog/${post.slug}`}
+                    className="opacity-50 duration-300 hover:opacity-100"
                   >
                     {post.title}
                   </Link>
@@ -59,7 +59,7 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
           </tbody>
         </table>
       ) : (
-        <p style={{ color: 'gray' }}>No posts found.</p>
+        <p style={{ color: "gray" }}>No posts found.</p>
       )}
     </div>
   );

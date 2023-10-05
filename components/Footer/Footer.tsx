@@ -1,32 +1,69 @@
-import { myPages } from '@/utils/myPages';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { InstagramIcon, TwitterIcon, GithubIcon } from "@/assets";
+import { myPages } from "@/utils/myPages";
+import { useRouter } from "next/router";
+import ExternalLink from "../ExternalLink/ExternalLink";
+import Link from "next/link";
 
 const Footer = () => {
+  const SOCIAL = [
+    {
+      name: "Twitter",
+      url: "https://www.twitter.com/farichieri",
+      icon: (
+        <TwitterIcon customClass="h-4 w-4 fill-black dark:fill-white opacity-50 hover:opacity-100 duration-300" />
+      ),
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/fabriciorichieri",
+      icon: (
+        <InstagramIcon customClass="h-4 w-4 fill-black dark:fill-white opacity-50 hover:opacity-100 duration-300" />
+      ),
+    },
+    {
+      name: "Github",
+      url: "https://github.com/farichieri",
+      icon: (
+        <GithubIcon customClass="h-4 w-4 fill-black dark:fill-white opacity-50 hover:opacity-100 duration-300" />
+      ),
+    },
+  ];
+
   const router = useRouter();
   return (
-    <footer className='w-full flex justify-center items-center border-t max-w-5xl mx-auto border-[var(--box-shadow-light)]'>
-      <div className='flex w-full mt-auto max-w-4xl py-10 gap-8 flex-col'>
-        <div className='mx-auto max-w-3xl sm:gap-x-10 grid grid-cols-3 sm:grid-cols-4'>
-          {myPages.map((page) => (
-            <Link
-              href={page.path}
-              key={page.name}
-              className={`rounded-3xl text-sm px-3 py-1 duration-300 hover:opacity-100 ${
-                router.asPath === page.path ? 'opacity-100' : 'opacity-50'
-              }`}
-            >
-              <span className='text-[var(--textColor)]'>{page.name}</span>
-            </Link>
-          ))}
+    <footer className="mx-auto flex w-full max-w-5xl items-center justify-center border-t border-[var(--box-shadow-light)]">
+      <div className="mt-auto flex w-full max-w-4xl flex-col gap-8 py-10">
+        <div className="mx-auto grid grid-cols-3 gap-x-2 sm:grid-cols-5 sm:gap-x-10">
+          {myPages.map((page) => {
+            return (
+              <ExternalLink
+                href={page.path}
+                key={page.name}
+                className={`rounded-3xl py-1 text-sm duration-300 hover:opacity-100 ${
+                  router.asPath === page.path ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <span className="text-[var(--textColor)]">{page.name}</span>
+              </ExternalLink>
+            );
+          })}
         </div>
-        <Link
-          className='mx-auto text-xs opacity-50 hover:opacity-100 duration-300'
-          href={'https://github.com/farichieri'}
-          target={'_blank'}
-        >
-          © 2023 Fabricio Richieri
-        </Link>
+        <div className="flex w-full justify-between px-4">
+          <Link
+            className="text-xs opacity-50 duration-300 hover:opacity-100"
+            href={"https://github.com/farichieri"}
+            target={"_blank"}
+          >
+            © 2023 Fabricio Richieri
+          </Link>
+          <div className="flex items-center gap-2">
+            {SOCIAL.map((social) => (
+              <ExternalLink href={social.url} key={social.name} className="">
+                {social.icon}
+              </ExternalLink>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

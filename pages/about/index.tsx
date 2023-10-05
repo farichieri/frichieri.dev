@@ -64,8 +64,14 @@ export default function About() {
           </div>
           <p>Based in Buenos Aires, Argentina. 🌎</p>
           <p>
-            In my free time, I like to do exercise, I go to the gym 💪 and I
+            In my free time, I like to do exercises , I go to the gym 💪 and I
             also like to eat healthy 🥦
+          </p>
+          <p>
+            I am currently seeking a position as a Front End or Full Stack
+            developer, specializing in React, where I can further strengthen my
+            skills, contribute based on my experience, and expand my career in
+            an environment that fosters my personal and professional growth.
           </p>
         </div>
         <div className='flex flex-col'>

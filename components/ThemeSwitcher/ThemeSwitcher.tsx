@@ -33,7 +33,7 @@ const ThemeSwitcher: FC<Props> = ({ isMenu }) => {
     return (
       <div
         onClick={toggleTheme}
-        className='flex w-full items-center justify-center gap-2 border-b h-14 font-semibold hover:bg-slate-500/10'
+        className='flex w-full items-center justify-center gap-2 h-14 font-semibold hover:bg-slate-500/10'
       >
         <span className='text-base'>Theme</span>
         <button
