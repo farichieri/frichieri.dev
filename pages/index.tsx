@@ -1,4 +1,4 @@
-import { allPosts } from "@/.contentlayer/generated";
+import { Post, allPosts } from "@/.contentlayer/generated";
 import { myProjects } from "../utils/myProjects";
 import { Projects as ProjectsType } from "@/types";
 import Image from "next/image";
@@ -11,7 +11,7 @@ const Page = ({
   posts,
   projects,
 }: {
-  posts: Array<object>;
+  posts: Post[];
   projects: ProjectsType;
 }) => {
   return (
@@ -25,9 +25,8 @@ const Page = ({
               </h1>
               <p className="text-lg opacity-70">
                 I&apos;m a Full Stack Web Developer from Argentina, specializing
-                in React, Next.js & TypeScript.
+                in Next.js, React, TypeScript & Tailwind.
               </p>
-              <p className="text-lg opacity-70">Actually open to work 💼</p>
             </div>
             <span className="">
               <Image

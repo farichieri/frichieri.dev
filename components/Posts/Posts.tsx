@@ -1,8 +1,12 @@
 import Link from "next/link";
-import Date from "../../components/Layout/Date";
 import { useMemo } from "react";
+import dynamic from "next/dynamic";
+import { Post } from "@/.contentlayer/generated";
+const Date = dynamic(() => import("../Layout/Date"), {
+  loading: () => <span>Loading...</span>,
+});
 
-const Posts = ({ posts }: { posts: Array<object> }) => {
+const Posts = ({ posts }: { posts: Post[] }) => {
   // let [actualPosts, setActualPosts] = useState(posts);
 
   // useEffect(() => {
@@ -38,23 +42,24 @@ const Posts = ({ posts }: { posts: Array<object> }) => {
         <table className=" border-separate border-spacing-y-2">
           <thead></thead>
           <tbody>
-            {actualPosts.map((post: any) => (
-              <tr className="post" key={post.id}>
-                <td>
-                  <Date dateString={post.date} />
-                </td>
-                <td>
-                  <Link
-                    href={`blog/${post.slug}`}
-                    className="opacity-50 duration-300 hover:opacity-100"
-                  >
+            {actualPosts.map((post: Post) => (
+              <Link
+                className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20 hover:opacity-100"
+                href={`blog/${post.slug}`}
+                key={post._id}
+              >
+                <tr className="flex w-full justify-between">
+                  <td>
+                    <Date dateString={post.date} />
+                  </td>
+                  <td className="opacity-50 group-hover:opacity-100">
                     {post.title}
-                  </Link>
-                </td>
-                <td>
-                  {/* <span>{post.views > 0 && <>views: {post.views}</>}</span> */}
-                </td>
-              </tr>
+                  </td>
+                  <td>
+                    {/* <span>{post.views > 0 && <>views: {post.views}</>}</span> */}
+                  </td>
+                </tr>
+              </Link>
             ))}
           </tbody>
         </table>

@@ -17,7 +17,7 @@ export default function Projects({
       {myProjects.map((project) => (
         <div key={project.id}>
           <ExternalLink href={project.websiteUrl}>
-            <div className="group my-8 flex flex-wrap gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-blue-300/20 md:flex-nowrap">
+            <div className="group my-8 flex flex-wrap gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20 md:flex-nowrap">
               <span className="mx-auto">
                 <Image
                   alt={`Project ${project.name}`}
