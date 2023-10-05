@@ -1,15 +1,15 @@
-import { FC, useEffect, useState } from 'react';
-import { myPages } from '@/utils/myPages';
-import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import MobileNav from './MobileNav';
+import { FC, useEffect, useState } from "react";
+import { myPages } from "@/utils/myPages";
+import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import MobileNav from "./MobileNav";
 
 const ThemeSwitcher = dynamic(
-  () => import('@/components/ThemeSwitcher/ThemeSwitcher'),
+  () => import("@/components/ThemeSwitcher/ThemeSwitcher"),
   {
     ssr: false,
-  }
+  },
 );
 
 interface Props {}
@@ -21,7 +21,7 @@ const NavBar: FC<Props> = () => {
   const [lastYPos, setLastYPos] = useState(0);
 
   const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.scrollY === 0) {
         setShow(false);
       } else {
@@ -32,10 +32,10 @@ const NavBar: FC<Props> = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
       return () => {
-        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener("scroll", controlNavbar);
       };
     }
   }, [lastYPos]);
@@ -48,43 +48,41 @@ const NavBar: FC<Props> = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 flex duration-300 w-full select-none items-center justify-center border-gray-500/20 px-2 backdrop-blur-md dark:border-gray-400/10   ${
+      className={`fixed top-0 z-50 flex w-full select-none items-center justify-center border-gray-500/20 px-2 backdrop-blur-md duration-300 dark:border-gray-400/10   ${
         show
-          ? 'border-b bg-white/50 dark:bg-black/50'
-          : 'border-none bg-transparent'
+          ? "border-b bg-white/50 dark:bg-black/50"
+          : "border-none bg-transparent"
       }`}
     >
       <div
         className={`z-[100] flex h-[var(--navHeight)] w-full max-w-7xl items-center justify-between gap-4 border-gray-500/20 px-2 dark:border-gray-400/10`}
       >
-        <div className='z-[100]'>
-          <Link href={'/'}>
-            <span className='text-blue-400 font-bold'>FR</span>
+        <div className="z-[100]">
+          <Link href={"/"}>
+            <span className="font-bold text-blue-400">FR</span>
           </Link>
         </div>
-        <div className='hidden  items-center justify-center gap-4 text-xs font-medium sm:text-base md:flex md:gap-10'>
-          {myPages
-            .filter((page) => !page.external)
-            .map((page) => (
-              <Link
-                href={page.path}
-                key={page.name}
-                className={`rounded-3xl text-sm px-3 py-1 duration-300 hover:opacity-100 ${
-                  router.asPath === page.path ? 'opacity-100' : 'opacity-50'
-                }`}
-              >
-                <span className='text-[var(--textColor)]'>{page.name}</span>
-              </Link>
-            ))}
+        <div className="hidden  items-center justify-center gap-4 text-xs font-medium sm:text-base md:flex md:gap-10">
+          {myPages.map((page) => (
+            <Link
+              href={page.path}
+              key={page.name}
+              className={`rounded-3xl px-3 py-1 text-sm duration-300 hover:opacity-100 ${
+                router.asPath === page.path ? "opacity-100" : "opacity-50"
+              }`}
+            >
+              <span className="text-[var(--textColor)]">{page.name}</span>
+            </Link>
+          ))}
         </div>
-        <div className='flex w-fit min-w-fit  items-center justify-end gap-4 text-xs xs:gap-5 sm:gap-10 sm:text-xl'>
-          <div className='hidden md:flex'>
+        <div className="flex w-fit min-w-fit  items-center justify-end gap-4 text-xs xs:gap-5 sm:gap-10 sm:text-xl">
+          <div className="hidden md:flex">
             <ThemeSwitcher />
           </div>
         </div>
-        <div className='cursor-pointer md:hidden left-auto z-[100]'>
+        <div className="left-auto z-[100] cursor-pointer md:hidden">
           <button
-            className='flex flex-col h-12 w-12 rounded justify-center items-center group'
+            className="group flex h-12 w-12 flex-col items-center justify-center rounded"
             onClick={(e) => {
               e.preventDefault();
               handleMenu();
@@ -93,16 +91,16 @@ const NavBar: FC<Props> = () => {
             <div
               className={`${genericHamburgerLine} ${
                 isOpen
-                  ? 'rotate-45 translate-y-0 opacity-50 group-hover:opacity-100'
-                  : 'opacity-50 group-hover:opacity-100'
+                  ? "translate-y-0 rotate-45 opacity-50 group-hover:opacity-100"
+                  : "opacity-50 group-hover:opacity-100"
               }`}
             />
 
             <div
               className={`${genericHamburgerLine} ${
                 isOpen
-                  ? '-rotate-45 -translate-y-1.5 opacity-50 group-hover:opacity-100'
-                  : 'opacity-50 group-hover:opacity-100'
+                  ? "-translate-y-1.5 -rotate-45 opacity-50 group-hover:opacity-100"
+                  : "opacity-50 group-hover:opacity-100"
               }`}
             />
           </button>
