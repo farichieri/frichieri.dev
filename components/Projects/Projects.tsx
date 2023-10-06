@@ -10,7 +10,7 @@ export default function Projects({
   projects: Projects;
   featured: boolean;
 }) {
-  const myProjects = featured ? projects.slice(0, 4) : projects;
+  const myProjects = featured ? projects.slice(0, 2) : projects;
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col divide-y ">
