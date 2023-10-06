@@ -1,8 +1,12 @@
 import { Post, allPosts } from "@/.contentlayer/generated";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import MainLayout from "../../components/Layout/MainLayout";
-import Posts from "../../components/Posts/Posts";
 import Searchbar from "../../components/Searchbar/Searchbar";
+
+const Posts = dynamic(() => import("../../components/Posts/Posts"), {
+  ssr: false,
+});
 
 const Blog = ({ posts }: { posts: Post[] }) => {
   const [postsState, setPostsState] = useState(posts);

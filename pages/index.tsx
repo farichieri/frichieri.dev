@@ -4,8 +4,12 @@ import { Projects as ProjectsType } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import MainLayout from "../components/Layout/MainLayout";
-import Posts from "../components/Posts/Posts";
 import Projects from "../components/Projects/Projects";
+import dynamic from "next/dynamic";
+
+const Posts = dynamic(() => import("../components/Posts/Posts"), {
+  ssr: false,
+});
 
 const Page = ({
   posts,

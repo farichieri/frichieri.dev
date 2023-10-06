@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { useMemo } from "react";
-import dynamic from "next/dynamic";
 import { Post } from "@/.contentlayer/generated";
-const Date = dynamic(() => import("../Layout/Date"), {
-  loading: () => <span>Loading...</span>,
-});
+import Date from "../Layout/Date";
 
 const Posts = ({ posts }: { posts: Post[] }) => {
   // let [actualPosts, setActualPosts] = useState(posts);

@@ -42,7 +42,7 @@ export const myProjects: Projects = [
     ],
     stack: 'Full Stack',
     description:
-      'A Task management app where you can create tasks, set a goal, and track your progress. Feel free to create an account.',
+      'A Task management app where you can plan your days, track tasks, and follow your progress. Feel free to create an account.',
   },
   {
     id: 0.2,
