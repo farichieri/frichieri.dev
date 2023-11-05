@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="mx-auto grid grid-cols-3 gap-x-2 sm:grid-cols-5 sm:gap-x-10">
           {myPages.map((page) => {
             return (
-              <ExternalLink
+              <Link
                 href={page.path}
                 key={page.name}
                 className={`rounded-3xl py-1 text-sm duration-300 hover:opacity-100 ${
@@ -44,7 +44,7 @@ const Footer = () => {
                 }`}
               >
                 <span className="text-[var(--textColor)]">{page.name}</span>
-              </ExternalLink>
+              </Link>
             );
           })}
         </div>

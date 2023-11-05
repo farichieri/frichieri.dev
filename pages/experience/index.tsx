@@ -52,15 +52,7 @@ export default function Page() {
       date: "Mar 2017 - Dec 2021",
       description:
         "- Monitored emergency alarms for homes, enterprises, and vehicles as a Monitor Operator and later served as a Sales Account Executive  <br/> - Received a diploma in recognition of my effort and dedication, given by the company's direction",
-      technologies: [
-        "JavaScript",
-        "React",
-        "Redux",
-        "NodeJs",
-        "PostgreSQL",
-        "HTML",
-        "CSS",
-      ],
+      technologies: [],
       title: "Monitor Operator - Accounts Executive",
       website: "https://uss.com.ar/",
     },
