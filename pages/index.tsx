@@ -28,8 +28,8 @@ const Page = ({
                 hey, I&apos;m <span className="text-blue-400">Fabricio</span> 👋
               </h1>
               <p className="text-lg opacity-70">
-                I&apos;m a 💻 Full Stack JavaScript Developer from 🌎 Buenos
-                Aires, Argentina.
+                I&apos;m a 💻 Full Stack JavaScript Developer from Buenos Aires,
+                Argentina.
               </p>
             </div>
             <span className="">

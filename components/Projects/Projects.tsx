@@ -24,7 +24,7 @@ export default function Projects({
                   src={project.image}
                   width={500}
                   height={282}
-                  className="flex rounded-md border shadow-lg dark:shadow-gray-800/20 md:h-[280px] md:w-[500px] md:basis-1/2 "
+                  className="flex rounded-xl border shadow-lg dark:shadow-gray-800/20 md:h-[280px] md:w-[500px] md:basis-1/2 "
                 />
               </span>
               <div className="flex w-full flex-col items-center justify-start gap-2 text-[var(--textColor)] md:basis-1/2">

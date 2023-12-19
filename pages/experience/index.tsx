@@ -6,17 +6,25 @@ export default function Page() {
   const EXPERIENCES = [
     {
       company: "Nutrition Plans LLC",
-      date: "April 2023 - Present",
-      description:
-        "- Developed and maintained a SaaS meal planner and nutrition platform using Next 13.0, React 18.0, TypeScript 5.0, Tailwind 3.3, Redux 4.0, Firebase 9.19, Stripe, Typesense, and Mdx.",
+      date: "Jan 2023 - Present",
+      description: `- Developed and maintained a SaaS meal planner and nutrition platform. Web app built with: Next 13.0, React
+        18.0, TypeScript 5.0, Tailwind 3.3, Redux 4.0, Firebase 9.19, Stripe. Developing mobile app with: React Native
+        and centralized backend with NestJs (NodeJs), TypeORM, JWT & MongoDB`,
       technologies: [
-        "Firebase",
         "Nextjs",
+        "React",
         "Redux",
         "Stripe",
         "Tailwindcss",
         "Typescript",
+        "Mdx",
         "Typesense",
+        "React Native",
+        "NodeJs",
+        "NestJs",
+        "MongoDB",
+        "TypeORM",
+        "JWT",
       ],
       title: "Founder - Full Stack Developer",
       website: "https://nutritionplans.co",
@@ -24,8 +32,10 @@ export default function Page() {
     {
       company: "Sundevs Inc.",
       date: "Jun 2022 - Jan 2023",
-      description:
-        "- Worked as a frontend developer on a web platform for the cinema industry with 1 million users/month, adding features, resolving bugs, and meeting client requirements. Utilized MERN Stack: Next 12.0, React 17.0, JavaScript, Redux 4.0, Node.js, MongoDB 6.0, Express 4.17, Google Analytics",
+      description: `- Worked as a front-end developer on a web platform for the cinema industry with 1 million users
+        (https://cinemark.com.co), adding features, resolving bugs, and meeting client requirements. Utilized MERN
+        Stack: Next 12.0, React 17.0, JavaScript ES6, Redux 4.0, Node.js, MongoDB 6.0, Express 4.17, Google
+        Analytics.`,
       technologies: ["JavaScript", "MongoDB", "Nextjs", "NodeJs", "Redux"],
       title: "Junior Software Engineer",
       website: "https://sundevs.com/",
@@ -34,7 +44,7 @@ export default function Page() {
       company: "soyHenry Bootcamp",
       date: "Mar 2022 - May 2022",
       description:
-        "- Selected as a teaching assistant to mentor new students in the bootcamp program. <br/> - Coordinate a group of students to achieve integration into the study team<br/> - Attend the resolution of exercises and promote group collaboration (Pair Programming)<br/> - Propose ideas to improve Bootcamp processes.",
+        "- Selected as a teaching assistant to mentor new students in the bootcamp program. <br/> - Coordinate a group of students to achieve integration into the study team<br/> - Attend the resolution of exercises and promote group collaboration (Pair Programming).",
       technologies: [
         "JavaScript",
         "React",
@@ -51,7 +61,7 @@ export default function Page() {
       company: "USS Seguridad Integral",
       date: "Mar 2017 - Dec 2021",
       description:
-        "- Monitored emergency alarms for homes, enterprises, and vehicles as a Monitor Operator and later served as a Sales Account Executive  <br/> - Received a diploma in recognition of my effort and dedication, given by the company's direction",
+        "- Monitored emergency alarms for homes, enterprises, and vehicles as a Monitor Operator.  <br/> -  Transitioned to Sales Account Executive role, selling, and providing customer support.  <br/> - Received a diploma in recognition of my effort and dedication, given by the company's direction",
       technologies: [],
       title: "Monitor Operator - Accounts Executive",
       website: "https://uss.com.ar/",

@@ -39,7 +39,7 @@ const Footer = () => {
               <Link
                 href={page.path}
                 key={page.name}
-                className={`rounded-3xl py-1 text-sm duration-300 hover:opacity-100 ${
+                className={`rounded-3xl py-1 text-sm duration-300 hover:opacity-100 sm:text-center ${
                   router.asPath === page.path ? "opacity-100" : "opacity-50"
                 }`}
               >

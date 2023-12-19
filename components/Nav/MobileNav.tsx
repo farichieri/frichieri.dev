@@ -15,14 +15,14 @@ const MobileNav: FC<Props> = ({ isOpen, onClick }) => {
         onClick={onClick}
         className={`${
           isOpen
-            ? "fixed inset-0 right-0 h-screen w-screen bg-black/50"
+            ? "fixed inset-0 right-0 h-screen w-screen bg-black/50 sm:hidden"
             : "right-full"
         } transition-all duration-300`}
       ></div>
       <div
         className={`${
           isOpen ? "right-0" : "right-full"
-        } absolute top-0 z-[90] flex h-auto w-full flex-col items-center bg-white px-4 pt-[var(--navHeight)] text-[var(--textColor)] shadow-sm transition-all duration-300 dark:bg-black dark:shadow-cyan-100/20 md:hidden `}
+        } fixed top-0 z-[90] flex h-auto w-full flex-col items-center bg-white px-4 pt-[var(--navHeight)] text-[var(--textColor)] shadow-sm transition-all duration-300 dark:bg-black dark:shadow-cyan-100/20 md:hidden `}
       >
         <div className="flex w-full flex-col items-center justify-center gap-10 border-t border-b text-base font-semibold">
           <div className="flex w-full flex-col divide-y ">
