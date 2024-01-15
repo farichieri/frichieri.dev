@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useMemo } from "react";
+
 import { Post } from "@/.contentlayer/generated";
-import Date from "../Layout/Date";
+import Date from "./Date";
 
 const Posts = ({ posts }: { posts: Post[] }) => {
   // let [actualPosts, setActualPosts] = useState(posts);

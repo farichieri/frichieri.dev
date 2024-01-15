@@ -1,53 +1,53 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Form from '../../components/Form/Form';
-import MainLayout from '../../components/Layout/MainLayout';
+import Image from "next/image";
+import Link from "next/link";
+
+import { Form } from "@/components";
 
 export default function Contact() {
   return (
-    <MainLayout>
-      <h1 style={{ width: '100%', textAlign: 'left' }}>Contact</h1>
-      <div className='contact-container'>
-        <div className='form-container'>
+    <>
+      <h1 style={{ width: "100%", textAlign: "left" }}>Contact</h1>
+      <div className="contact-container">
+        <div className="form-container">
           <Form />
         </div>
 
-        <div className='links'>
-          <Link href={'https://www.linkedin.com/in/frichieri/'} target='_blank'>
+        <div className="links">
+          <Link href={"https://www.linkedin.com/in/frichieri/"} target="_blank">
             <span>
               <Image
-                src={'/images/linkedin.png'}
-                alt='linkedin'
+                src={"/images/linkedin.png"}
+                alt="linkedin"
                 width={38}
                 height={38}
               />
             </span>
           </Link>
-          <Link href={'https://github.com/FARichieri'} target='_blank'>
-            <span className='github'>
+          <Link href={"https://github.com/FARichieri"} target="_blank">
+            <span className="github">
               <Image
-                src={'/images/github.png'}
-                alt='github'
+                src={"/images/github.png"}
+                alt="github"
                 width={32}
                 height={32}
               />
             </span>
           </Link>
-          <Link href='https://twitter.com/farichieri'>
-            <span className='twitter'>
+          <Link href="https://twitter.com/farichieri">
+            <span className="twitter">
               <Image
-                src='/images/twitter.png'
-                alt='twitter'
+                src="/images/twitter.png"
+                alt="twitter"
                 width={38}
                 height={38}
               />
             </span>
           </Link>
-          <Link href='mailto:fabriciorichieri@yahoo.com'>
-            <span className='email'>
+          <Link href="mailto:fabriciorichieri@yahoo.com">
+            <span className="email">
               <Image
-                src='/images/email.png'
-                alt='email'
+                src="/images/email.png"
+                alt="email"
                 width={32}
                 height={32}
               />
@@ -104,6 +104,6 @@ export default function Contact() {
           }
         `}</style>
       </div>
-    </MainLayout>
+    </>
   );
 }

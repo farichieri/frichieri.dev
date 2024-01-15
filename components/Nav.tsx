@@ -1,20 +1,18 @@
 import { FC, useEffect, useState } from "react";
-import { myPages } from "@/utils/myPages";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+
+import { myPages } from "@/utils/myPages";
 import MobileNav from "./MobileNav";
 
-const ThemeSwitcher = dynamic(
-  () => import("@/components/ThemeSwitcher/ThemeSwitcher"),
-  {
-    ssr: false,
-  },
-);
+const ThemeSwitcher = dynamic(() => import("@/components/ThemeSwitcher"), {
+  ssr: false,
+});
 
 interface Props {}
 
-const NavBar: FC<Props> = () => {
+const Nav: FC<Props> = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState(false);
@@ -113,4 +111,4 @@ const NavBar: FC<Props> = () => {
   );
 };
 
-export default NavBar;
+export default Nav;

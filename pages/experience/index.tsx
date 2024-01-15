@@ -1,6 +1,4 @@
-import Technologies from "@/components/Technologies/Technologies";
-import ExternalLink from "../../components/ExternalLink/ExternalLink";
-import MainLayout from "../../components/Layout/MainLayout";
+import { Technologies, ExternalLink } from "@/components";
 
 export default function Page() {
   const EXPERIENCES = [
@@ -68,7 +66,7 @@ export default function Page() {
     },
   ];
   return (
-    <MainLayout>
+    <>
       <section className="flex w-full flex-col items-center justify-center gap-8">
         <h1 className="w-full text-left">Experience</h1>
         <div className="flex w-full list-disc flex-col gap-y-20">
@@ -95,6 +93,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 }

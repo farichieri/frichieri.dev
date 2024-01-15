@@ -1,14 +1,13 @@
-import { Post, allPosts } from "@/.contentlayer/generated";
-import Date from "../../components/Layout/Date";
 import Head from "next/head";
 import Link from "next/link";
-import MainLayout from "../../components/Layout/MainLayout";
 import React from "react";
-import { Mdx } from "@/components/Mdx/Mdx";
+
+import { Post, allPosts } from "@/.contentlayer/generated";
+import { Mdx, Date } from "@/components";
 
 const Post = ({ data }: { data: Post }) => {
   return (
-    <MainLayout>
+    <>
       <Head>
         <title>{data.title}</title>
       </Head>
@@ -37,7 +36,7 @@ const Post = ({ data }: { data: Post }) => {
           {"<"} All Posts
         </Link>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

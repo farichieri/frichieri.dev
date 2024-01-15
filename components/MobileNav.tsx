@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
-import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+
+import ThemeSwitcher from "./ThemeSwitcher";
 import { myPages } from "@/utils/myPages";
 
 interface Props {

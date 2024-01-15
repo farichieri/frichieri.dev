@@ -2,7 +2,17 @@ import { Projects } from "../types";
 
 export const myProjects: Projects = [
   {
-    id: 0,
+    name: "Ecommerce Template",
+    slug: "ecommerce-template",
+    image: "/images/projects/ecommerce-template.png",
+    githubUrl: "",
+    websiteUrl: "https://ecomm-template-nextjs.vercel.app/",
+    technologies: ["Nextjs", "React", "Tailwindcss", "Typescript"],
+    stack: "Front End",
+    description:
+      "I had to create this project for a client, who gave me the URL of an HTML model website for reference. He wanted it built with NextJs 14, TypeScript, TailwindCSS.",
+  },
+  {
     name: "nutritionplans.co",
     slug: "nutrition-plans",
     image: "/images/projects/nutrition-plans.png",
@@ -30,7 +40,6 @@ export const myProjects: Projects = [
       "A Saas Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc.), adapt your diet with your body features, goals and meal settings, and get a personalized diet for your days which will be aiming to guide you to your goal. Feel free to create an account.",
   },
   {
-    id: 3,
     name: "lucasnazar.com",
     slug: "lucasnazardj",
     image: "/images/projects/lucasnazardj.png",
@@ -48,7 +57,6 @@ export const myProjects: Projects = [
     description: "A Dj personal website.",
   },
   {
-    id: 1,
     name: "improveme",
     slug: "improveme",
     image: "/images/projects/improveme.png",
@@ -69,7 +77,6 @@ export const myProjects: Projects = [
       "A Task management app where you can plan your days, track tasks, and follow your progress. Feel free to create an account.",
   },
   {
-    id: 2,
     name: "almarichnutricion.com",
     slug: "almarich-nutricion",
     image: "/images/projects/almarichnutricion.png",
@@ -80,7 +87,6 @@ export const myProjects: Projects = [
     description: "A Nutritionist personal website.",
   },
   {
-    id: 4,
     name: "Computechshop",
     slug: "computechshop",
     image: "/images/projects/computechshop.png",
@@ -101,7 +107,6 @@ export const myProjects: Projects = [
       "An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users. (Backend off).",
   },
   {
-    id: 7,
     name: "Pokemon PI",
     slug: "pokemon-pi",
     image: "/images/projects/pokemon.png",
@@ -120,7 +125,6 @@ export const myProjects: Projects = [
       "Individual project for the #soyHenry Full Stack Development Bootcamp. Implementing CRUD operations. (Backend off)",
   },
   {
-    id: 8,
     name: "Marketing Services",
     slug: "marketing-services",
     image: "/images/projects/marketing-services.png",
@@ -132,7 +136,6 @@ export const myProjects: Projects = [
       "Simple website required by a recruitment process. (Not responsive)",
   },
   {
-    id: 9,
     name: "Random Quote Machine",
     slug: "random-quote-machine",
     image: "/images/projects/random-quote-machine.png",
@@ -144,7 +147,6 @@ export const myProjects: Projects = [
       "Random Quote Machine made for the freeCodeCamp Front End Development Libraries certification.",
   },
   {
-    id: 10,
     name: "Pomodoro Clock",
     slug: "pomodoro-clock",
     image: "/images/projects/pomodoro-clock.png",
@@ -156,7 +158,6 @@ export const myProjects: Projects = [
       "Pomodoro clock made for the freeCodeCamp Front End Development Libraries certification.",
   },
   {
-    id: 12,
     name: "JavaScript Calculator",
     slug: "javascript-calculator",
     image: "/images/projects/javascript-calculator.png",
@@ -168,7 +169,6 @@ export const myProjects: Projects = [
       "JavaScript Calculator made for the freeCodeCamp Front End Development Libraries certification.",
   },
   {
-    id: 13,
     name: "Drum Machine",
     slug: "drum-machine",
     image: "/images/projects/drum-machine.png",
@@ -180,7 +180,6 @@ export const myProjects: Projects = [
       "Drum Machine made for the freeCodeCamp Front End Development Libraries certification.",
   },
   {
-    id: 14,
     name: "Markdown Previewer",
     slug: "markdown-previewer",
     image: "/images/projects/markdown-previewer.png",
@@ -192,7 +191,6 @@ export const myProjects: Projects = [
       "Markdown Previewer made for the freeCodeCamp Front End Development Libraries certification.",
   },
   {
-    id: 15,
     name: "Bar Chart Graph",
     slug: "bar-chart",
     image: "/images/projects/bar-chart.png",
@@ -204,7 +202,6 @@ export const myProjects: Projects = [
       "Bar Chart Graph project made for the Data Visualization freeCodeCamp certification.",
   },
   {
-    id: 16,
     name: "Scatter Plot Graph",
     slug: "scatter-plot",
     image: "/images/projects/scatterplot.png",
@@ -217,7 +214,6 @@ export const myProjects: Projects = [
       "Scatter Plot Graph project made for the Data Visualization freeCodeCamp certification.",
   },
   {
-    id: 17,
     name: "Heat Map Graph",
     slug: "heat-map",
     image: "/images/projects/heat-map.png",
@@ -229,7 +225,6 @@ export const myProjects: Projects = [
       "Heat Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
   {
-    id: 18,
     name: "Tree map Graph",
     slug: "tree-map",
     image: "/images/projects/tree-map.png",
@@ -242,7 +237,6 @@ export const myProjects: Projects = [
       "Tree Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
   {
-    id: 19,
     name: "Choropleth Map Graph",
     slug: "choropleth-map",
     image: "/images/projects/choropleth-map.png",
@@ -255,7 +249,6 @@ export const myProjects: Projects = [
       "Choropleth Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
   {
-    id: 20,
     name: "Timestamp Microservice",
     slug: "timestamp-microservice",
     image: "/images/projects/timestamp-microservice.png",
@@ -267,7 +260,6 @@ export const myProjects: Projects = [
       "Timestamp Microservice project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
-    id: 21,
     name: "Url Shortener",
     slug: "timestamp-microservice",
     image: "/images/projects/url-shortener.png",
@@ -279,7 +271,6 @@ export const myProjects: Projects = [
       "Url Shortener project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
-    id: 22,
     name: "Header Parser",
     slug: "header-parser",
     image: "/images/projects/header-parser.png",
@@ -291,7 +282,6 @@ export const myProjects: Projects = [
       "Header Parser project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
-    id: 23,
     name: "Exercise Tracker",
     slug: "exercise-tracker",
     image: "/images/projects/exercise-tracker.png",
@@ -304,7 +294,6 @@ export const myProjects: Projects = [
       "Exercise Tracker project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
-    id: 24,
     name: "File Metadata",
     slug: "file-metadata",
     image: "/images/projects/file-metadata.png",
@@ -316,7 +305,6 @@ export const myProjects: Projects = [
       "File Metadata project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
-    id: 25,
     name: "Metric/Imperial Converter",
     slug: "metric-imperial-converter",
     image: "/images/projects/metric-imperial-converter.png",
@@ -328,7 +316,6 @@ export const myProjects: Projects = [
       "Metric Imperial Converter project made for the Quality Assurance freeCodeCamp certification.",
   },
   {
-    id: 26,
     name: "Issue Tracker",
     slug: "issue-tracker",
     image: "/images/projects/issue-tracker.png",
@@ -340,7 +327,6 @@ export const myProjects: Projects = [
       "Issue Tracker project made for the Quality Assurance freeCodeCamp certification.",
   },
   {
-    id: 27,
     name: "Sudoku Solver",
     slug: "sudoku-solver",
     image: "/images/projects/sudoku-solver.png",
@@ -353,7 +339,6 @@ export const myProjects: Projects = [
       "Sudoku Solver project made for the Quality Assurance freeCodeCamp certification.",
   },
   {
-    id: 28,
     name: "American British English Translator",
     slug: "american-british-english-translator",
     image: "/images/projects/american-british-english-translator.png",
@@ -367,7 +352,6 @@ export const myProjects: Projects = [
       "American British English Translator project made for the Quality Assurance freeCodeCamp certification.",
   },
   {
-    id: 29,
     name: "Stock-checker",
     slug: "stock-checker",
     image: "/images/projects/stock-checker.png",
@@ -379,7 +363,6 @@ export const myProjects: Projects = [
       "Stock checker project made for the Quality Assurance freeCodeCamp certification.",
   },
   {
-    id: 30,
     name: "Anonymous Message Board",
     slug: "anonymous-message-board",
     image: "/images/projects/anonymous-message-board.png",

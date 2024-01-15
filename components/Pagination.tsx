@@ -1,5 +1,6 @@
-import React from 'react';
-import usePagination, { DOTS } from '../../hooks/usePagination';
+import React from "react";
+
+import usePagination, { DOTS } from "../hooks/usePagination";
 
 const Pagination = ({
   currentPage,
@@ -34,12 +35,12 @@ const Pagination = ({
   };
 
   return (
-    <ul className='flex select-none gap-1 items-baseline list-none mb-20 justify-center'>
-      <li className=' flex'>
+    <ul className="mb-20 flex select-none list-none items-baseline justify-center gap-1">
+      <li className=" flex">
         <button
-          type='button'
-          className='arrowButton left border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden hover:bg-slate-500/20 disabled:opacity-50 disabled:pointer-events-none'
-          aria-label='Goto previous page'
+          type="button"
+          className="arrowButton left border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
+          aria-label="Goto previous page"
           onClick={onPrevious}
           disabled={currentPage === 1}
         >
@@ -50,7 +51,7 @@ const Pagination = ({
       {paginationRange.map((pageNumber: any, index: number) => {
         if (pageNumber === DOTS) {
           return (
-            <li key={index} className='dots line-height-34px mx-2'>
+            <li key={index} className="dots line-height-34px mx-2">
               &#8230;
             </li>
           );
@@ -61,15 +62,15 @@ const Pagination = ({
             key={index}
             className={` ${
               pageNumber === currentPage
-                ? 'font-bold underline opacity-100 bg-slate-500/20 rounded-full '
-                : 'opacity-50 hover:opacity-100'
+                ? "rounded-full bg-slate-500/20 font-bold underline opacity-100 "
+                : "opacity-50 hover:opacity-100"
             }`}
           >
             <button
-              type='button'
+              type="button"
               aria-label={`Goto page ${pageNumber}`}
               onClick={() => onPageChange(pageNumber)}
-              className='border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden  hover:bg-slate-500/20'
+              className="border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent  hover:bg-slate-500/20"
             >
               {pageNumber}
             </button>
@@ -77,11 +78,11 @@ const Pagination = ({
         );
       })}
 
-      <li className=' flex'>
+      <li className=" flex">
         <button
-          type='button'
-          className='arrowButton right border border-box-shadow-light bg-transparent h-9 w-9 rounded-full overflow-hidden hover:bg-slate-500/20 disabled:opacity-50 disabled:pointer-events-none'
-          aria-label='Goto next page'
+          type="button"
+          className="arrowButton right border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
+          aria-label="Goto next page"
           onClick={onNext}
           disabled={currentPage === totalPages}
         >
@@ -90,8 +91,8 @@ const Pagination = ({
       </li>
 
       <select
-        className='bg-[var(--bgColor)] mx-2 px-2 py-2 text-[var(--textColor)] border border-box-shadow-light rounded-md'
-        aria-label='Select page size'
+        className="border-box-shadow-light mx-2 rounded-md border bg-[var(--bgColor)] px-2 py-2 text-[var(--textColor)]"
+        aria-label="Select page size"
         value={pageSize}
         onChange={(e) => {
           onPageSizeOptionChange(e.target.value);

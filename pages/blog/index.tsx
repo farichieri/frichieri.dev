@@ -1,10 +1,10 @@
-import { Post, allPosts } from "@/.contentlayer/generated";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import MainLayout from "../../components/Layout/MainLayout";
-import Searchbar from "../../components/Searchbar/Searchbar";
 
-const Posts = dynamic(() => import("../../components/Posts/Posts"), {
+import { Post, allPosts } from "@/.contentlayer/generated";
+import { Searchbar } from "@/components";
+
+const Posts = dynamic(() => import("../../components/Posts"), {
   ssr: false,
 });
 
@@ -21,11 +21,11 @@ const Blog = ({ posts }: { posts: Post[] }) => {
   };
 
   return (
-    <MainLayout>
+    <>
       <h1 style={{ width: "100%", textAlign: "left" }}>Blog</h1>
       <Searchbar handleSearch={handleSearch} />
       <Posts posts={postsState} />
-    </MainLayout>
+    </>
   );
 };
 

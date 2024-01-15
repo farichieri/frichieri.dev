@@ -1,25 +1,25 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { myProjects } from '../../utils/myProjects';
-import { ParsedUrlQuery } from 'querystring';
-import { Project } from '../../types';
-import Image from 'next/image';
-import Link from 'next/link';
-import MainLayout from '../../components/Layout/MainLayout';
-import Technologies from '@/components/Technologies/Technologies';
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
+import Image from "next/image";
+import Link from "next/link";
+
+import { myProjects } from "@/utils";
+import { Project } from "@/types";
+import { Technologies } from "@/components";
 
 const Slug = ({ project }: { project: Project }) => {
   return (
-    <MainLayout>
-      <h1 className='font-bold text-xl'>{project.name} </h1>
-      <div className='flex w-full flex-col'>
-        <span className='w-full flex relative h-auto mx-auto '>
+    <>
+      <h1 className="text-xl font-bold">{project.name} </h1>
+      <div className="flex w-full flex-col">
+        <span className="relative mx-auto flex h-auto w-full ">
           <Image
             src={project.image}
             alt={project.name}
             height={1200}
             width={900}
             priority
-            className='rounded-xl flex mx-auto'
+            className="mx-auto flex rounded-xl"
           />
         </span>
         <div>
@@ -29,14 +29,14 @@ const Slug = ({ project }: { project: Project }) => {
           <h2>Made with:</h2>
           <Technologies technologies={project.technologies} />
           <br />
-          <h2 style={{ display: 'flex', alignItems: 'center' }}>
+          <h2 style={{ display: "flex", alignItems: "center" }}>
             See live:
             <p>
-              <Link href={project.websiteUrl} target={'_blank'}>
-                <span className='live'>
+              <Link href={project.websiteUrl} target={"_blank"}>
+                <span className="live">
                   <Image
-                    src={'/images/live.png'}
-                    alt='live'
+                    src={"/images/live.png"}
+                    alt="live"
                     height={30}
                     width={30}
                   />
@@ -45,15 +45,15 @@ const Slug = ({ project }: { project: Project }) => {
             </p>
           </h2>
           <br />
-          <h2 style={{ display: 'flex', alignItems: 'center' }}>
+          <h2 style={{ display: "flex", alignItems: "center" }}>
             Code:
             <p>
               {project.githubUrl ? (
-                <Link href={project.githubUrl} target={'_blank'}>
-                  <span className='github'>
+                <Link href={project.githubUrl} target={"_blank"}>
+                  <span className="github">
                     <Image
-                      src={'/images/github.png'}
-                      alt='source'
+                      src={"/images/github.png"}
+                      alt="source"
                       height={30}
                       width={30}
                     />
@@ -61,8 +61,8 @@ const Slug = ({ project }: { project: Project }) => {
                 </Link>
               ) : (
                 <Image
-                  src={'/images/hidden.png'}
-                  alt='source'
+                  src={"/images/hidden.png"}
+                  alt="source"
                   height={30}
                   width={30}
                 />
@@ -71,7 +71,7 @@ const Slug = ({ project }: { project: Project }) => {
           </h2>
           <br />
         </div>
-        <Link href={'/projects'}>{'<'} Back to all projects</Link>
+        <Link href={"/projects"}>{"<"} Back to all projects</Link>
       </div>
 
       <style jsx>{`
@@ -131,7 +131,7 @@ const Slug = ({ project }: { project: Project }) => {
           }
         }
       `}</style>
-    </MainLayout>
+    </>
   );
 };
 
@@ -146,11 +146,11 @@ interface IParams extends ParsedUrlQuery {
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const paths: Array<any> = [];
   myProjects.forEach((project) =>
-    paths.push({ params: { slug: project.slug } })
+    paths.push({ params: { slug: project.slug } }),
   );
   return {
     paths: paths,
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 };
 

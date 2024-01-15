@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import Button from '../Layout/Button';
+import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+import Button from "./Button";
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -8,39 +9,39 @@ const Form = () => {
   const captchaRef = useRef<any>(null);
   const sitekey = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
   const [input, setInput] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [message, setMessage] = useState({
-    text: '',
-    type: '',
+    text: "",
+    type: "",
   });
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     event.preventDefault();
     setInput({
       ...input,
       [event.target.name]: event.target.value,
     });
-    setMessage({ text: '', type: '' });
+    setMessage({ text: "", type: "" });
   };
 
   const MESSAGES = {
-    INCOMPLETE: 'Complete all the fields to send the message',
+    INCOMPLETE: "Complete all the fields to send the message",
     NOT_ROBOT: `Please verify that you are a human`,
-    SUCCESS: 'The message was successfully sent',
-    ERROR: 'The message could not be sent',
+    SUCCESS: "The message was successfully sent",
+    ERROR: "The message could not be sent",
   };
   const MESSAGE_TYPE = {
-    ERROR: 'error',
-    SUCCESS: 'success',
+    ERROR: "error",
+    SUCCESS: "success",
   };
 
   const handleSubmit = async (event: React.FormEvent) => {
-    setMessage({ text: '', type: '' });
+    setMessage({ text: "", type: "" });
     event.preventDefault();
     if (captchaRef.current !== null) {
       const token = captchaRef.current.getValue();
@@ -53,30 +54,30 @@ const Form = () => {
         setMessage({ text: MESSAGES.INCOMPLETE, type: MESSAGE_TYPE.ERROR });
         return;
       }
-      if (token === '') {
+      if (token === "") {
         setMessage({ text: MESSAGES.NOT_ROBOT, type: MESSAGE_TYPE.ERROR });
         return;
       }
       setIsLoading(true);
       setIsDisabled(true);
-      await fetch('api/recaptcha', { method: 'POST', body: token }).then(
+      await fetch("api/recaptcha", { method: "POST", body: token }).then(
         (response) => {
           if (response.status === 401) {
             setIsLoading(false);
             setIsDisabled(false);
             return;
           } else {
-            fetch('/api/mailer', {
-              method: 'post',
+            fetch("/api/mailer", {
+              method: "post",
               body: JSON.stringify(input),
             }).then((response) => {
               if (response.ok) {
                 setIsLoading(false);
                 setIsDisabled(false);
                 setInput({
-                  name: '',
-                  email: '',
-                  message: '',
+                  name: "",
+                  email: "",
+                  message: "",
                 });
                 setMessage({
                   text: MESSAGES.SUCCESS,
@@ -87,51 +88,51 @@ const Form = () => {
               }
             });
           }
-        }
+        },
       );
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 style={{ marginBottom: '1rem', textAlign: 'left', width: '100%' }}>
+      <h2 style={{ marginBottom: "1rem", textAlign: "left", width: "100%" }}>
         Contact Form:
       </h2>
       <input
         onChange={handleChange}
-        type={'text'}
-        name='name'
+        type={"text"}
+        name="name"
         value={input.name}
-        placeholder='Name'
+        placeholder="Name"
       />
       <input
         onChange={handleChange}
-        type={'email'}
-        name='email'
+        type={"email"}
+        name="email"
         value={input.email}
-        placeholder='Email'
+        placeholder="Email"
       />
       <textarea
         onChange={handleChange}
-        name='message'
+        name="message"
         value={input.message}
-        placeholder='Message'
+        placeholder="Message"
       />
-      <div className='recaptcha'>
+      <div className="recaptcha">
         <ReCAPTCHA
-          size='normal'
+          size="normal"
           sitekey={`${sitekey}`}
           ref={captchaRef}
-          hl='en'
-          theme='dark'
+          hl="en"
+          theme="dark"
         />
       </div>
-      <div className='button-container'>
+      <div className="button-container">
         <Button
-          content={'Send'}
+          content={"Send"}
           isLoading={isLoading}
           isDisabled={isDisabled}
-          loadingContent={'Sending...'}
+          loadingContent={"Sending..."}
         />
       </div>
       <span className={message.type}>{message.text}</span>

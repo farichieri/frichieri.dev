@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { Theme } from "@/types";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+
+import { Theme } from "@/types";
 
 interface Props {
   isMenu?: boolean;

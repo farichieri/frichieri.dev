@@ -1,7 +1,8 @@
-import { Projects } from "../../types";
-import ExternalLink from "../ExternalLink/ExternalLink";
 import Image from "next/image";
-import Technologies from "../Technologies/Technologies";
+
+import { Projects } from "../types";
+import ExternalLink from "./ExternalLink";
+import Technologies from "./Technologies";
 
 export default function Projects({
   projects,
@@ -15,7 +16,7 @@ export default function Projects({
   return (
     <div className="mx-auto flex max-w-5xl flex-col divide-y ">
       {myProjects.map((project) => (
-        <div key={project.id}>
+        <div key={project.slug}>
           <ExternalLink href={project.websiteUrl}>
             <div className="group my-8 flex flex-wrap gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20 md:flex-nowrap">
               <span className="mx-auto">

@@ -1,8 +1,9 @@
-import { InstagramIcon, TwitterIcon, GithubIcon } from "@/assets";
-import { myPages } from "@/utils/myPages";
 import { useRouter } from "next/router";
-import ExternalLink from "../ExternalLink/ExternalLink";
 import Link from "next/link";
+
+import { myPages } from "@/utils/myPages";
+import ExternalLink from "./ExternalLink";
+import { InstagramIcon, TwitterIcon, GithubIcon } from "@/assets";
 
 const Footer = () => {
   const SOCIAL = [

@@ -1,9 +1,7 @@
-import { myProjects } from "../../utils/myProjects";
 import { useState } from "react";
-import Filter from "../../components/Filter/Filter";
-import MainLayout from "../../components/Layout/MainLayout";
-import Pagination from "../../components/Pagination/Pagination";
-import Projects from "../../components/Projects/Projects";
+
+import { Projects, Pagination, Filter } from "@/components";
+import { myProjects } from "@/utils";
 
 const getPageSizes = (length: number): number[] => {
   if (length <= 10) {
@@ -55,7 +53,7 @@ export default function Index({ projects }: { projects: Array<any> }) {
   };
 
   return (
-    <MainLayout>
+    <>
       <div className="flex flex-col items-center gap-4">
         <h1 className="w-full text-left">Projects</h1>
         <Filter handleFilter={handleFilter} optionSelected={optionSelected} />
@@ -70,7 +68,7 @@ export default function Index({ projects }: { projects: Array<any> }) {
           totalPages={totalPages}
         />
       </div>
-    </MainLayout>
+    </>
   );
 }
 
