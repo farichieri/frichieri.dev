@@ -1,4 +1,7 @@
 import { Projects } from "../types";
+import { STACKS } from "./stacks";
+
+const { FRONT_END, FULL_STACK, ACADEMIC } = STACKS;
 
 export const myProjects: Projects = [
   {
@@ -8,7 +11,7 @@ export const myProjects: Projects = [
     githubUrl: "",
     websiteUrl: "https://ecomm-template-nextjs.vercel.app/",
     technologies: ["Nextjs", "React", "Tailwindcss", "Typescript"],
-    stack: "Front End",
+    stack: FRONT_END,
     description:
       "I had to create this project for a client, who gave me the URL of an HTML model website for reference. He wanted it built with NextJs 14, TypeScript, TailwindCSS.",
   },
@@ -35,7 +38,7 @@ export const myProjects: Projects = [
       "TypeORM",
       "JWT",
     ],
-    stack: "Full Stack",
+    stack: FULL_STACK,
     description:
       "A Saas Meal Planner Platform where you can choose the plan that you like (Balanced, Vegetarian, Mediterranean, Low-Carb, Gluten Free, etc.), adapt your diet with your body features, goals and meal settings, and get a personalized diet for your days which will be aiming to guide you to your goal. Feel free to create an account.",
   },
@@ -53,7 +56,7 @@ export const myProjects: Projects = [
       "Firebase",
       "CSS",
     ],
-    stack: "Front End",
+    stack: FRONT_END,
     description: "A Dj personal website.",
   },
   {
@@ -72,7 +75,7 @@ export const myProjects: Projects = [
       "Firebase",
       "Mdx",
     ],
-    stack: "Full Stack",
+    stack: FULL_STACK,
     description:
       "A Task management app where you can plan your days, track tasks, and follow your progress. Feel free to create an account.",
   },
@@ -83,7 +86,7 @@ export const myProjects: Projects = [
     githubUrl: "",
     websiteUrl: "https://www.almarichnutricion.com/",
     technologies: ["Next.js", "Typescript", "React.js", "Firebase"],
-    stack: "Front End",
+    stack: FRONT_END,
     description: "A Nutritionist personal website.",
   },
   {
@@ -102,7 +105,7 @@ export const myProjects: Projects = [
       "Sequelize",
       "Mercadopago",
     ],
-    stack: "Full Stack",
+    stack: ACADEMIC,
     description:
       "An E-commerce of computer products built as the final project of the #soyHenry Full Stack Development Bootcamp. It has an /admin panel with variety of control of stocks and users. (Backend off).",
   },
@@ -120,7 +123,7 @@ export const myProjects: Projects = [
       "Sequelize",
       "Express",
     ],
-    stack: "Full Stack",
+    stack: ACADEMIC,
     description:
       "Individual project for the #soyHenry Full Stack Development Bootcamp. Implementing CRUD operations. (Backend off)",
   },
@@ -131,7 +134,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/simple-marketing-services",
     websiteUrl: "https://marketing-services-test.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    stack: "Front End",
+    stack: FRONT_END,
     description:
       "Simple website required by a recruitment process. (Not responsive)",
   },
@@ -142,7 +145,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/Random-Quote-Machine",
     websiteUrl: "https://random-quote-machine-xi.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
-    stack: "Front End, freeCodeCamp",
+    stack: ACADEMIC,
     description:
       "Random Quote Machine made for the freeCodeCamp Front End Development Libraries certification.",
   },
@@ -153,7 +156,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/pomodoro-clock",
     websiteUrl: "https://frichieri-pomodoro-clock.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
-    stack: "Front End, freeCodeCamp",
+    stack: ACADEMIC,
     description:
       "Pomodoro clock made for the freeCodeCamp Front End Development Libraries certification.",
   },
@@ -164,7 +167,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/javascript-calculator",
     websiteUrl: "https://frichieri-javascript-calculator.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
-    stack: "Front End, freeCodeCamp",
+    stack: ACADEMIC,
     description:
       "JavaScript Calculator made for the freeCodeCamp Front End Development Libraries certification.",
   },
@@ -175,7 +178,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/drum-machine",
     websiteUrl: "https://drum-machine-frichieri.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
-    stack: "Front End, freeCodeCamp",
+    stack: ACADEMIC,
     description:
       "Drum Machine made for the freeCodeCamp Front End Development Libraries certification.",
   },
@@ -186,7 +189,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/markdown-previewer",
     websiteUrl: "https://frichieri-markdown-previewer.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
-    stack: "Front End, freeCodeCamp",
+    stack: ACADEMIC,
     description:
       "Markdown Previewer made for the freeCodeCamp Front End Development Libraries certification.",
   },
@@ -197,7 +200,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/data-visualization__bar-chart",
     websiteUrl: "https://data-visualization-bar-chart.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
-    stack: "freeCodeCamp, Front End",
+    stack: ACADEMIC,
     description:
       "Bar Chart Graph project made for the Data Visualization freeCodeCamp certification.",
   },
@@ -209,7 +212,7 @@ export const myProjects: Projects = [
       "https://github.com/farichieri/data-visualization__scatterplot-graph",
     websiteUrl: "https://data-visualization-scatterplot-graph.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
-    stack: "freeCodeCamp, Front End",
+    stack: ACADEMIC,
     description:
       "Scatter Plot Graph project made for the Data Visualization freeCodeCamp certification.",
   },
@@ -220,7 +223,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/data-visualization__heat-map",
     websiteUrl: "https://data-visualization-heat-map.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
-    stack: "freeCodeCamp, Front End",
+    stack: ACADEMIC,
     description:
       "Heat Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
@@ -232,7 +235,7 @@ export const myProjects: Projects = [
       "https://github.com/farichieri/data-visualization__treemap-diagram",
     websiteUrl: "https://data-visualization-treemap-diagram.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
-    stack: "freeCodeCamp, Front End",
+    stack: ACADEMIC,
     description:
       "Tree Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
@@ -244,7 +247,7 @@ export const myProjects: Projects = [
       "https://github.com/farichieri/data-visualization__choropleth-map",
     websiteUrl: "https://data-visualization-choropleth-map.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
-    stack: "freeCodeCamp, Front End",
+    stack: ACADEMIC,
     description:
       "Choropleth Map Graph project made for the Data Visualization freeCodeCamp certification.",
   },
@@ -255,18 +258,18 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-timestamp",
     websiteUrl: "https://data-visualization-choropleth-map.vercel.app/",
     technologies: ["Node.js", "Express"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Timestamp Microservice project made for the Back End Development and APIs freeCodeCamp certification.",
   },
   {
     name: "Url Shortener",
-    slug: "timestamp-microservice",
+    slug: "url-shortener",
     image: "/images/projects/url-shortener.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-urlshortener",
     websiteUrl: "https://boilerplate-project-urlshortener.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Url Shortener project made for the Back End Development and APIs freeCodeCamp certification.",
   },
@@ -277,7 +280,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-headerparser",
     websiteUrl: "https://boilerplate-project-headerparser.farichieri.repl.co/",
     technologies: ["Node.js", "Express"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Header Parser project made for the Back End Development and APIs freeCodeCamp certification.",
   },
@@ -289,7 +292,7 @@ export const myProjects: Projects = [
     websiteUrl:
       "https://boilerplate-project-exercisetracker.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Exercise Tracker project made for the Back End Development and APIs freeCodeCamp certification.",
   },
@@ -300,7 +303,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-filemetadata",
     websiteUrl: "https://boilerplate-project-filemetadata.farichieri.repl.co/",
     technologies: ["Node.js", "Express"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "File Metadata project made for the Back End Development and APIs freeCodeCamp certification.",
   },
@@ -311,7 +314,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-metricimpconverter",
     websiteUrl: "https://boilerplate-metricimpconverter.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Metric Imperial Converter project made for the Quality Assurance freeCodeCamp certification.",
   },
@@ -322,7 +325,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-issuetracker",
     websiteUrl: "https://boilerplate-project-issuetracker.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "MongoDB", "mongoose", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Issue Tracker project made for the Quality Assurance freeCodeCamp certification.",
   },
@@ -334,7 +337,7 @@ export const myProjects: Projects = [
       "https://github.com/farichieri/boilerplate-project-sudoku-solver",
     websiteUrl: "https://boilerplate-project-sudoku-solver.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Sudoku Solver project made for the Quality Assurance freeCodeCamp certification.",
   },
@@ -347,7 +350,7 @@ export const myProjects: Projects = [
     websiteUrl:
       "https://boilerplate-project-american-british-english-translator.farichieri.repl.co",
     technologies: ["Node.js", "Express", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "American British English Translator project made for the Quality Assurance freeCodeCamp certification.",
   },
@@ -358,7 +361,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-stockchecker",
     websiteUrl: "https://boilerplate-project-stockchecker.farichieri.repl.co",
     technologies: ["Node.js", "Express", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Stock checker project made for the Quality Assurance freeCodeCamp certification.",
   },
@@ -369,7 +372,7 @@ export const myProjects: Projects = [
     githubUrl: "https://github.com/farichieri/boilerplate-project-messageboard",
     websiteUrl: "https://boilerplate-project-messageboard.farichieri.repl.co",
     technologies: ["Node.js", "Express", "Chai"],
-    stack: "freeCodeCamp, Back End",
+    stack: ACADEMIC,
     description:
       "Anonymous Message Board project made for the Quality Assurance freeCodeCamp certification.",
   },

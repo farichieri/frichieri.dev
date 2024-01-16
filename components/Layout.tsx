@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <div className={`${font.className} font-medium`}>
         <div className="mx-auto max-w-screen-lg">
-          <span className="fixed bottom-[calc(100%-200px)] z-[-1] aspect-square w-full max-w-screen-lg rounded-full bg-gradient-to-b from-blue-400 via-blue-400 to-blue-400 opacity-60 blur-3xl filter dark:bottom-[calc(100%-180px)] dark:from-blue-900 dark:via-blue-900 dark:to-blue-900 dark:opacity-40"></span>
+          <span className="fixed bottom-[calc(100%-200px)] z-[-1] aspect-square w-full max-w-screen-lg rounded-full bg-gradient-to-b from-blue-200 via-blue-200 to-blue-200 opacity-60 blur-3xl filter dark:bottom-[calc(100%-180px)] dark:from-blue-900 dark:via-blue-900 dark:to-blue-900 dark:opacity-40"></span>
         </div>
         <Nav />
         <main className="z-50 flex w-full items-center justify-center pt-[var(--navHeight)]">

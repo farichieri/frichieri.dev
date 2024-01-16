@@ -26,6 +26,7 @@ export default function Index({ projects }: { projects: Array<any> }) {
     event.preventDefault();
     const stack = (event.target as HTMLButtonElement).value;
     const filterProjects = (stack: string) => {
+      console.log({ stack });
       if (stack !== "All") {
         return projects.filter((project) => project.stack.includes(stack));
       } else {

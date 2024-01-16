@@ -71,8 +71,8 @@ export default function About() {
             <p>Full Stack JavaScript Developer</p>
           </div>
         </div>
-        <p>Based in Buenos Aires, Argentina. 🌎</p>
-        <p className="">
+        <p className="text-sm">Based in Buenos Aires, Argentina. 🌎</p>
+        <p className="text-sm">
           I&apos;m an Enthusiastic and dedicated JavaScript/TypeScript developer
           with a keen interest in Front End and Full Stack development. Eager to
           secure a position in a dynamic and innovative company where my skills
@@ -84,9 +84,11 @@ export default function About() {
           to collaborate with a forward-thinking team and make a significant
           mark in the world of web development.
         </p>
-        <p>In my free time, I use to go to the gym 💪 and I eat healthy 🥦</p>
+        <p className="text-sm">
+          In my free time, I use to go to the gym 💪 and I eat healthy 🥦
+        </p>
       </div>
-      <div className="flex flex-col">
+      <div className="flex  flex-col">
         <h3 className="text-base font-semibold text-blue-400">Skills</h3>
         <Technologies technologies={technologies} />
       </div>

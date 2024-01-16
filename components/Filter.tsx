@@ -1,4 +1,5 @@
-import React from 'react';
+import { STACKS } from "@/utils";
+import React from "react";
 
 const Filter = ({
   handleFilter,
@@ -7,19 +8,13 @@ const Filter = ({
   handleFilter: any;
   optionSelected: string;
 }) => {
-  const OPTIONS = [
-    'All',
-    'Front End',
-    'Back End',
-    'Full Stack',
-    'freeCodeCamp',
-  ];
+  const OPTIONS = ["All", ...Object.values(STACKS)];
   return (
     <section>
       {OPTIONS.map((opt) => (
         <button
           key={opt}
-          className={opt === optionSelected ? 'this-filter' : ''}
+          className={opt === optionSelected ? "this-filter" : ""}
           onClick={handleFilter}
           value={opt}
         >
