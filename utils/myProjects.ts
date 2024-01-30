@@ -5,15 +5,15 @@ const { FRONT_END, FULL_STACK, ACADEMIC } = STACKS;
 
 export const myProjects: Projects = [
   {
-    name: "Ecommerce Template",
+    name: "Ecommerce w/ NextJs & GraphQL",
     slug: "ecommerce-template",
     image: "/images/projects/ecommerce-template.png",
     githubUrl: "",
     websiteUrl: "https://ecomm-template-nextjs.vercel.app/",
-    technologies: ["Nextjs", "React", "Tailwindcss", "Typescript"],
+    technologies: ["Nextjs", "React", "Tailwindcss", "Typescript", "GraphQL"],
     stack: FRONT_END,
     description:
-      "I had to create this project for a client, who gave me the URL of an HTML model website for reference. He wanted it built with NextJs 14, TypeScript, TailwindCSS.",
+      "Freelance project for a client. Ecommerce built with NextJs 14, TypeScript, TailwindCSS & connected to a GraphQL API.",
   },
   {
     name: "nutritionplans.co",
