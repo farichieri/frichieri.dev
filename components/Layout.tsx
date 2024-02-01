@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <span className="fixed bottom-[calc(100%-200px)] z-[-1] aspect-square w-full max-w-screen-lg rounded-full bg-gradient-to-b from-blue-200 via-blue-200 to-blue-200 opacity-60 blur-3xl filter dark:bottom-[calc(100%-180px)] dark:from-blue-900 dark:via-blue-900 dark:to-blue-900 dark:opacity-40"></span>
         </div>
         <Nav />
-        <main className="z-50 mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 pt-[var(--navHeight)]">
+        <main className="z-50 mx-auto flex min-h-screen w-full max-w-5xl flex-col overflow-x-hidden px-4 pt-[var(--navHeight)]">
           {children}
         </main>
         <Footer />

@@ -1,14 +1,18 @@
 import { ArrowLeft, ExternalLink, GitHub, Lock } from "react-feather";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import Image from "next/image";
 import Link from "next/link";
 
-import { myProjects } from "@/utils";
+import { myProjects, readImages } from "@/utils";
 import { Project } from "@/types";
-import { Technologies } from "@/components";
+import { Carousel, Technologies } from "@/components";
 
-const Slug = ({ project }: { project: Project }) => {
+interface Props {
+  project: Project;
+  images: string[];
+}
+
+const Slug: React.FC<Props> = ({ project, images }) => {
   return (
     <section className="py-14">
       <Link
@@ -19,16 +23,10 @@ const Slug = ({ project }: { project: Project }) => {
         {project.name}
       </Link>
       <div className="flex w-full flex-col">
-        <span className="relative mx-auto flex h-auto w-full ">
-          <Image
-            src={project.image}
-            alt={project.name}
-            height={1200}
-            width={900}
-            priority
-            className="mx-auto flex w-full rounded-xl border border-slate-500/20"
-          />
+        <span className="">
+          <Carousel images={images} />
         </span>
+
         <Link
           href={project.websiteUrl}
           target={"_blank"}
@@ -91,8 +89,10 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
   const project = myProjects.find((project) => project.slug === slug);
+  const images = readImages(slug);
+
   return {
-    props: { project },
+    props: { project, images },
   };
 };
 
