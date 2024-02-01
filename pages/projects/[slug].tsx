@@ -1,3 +1,4 @@
+import { ArrowLeft, ExternalLink, GitHub, Lock } from "react-feather";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Image from "next/image";
@@ -9,8 +10,14 @@ import { Technologies } from "@/components";
 
 const Slug = ({ project }: { project: Project }) => {
   return (
-    <>
-      <h1 className="text-xl font-bold">{project.name} </h1>
+    <section className="py-14">
+      <Link
+        href={project.websiteUrl}
+        target={"_blank"}
+        className="link mb-4 flex w-fit items-center text-4xl"
+      >
+        {project.name}
+      </Link>
       <div className="flex w-full flex-col">
         <span className="relative mx-auto flex h-auto w-full ">
           <Image
@@ -19,119 +26,46 @@ const Slug = ({ project }: { project: Project }) => {
             height={1200}
             width={900}
             priority
-            className="mx-auto flex rounded-xl"
+            className="mx-auto flex w-full rounded-xl border border-slate-500/20"
           />
         </span>
+        <Link
+          href={project.websiteUrl}
+          target={"_blank"}
+          className="link mx-auto my-4 flex items-center gap-1 text-lg"
+        >
+          See it live <ExternalLink className="h-4" />
+        </Link>
         <div>
-          <h2>Description:</h2>
+          <h2 className="text-3xl font-semibold">Description:</h2>
           <p>{project.description}</p>
           <br />
-          <h2>Made with:</h2>
+          <h2 className="mb-4 text-3xl font-semibold">Technologies:</h2>
           <Technologies technologies={project.technologies} />
           <br />
-          <h2 style={{ display: "flex", alignItems: "center" }}>
-            See live:
-            <p>
-              <Link href={project.websiteUrl} target={"_blank"}>
-                <span className="live">
-                  <Image
-                    src={"/images/live.png"}
-                    alt="live"
-                    height={30}
-                    width={30}
-                  />
-                </span>
-              </Link>
-            </p>
-          </h2>
-          <br />
-          <h2 style={{ display: "flex", alignItems: "center" }}>
+          <h2 className="flex items-center gap-2">
             Code:
-            <p>
-              {project.githubUrl ? (
-                <Link href={project.githubUrl} target={"_blank"}>
-                  <span className="github">
-                    <Image
-                      src={"/images/github.png"}
-                      alt="source"
-                      height={30}
-                      width={30}
-                    />
-                  </span>
-                </Link>
-              ) : (
-                <Image
-                  src={"/images/hidden.png"}
-                  alt="source"
-                  height={30}
-                  width={30}
-                />
-              )}
-            </p>
+            {project.githubUrl ? (
+              <Link
+                href={project.githubUrl}
+                target={"_blank"}
+                className="p- rounded-full duration-300"
+              >
+                <GitHub />
+              </Link>
+            ) : (
+              <Lock />
+            )}
           </h2>
-          <br />
         </div>
-        <Link href={"/projects"}>{"<"} Back to all projects</Link>
+        <Link
+          href={"/projects"}
+          className="mt-24 flex items-center opacity-50 duration-300 hover:opacity-100"
+        >
+          <ArrowLeft className="h-4" /> <span>Back to all projects</span>
+        </Link>
       </div>
-
-      <style jsx>{`
-        .project-container {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          text-align: left;
-        }
-        div {
-          padding: 1rem 0;
-        }
-        .img {
-          align-items: center;
-          border-radius: 1rem;
-          border: 2px solid var(--box-shadow-light);
-          box-shadow: 0 0 10px 1px var(--box-shadow-light);
-          height: 400px;
-          max-width: 800px;
-          overflow: auto;
-          position: relative;
-          width: 100%;
-        }
-        p {
-          display: flex;
-          margin: 0.5rem;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .github,
-        .live,
-        .back {
-          position: relative;
-          display: flex;
-          height: 30px;
-          width: 30px;
-          border-radius: 50%;
-          transition: 0.3s;
-          background: white;
-        }
-        .github:hover,
-        .live:hover {
-          transform: scale(1.1);
-        }
-        .live {
-          background: none;
-        }
-        @media and only screen (max-width: 768px) {
-          .img {
-            max-height: 50vw;
-          }
-        }
-        @media and only screen (max-width: 500px) {
-          .img {
-            max-height: 50vw;
-          }
-        }
-      `}</style>
-    </>
+    </section>
   );
 };
 

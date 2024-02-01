@@ -4,10 +4,10 @@ interface Props {
 
 const Technologies = ({ technologies }: Props) => {
   return (
-    <div className='flex my-2 flex-wrap gap-y-2 gap-1'>
+    <div className="my-2 flex flex-wrap gap-1 gap-y-2">
       {technologies.map((technology) => (
         <div key={technology}>
-          <span className='text-xs rounded-3xl px-2 py-1.5 bg-blue-300/30 select-none'>
+          <span className="select-none rounded-3xl bg-blue-300/30 px-2 py-1.5 text-xs">
             {technology}
           </span>
         </div>

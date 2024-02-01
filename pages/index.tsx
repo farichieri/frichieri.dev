@@ -5,7 +5,8 @@ import dynamic from "next/dynamic";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import { Projects as ProjectsType } from "@/types";
 import { myProjects } from "@/utils/";
-import { Projects } from "@/components/";
+import { ExternalLink, Projects } from "@/components/";
+import { ArrowRight } from "react-feather";
 
 const Posts = dynamic(() => import("../components/Posts"), {
   ssr: false,
@@ -19,7 +20,7 @@ const Page = ({
   projects: ProjectsType;
 }) => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center pb-4">
+    <div className="flex h-full w-full flex-col items-center justify-center pb-24">
       <div className="relative flex h-auto w-full items-center overflow-hidden rounded-3xl text-left ">
         <div className="z-10 flex w-full flex-wrap-reverse justify-between gap-4 py-4 sm:flex-nowrap">
           <div className="">
@@ -29,6 +30,17 @@ const Page = ({
             <p className="text-lg opacity-70">
               I&apos;m a 💻 Full Stack JavaScript Developer from Buenos Aires,
               Argentina.
+            </p>
+            <p className="text-lg">
+              <span className="opacity-70">
+                Do you have a project in mind? Hire me on
+              </span>{" "}
+              <ExternalLink
+                className="font-semibold text-green-400 duration-300 hover:text-green-600 hover:underline"
+                href="https://www.upwork.com/freelancers/frichieri"
+              >
+                Upwork
+              </ExternalLink>
             </p>
           </div>
           <span className="">
@@ -49,21 +61,21 @@ const Page = ({
         <Projects projects={projects} featured={true} />
         <Link
           href={"/projects"}
-          className="opacity-50 duration-300 hover:opacity-100"
+          className="flex items-center opacity-50 duration-300 hover:opacity-100"
         >
-          See all projects {">"}
+          See all projects <ArrowRight className="h-4" />
         </Link>
       </div>
-      <div className="flex h-full w-full flex-col text-left ">
+      <div className="flex h-full w-full flex-col text-left">
         <div>
           <h2 className="font-semibold">Last Posts</h2>
         </div>
         <Posts posts={posts} />
         <Link
           href={"/blog"}
-          className="my-3  opacity-50 duration-300 hover:opacity-100"
+          className="mt-3 flex items-center opacity-50 duration-300 hover:opacity-100"
         >
-          Read all posts {">"}
+          Read all posts <ArrowRight className="h-4" />
         </Link>
       </div>
     </div>

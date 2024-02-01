@@ -1,6 +1,7 @@
 import React from "react";
 
 import usePagination, { DOTS } from "../hooks/usePagination";
+import { ArrowLeft, ArrowRight } from "react-feather";
 
 const Pagination = ({
   currentPage,
@@ -39,12 +40,12 @@ const Pagination = ({
       <li className=" flex">
         <button
           type="button"
-          className="arrowButton left border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
+          className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
           aria-label="Goto previous page"
           onClick={onPrevious}
           disabled={currentPage === 1}
         >
-          {`<`}
+          <ArrowLeft className="h-4 w-4" />
         </button>
       </li>
 
@@ -70,7 +71,7 @@ const Pagination = ({
               type="button"
               aria-label={`Goto page ${pageNumber}`}
               onClick={() => onPageChange(pageNumber)}
-              className="border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent  hover:bg-slate-500/20"
+              className="h-9 w-9 overflow-hidden rounded-full border bg-transparent  hover:bg-slate-500/20"
             >
               {pageNumber}
             </button>
@@ -81,17 +82,17 @@ const Pagination = ({
       <li className=" flex">
         <button
           type="button"
-          className="arrowButton right border-box-shadow-light h-9 w-9 overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
+          className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border bg-transparent hover:bg-slate-500/20 disabled:pointer-events-none disabled:opacity-50"
           aria-label="Goto next page"
           onClick={onNext}
           disabled={currentPage === totalPages}
         >
-          {`>`}
+          <ArrowRight className="h-4 w-4" />
         </button>
       </li>
 
       <select
-        className="border-box-shadow-light mx-2 rounded-md border bg-[var(--bgColor)] px-2 py-2 text-[var(--textColor)]"
+        className="mx-2 rounded-md border bg-[var(--bgColor)] px-2 py-2 text-[var(--textColor)]"
         aria-label="Select page size"
         value={pageSize}
         onChange={(e) => {

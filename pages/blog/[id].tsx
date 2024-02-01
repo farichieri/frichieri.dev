@@ -4,6 +4,7 @@ import React from "react";
 
 import { Post, allPosts } from "@/.contentlayer/generated";
 import { Mdx, Date } from "@/components";
+import { ArrowLeft } from "react-feather";
 
 const Post = ({ data }: { data: Post }) => {
   return (
@@ -11,7 +12,7 @@ const Post = ({ data }: { data: Post }) => {
       <Head>
         <title>{data.title}</title>
       </Head>
-      <article className="px-2">
+      <article className="px-2 pb-24">
         <div className="mb-10">
           <div
             style={{
@@ -28,12 +29,12 @@ const Post = ({ data }: { data: Post }) => {
         </div>
         <Mdx code={data.body.code} />
       </article>
-      <div className="my-10">
+      <div className="my-10 pb-24">
         <Link
           href={"/blog"}
-          className="opacity-50 duration-300 hover:opacity-100"
+          className="flex items-center gap-1 opacity-50 duration-300 hover:opacity-100"
         >
-          {"<"} All Posts
+          <ArrowLeft className="h-4 w-4" /> <span>Back to Blog</span>
         </Link>
       </div>
     </>

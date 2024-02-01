@@ -6,6 +6,8 @@ import ExternalLink from "./ExternalLink";
 import { InstagramIcon, TwitterIcon, GithubIcon } from "@/assets";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   const SOCIAL = [
     {
       name: "Twitter",
@@ -55,7 +57,7 @@ const Footer = () => {
             href={"https://github.com/farichieri"}
             target={"_blank"}
           >
-            © 2023 Fabricio Richieri
+            © {year} Fabricio Richieri
           </Link>
           <div className="flex items-center gap-2">
             {SOCIAL.map((social) => (

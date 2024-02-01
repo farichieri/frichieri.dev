@@ -51,7 +51,7 @@ export default function About() {
   ];
 
   return (
-    <section className="flex flex-col gap-6">
+    <section className="flex flex-col gap-6 pb-24">
       <h1 style={{ width: "100%", textAlign: "left" }}>About</h1>
       <div className="flex flex-col space-y-8">
         <div className="my-4 flex h-full w-full justify-start gap-4">
@@ -71,20 +71,16 @@ export default function About() {
             <p>Full Stack JavaScript Developer</p>
           </div>
         </div>
-        <p className="text-sm">Based in Buenos Aires, Argentina. 🌎</p>
-        <p className="text-sm">
+        <p className="">Based in Buenos Aires, Argentina. 🌎</p>
+        <p className="">
           I&apos;m an Enthusiastic and dedicated JavaScript/TypeScript developer
-          with a keen interest in Front End and Full Stack development. Eager to
-          secure a position in a dynamic and innovative company where my skills
-          can thrive, and my experiences can make a meaningful impact. I am
+          with a keen interest in Front End and Full Stack development. I am
           driven by a passion for creating seamless and user-friendly digital
           experiences. With a focus on continuous learning, I am committed to
           contributing to projects that challenge me, nurture my expertise, and
-          enable both personal and professional growth. Seeking an opportunity
-          to collaborate with a forward-thinking team and make a significant
-          mark in the world of web development.
+          enable both personal and professional growth.
         </p>
-        <p className="text-sm">
+        <p className="">
           In my free time, I use to go to the gym 💪 and I eat healthy 🥦
         </p>
       </div>

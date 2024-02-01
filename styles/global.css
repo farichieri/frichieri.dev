@@ -91,6 +91,10 @@ html {
     margin: 0;
     opacity: 1 !important;
   }
+
+  .link {
+    @apply text-blue-400 opacity-75 duration-300 hover:text-blue-500 hover:underline hover:opacity-90 active:opacity-100 dark:text-blue-400;
+  }
 }
 ::selection {
   color: white;

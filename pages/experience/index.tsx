@@ -66,33 +66,31 @@ export default function Page() {
     },
   ];
   return (
-    <>
-      <section className="flex w-full flex-col items-center justify-center gap-8">
-        <h1 className="w-full text-left">Experience</h1>
-        <div className="flex w-full list-disc flex-col gap-y-20">
-          {EXPERIENCES.map((experience) => (
-            <ExternalLink href={experience.website} key={experience.company}>
-              <div className="group mb-4 flex w-full select-none list-inside list-disc flex-col gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20">
-                <div className="flex w-full items-center justify-between">
-                  <span className="group-hover:text-blue-400">
-                    <b>{experience.company}</b>
-                  </span>
-                  <span>{experience.date}</span>
-                </div>
-                <div className="flex w-full flex-col gap-2 text-left">
-                  <span>
-                    <b>{experience.title}</b>
-                  </span>
-                  <span
-                    dangerouslySetInnerHTML={{ __html: experience.description }}
-                  ></span>
-                  <Technologies technologies={experience.technologies} />
-                </div>
+    <section className="flex w-full flex-col items-center justify-center gap-8 pb-24">
+      <h1 className="w-full text-left">Experience</h1>
+      <div className="flex w-full list-disc flex-col gap-y-20">
+        {EXPERIENCES.map((experience) => (
+          <ExternalLink href={experience.website} key={experience.company}>
+            <div className="group mb-4 flex w-full select-none list-inside list-disc flex-col gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20">
+              <div className="flex w-full items-center justify-between">
+                <span className="group-hover:text-blue-400">
+                  <b>{experience.company}</b>
+                </span>
+                <span>{experience.date}</span>
               </div>
-            </ExternalLink>
-          ))}
-        </div>
-      </section>
-    </>
+              <div className="flex w-full flex-col gap-2 text-left">
+                <span>
+                  <b>{experience.title}</b>
+                </span>
+                <span
+                  dangerouslySetInnerHTML={{ __html: experience.description }}
+                ></span>
+                <Technologies technologies={experience.technologies} />
+              </div>
+            </div>
+          </ExternalLink>
+        ))}
+      </div>
+    </section>
   );
 }

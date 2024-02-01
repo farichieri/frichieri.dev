@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 import { Projects } from "../types";
-import ExternalLink from "./ExternalLink";
 import Technologies from "./Technologies";
+import Link from "next/link";
 
 export default function Projects({
   projects,
@@ -17,7 +17,7 @@ export default function Projects({
     <div className="mx-auto flex max-w-5xl flex-col divide-y ">
       {myProjects.map((project) => (
         <div key={project.slug}>
-          <ExternalLink href={project.websiteUrl}>
+          <Link href={`/projects/${project.slug}`}>
             <div className="group my-8 flex flex-wrap gap-4 rounded-md border border-transparent p-4 duration-300 hover:border-gray-500/20 hover:bg-slate-500/20 md:flex-nowrap">
               <span className="mx-auto">
                 <Image
@@ -38,7 +38,7 @@ export default function Projects({
                 <Technologies technologies={project.technologies} />
               </div>
             </div>
-          </ExternalLink>
+          </Link>
         </div>
       ))}
     </div>
