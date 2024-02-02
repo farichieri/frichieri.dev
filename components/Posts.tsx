@@ -47,10 +47,10 @@ const Posts = ({ posts }: { posts: Post[] }) => {
                 key={post._id}
               >
                 <tr className="flex w-full justify-between">
-                  <td>
+                  <td className="min-w-fit">
                     <Date dateString={post.date} />
                   </td>
-                  <td className="opacity-50 group-hover:opacity-100">
+                  <td className="w-full pl-10 text-left opacity-50 group-hover:opacity-100 sm:pl-20">
                     {post.title}
                   </td>
                   <td>

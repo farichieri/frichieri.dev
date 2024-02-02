@@ -7,7 +7,7 @@ export const myProjects: Projects = [
   {
     name: "Ecommerce w/ NextJs & GraphQL",
     slug: "ecommerce-template",
-    image: "/images/projects/ecommerce-template.png",
+    image: "/images/projects/ecommerce-template/ecommerce-template.png",
     githubUrl: "",
     websiteUrl: "https://ecomm-template-nextjs.vercel.app/",
     technologies: ["Nextjs", "React", "Tailwindcss", "Typescript", "GraphQL"],
@@ -18,7 +18,7 @@ export const myProjects: Projects = [
   {
     name: "nutritionplans.co",
     slug: "nutrition-plans",
-    image: "/images/projects/nutrition-plans.png",
+    image: "/images/projects/nutrition-plans/nutrition-plans.png",
     githubUrl: "",
     websiteUrl: "https://www.nutritionplans.co/",
     technologies: [
@@ -45,7 +45,7 @@ export const myProjects: Projects = [
   {
     name: "lucasnazar.com",
     slug: "lucasnazardj",
-    image: "/images/projects/lucasnazardj.png",
+    image: "/images/projects/lucasnazardj/lucasnazardj.png",
     githubUrl: "",
     websiteUrl: "https://www.lucasnazar.com/",
     technologies: [
@@ -62,7 +62,7 @@ export const myProjects: Projects = [
   {
     name: "improveme",
     slug: "improveme",
-    image: "/images/projects/improveme.png",
+    image: "/images/projects/improveme/improveme.png",
     githubUrl: "https://github.com/farichieri/daily-tracker",
     websiteUrl: "https://improveme.vercel.app/",
     technologies: [
@@ -82,7 +82,7 @@ export const myProjects: Projects = [
   {
     name: "almarichnutricion.com",
     slug: "almarich-nutricion",
-    image: "/images/projects/almarichnutricion.png",
+    image: "/images/projects/almarichnutricion/almarichnutricion.png",
     githubUrl: "",
     websiteUrl: "https://www.almarichnutricion.com/",
     technologies: ["Next.js", "Typescript", "React.js", "Firebase"],
@@ -92,7 +92,7 @@ export const myProjects: Projects = [
   {
     name: "Computechshop",
     slug: "computechshop",
-    image: "/images/projects/computechshop.png",
+    image: "/images/projects/computechshop/computechshop.png",
     githubUrl: "https://github.com/FARichieri/CompuTechShop",
     websiteUrl: "https://www.youtube.com/watch?v=0lUWnxA4_tI",
     technologies: [
@@ -112,7 +112,7 @@ export const myProjects: Projects = [
   {
     name: "Pokemon PI",
     slug: "pokemon-pi",
-    image: "/images/projects/pokemon.png",
+    image: "/images/projects/pokemon/pokemon.png",
     githubUrl: "https://github.com/FARichieri/PI-Pokemon",
     websiteUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:6921812562049179649/",
@@ -130,7 +130,7 @@ export const myProjects: Projects = [
   {
     name: "Marketing Services",
     slug: "marketing-services",
-    image: "/images/projects/marketing-services.png",
+    image: "/images/projects/marketing-services/marketing-services.png",
     githubUrl: "https://github.com/farichieri/simple-marketing-services",
     websiteUrl: "https://marketing-services-test.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -141,7 +141,7 @@ export const myProjects: Projects = [
   {
     name: "Random Quote Machine",
     slug: "random-quote-machine",
-    image: "/images/projects/random-quote-machine.png",
+    image: "/images/projects/random-quote-machine/random-quote-machine.png",
     githubUrl: "https://github.com/farichieri/Random-Quote-Machine",
     websiteUrl: "https://random-quote-machine-xi.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
@@ -152,7 +152,7 @@ export const myProjects: Projects = [
   {
     name: "Pomodoro Clock",
     slug: "pomodoro-clock",
-    image: "/images/projects/pomodoro-clock.png",
+    image: "/images/projects/pomodoro-clock/pomodoro-clock.png",
     githubUrl: "https://github.com/farichieri/pomodoro-clock",
     websiteUrl: "https://frichieri-pomodoro-clock.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
@@ -163,7 +163,7 @@ export const myProjects: Projects = [
   {
     name: "JavaScript Calculator",
     slug: "javascript-calculator",
-    image: "/images/projects/javascript-calculator.png",
+    image: "/images/projects/javascript-calculator/javascript-calculator.png",
     githubUrl: "https://github.com/farichieri/javascript-calculator",
     websiteUrl: "https://frichieri-javascript-calculator.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
@@ -174,7 +174,7 @@ export const myProjects: Projects = [
   {
     name: "Drum Machine",
     slug: "drum-machine",
-    image: "/images/projects/drum-machine.png",
+    image: "/images/projects/drum-machine/drum-machine.png",
     githubUrl: "https://github.com/farichieri/drum-machine",
     websiteUrl: "https://drum-machine-frichieri.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
@@ -185,7 +185,7 @@ export const myProjects: Projects = [
   {
     name: "Markdown Previewer",
     slug: "markdown-previewer",
-    image: "/images/projects/markdown-previewer.png",
+    image: "/images/projects/markdown-previewer/markdown-previewer.png",
     githubUrl: "https://github.com/farichieri/markdown-previewer",
     websiteUrl: "https://frichieri-markdown-previewer.vercel.app/",
     technologies: ["JavaScript", "React", "Css"],
@@ -196,7 +196,7 @@ export const myProjects: Projects = [
   {
     name: "Bar Chart Graph",
     slug: "bar-chart",
-    image: "/images/projects/bar-chart.png",
+    image: "/images/projects/bar-chart/bar-chart.png",
     githubUrl: "https://github.com/farichieri/data-visualization__bar-chart",
     websiteUrl: "https://data-visualization-bar-chart.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
@@ -207,7 +207,7 @@ export const myProjects: Projects = [
   {
     name: "Scatter Plot Graph",
     slug: "scatter-plot",
-    image: "/images/projects/scatterplot.png",
+    image: "/images/projects/scatterplot/scatterplot.png",
     githubUrl:
       "https://github.com/farichieri/data-visualization__scatterplot-graph",
     websiteUrl: "https://data-visualization-scatterplot-graph.vercel.app/",
@@ -219,7 +219,7 @@ export const myProjects: Projects = [
   {
     name: "Heat Map Graph",
     slug: "heat-map",
-    image: "/images/projects/heat-map.png",
+    image: "/images/projects/heat-map/heat-map.png",
     githubUrl: "https://github.com/farichieri/data-visualization__heat-map",
     websiteUrl: "https://data-visualization-heat-map.vercel.app/",
     technologies: ["D3.js", "JavaScript", "HTML", "CSS"],
@@ -230,7 +230,7 @@ export const myProjects: Projects = [
   {
     name: "Tree map Graph",
     slug: "tree-map",
-    image: "/images/projects/tree-map.png",
+    image: "/images/projects/tree-map/tree-map.png",
     githubUrl:
       "https://github.com/farichieri/data-visualization__treemap-diagram",
     websiteUrl: "https://data-visualization-treemap-diagram.vercel.app/",
@@ -242,7 +242,7 @@ export const myProjects: Projects = [
   {
     name: "Choropleth Map Graph",
     slug: "choropleth-map",
-    image: "/images/projects/choropleth-map.png",
+    image: "/images/projects/choropleth-map/choropleth-map.png",
     githubUrl:
       "https://github.com/farichieri/data-visualization__choropleth-map",
     websiteUrl: "https://data-visualization-choropleth-map.vercel.app/",
@@ -254,7 +254,7 @@ export const myProjects: Projects = [
   {
     name: "Timestamp Microservice",
     slug: "timestamp-microservice",
-    image: "/images/projects/timestamp-microservice.png",
+    image: "/images/projects/timestamp-microservice/timestamp-microservice.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-timestamp",
     websiteUrl: "https://data-visualization-choropleth-map.vercel.app/",
     technologies: ["Node.js", "Express"],
@@ -265,7 +265,7 @@ export const myProjects: Projects = [
   {
     name: "Url Shortener",
     slug: "url-shortener",
-    image: "/images/projects/url-shortener.png",
+    image: "/images/projects/url-shortener/url-shortener.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-urlshortener",
     websiteUrl: "https://boilerplate-project-urlshortener.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
@@ -276,7 +276,7 @@ export const myProjects: Projects = [
   {
     name: "Header Parser",
     slug: "header-parser",
-    image: "/images/projects/header-parser.png",
+    image: "/images/projects/header-parser/header-parser.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-headerparser",
     websiteUrl: "https://boilerplate-project-headerparser.farichieri.repl.co/",
     technologies: ["Node.js", "Express"],
@@ -287,7 +287,7 @@ export const myProjects: Projects = [
   {
     name: "Exercise Tracker",
     slug: "exercise-tracker",
-    image: "/images/projects/exercise-tracker.png",
+    image: "/images/projects/exercise-tracker/exercise-tracker.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-filemetadata",
     websiteUrl:
       "https://boilerplate-project-exercisetracker.farichieri.repl.co/",
@@ -299,7 +299,7 @@ export const myProjects: Projects = [
   {
     name: "File Metadata",
     slug: "file-metadata",
-    image: "/images/projects/file-metadata.png",
+    image: "/images/projects/file-metadata/file-metadata.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-filemetadata",
     websiteUrl: "https://boilerplate-project-filemetadata.farichieri.repl.co/",
     technologies: ["Node.js", "Express"],
@@ -310,7 +310,8 @@ export const myProjects: Projects = [
   {
     name: "Metric/Imperial Converter",
     slug: "metric-imperial-converter",
-    image: "/images/projects/metric-imperial-converter.png",
+    image:
+      "/images/projects/metric-imperial-converter/metric-imperial-converter.png",
     githubUrl: "https://github.com/farichieri/boilerplate-metricimpconverter",
     websiteUrl: "https://boilerplate-metricimpconverter.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "Chai"],
@@ -321,7 +322,7 @@ export const myProjects: Projects = [
   {
     name: "Issue Tracker",
     slug: "issue-tracker",
-    image: "/images/projects/issue-tracker.png",
+    image: "/images/projects/issue-tracker/issue-tracker.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-issuetracker",
     websiteUrl: "https://boilerplate-project-issuetracker.farichieri.repl.co/",
     technologies: ["Node.js", "Express", "MongoDB", "mongoose", "Chai"],
@@ -332,7 +333,7 @@ export const myProjects: Projects = [
   {
     name: "Sudoku Solver",
     slug: "sudoku-solver",
-    image: "/images/projects/sudoku-solver.png",
+    image: "/images/projects/sudoku-solver/sudoku-solver.png",
     githubUrl:
       "https://github.com/farichieri/boilerplate-project-sudoku-solver",
     websiteUrl: "https://boilerplate-project-sudoku-solver.farichieri.repl.co/",
@@ -344,7 +345,8 @@ export const myProjects: Projects = [
   {
     name: "American British English Translator",
     slug: "american-british-english-translator",
-    image: "/images/projects/american-british-english-translator.png",
+    image:
+      "/images/projects/american-british-english-translator/american-british-english-translator.png",
     githubUrl:
       "https://github.com/farichieri/boilerplate-project-american-british-english-translator",
     websiteUrl:
@@ -357,7 +359,7 @@ export const myProjects: Projects = [
   {
     name: "Stock-checker",
     slug: "stock-checker",
-    image: "/images/projects/stock-checker.png",
+    image: "/images/projects/stock-checker/stock-checker.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-stockchecker",
     websiteUrl: "https://boilerplate-project-stockchecker.farichieri.repl.co",
     technologies: ["Node.js", "Express", "Chai"],
@@ -368,7 +370,8 @@ export const myProjects: Projects = [
   {
     name: "Anonymous Message Board",
     slug: "anonymous-message-board",
-    image: "/images/projects/anonymous-message-board.png",
+    image:
+      "/images/projects/anonymous-message-board/anonymous-message-board.png",
     githubUrl: "https://github.com/farichieri/boilerplate-project-messageboard",
     websiteUrl: "https://boilerplate-project-messageboard.farichieri.repl.co",
     technologies: ["Node.js", "Express", "Chai"],
