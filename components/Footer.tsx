@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <footer className="mx-auto flex w-full max-w-5xl items-center justify-center border-t border-[var(--box-shadow-light)]">
       <div className="mt-auto flex w-full max-w-4xl flex-col gap-8 py-10">
-        <div className="mx-auto grid grid-cols-3 gap-x-2 sm:grid-cols-5 sm:gap-x-10">
+        <div className="mx-auto grid grid-cols-3 gap-x-2 sm:gap-x-10">
           {myPages.map((page) => {
             return (
               <Link
