@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Technologies } from "@/components";
+import { ExternalLink, Technologies } from "@/components";
 
 export default function About() {
   const links = [
@@ -36,6 +36,8 @@ export default function About() {
     "TailwindCSS",
     "HTML",
     "CSS",
+    "Shopify",
+    "Liquid",
     "React Native",
     "Node",
     "NestJS",
@@ -79,6 +81,20 @@ export default function About() {
           experiences. With a focus on continuous learning, I am committed to
           contributing to projects that challenge me, nurture my expertise, and
           enable both personal and professional growth.
+        </p>
+        <p className="">
+          I&apos;m currently working at{" "}
+          <ExternalLink href="https://tidalrise.uk" className="link">
+            tidalrise.uk
+          </ExternalLink>{" "}
+          as a Shopify Frontend Developer and at{" "}
+          <ExternalLink
+            href="https://www.upwork.com/freelancers/frichieri"
+            className="link"
+          >
+            upwork.com
+          </ExternalLink>{" "}
+          as a freelancer.
         </p>
         <p className="">
           In my free time, I use to go to the gym 💪 and I eat healthy 🥦
