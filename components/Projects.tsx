@@ -14,7 +14,7 @@ export default function Projects({
   const myProjects = featured ? projects.slice(0, 2) : projects;
 
   return (
-    <div className="mx-auto flex max-w-5xl flex-col divide-y ">
+    <div className="mx-auto flex w-full max-w-5xl flex-col divide-y ">
       {myProjects.map((project) => (
         <div key={project.slug}>
           <Link href={`/projects/${project.slug}`}>
@@ -25,7 +25,7 @@ export default function Projects({
                   src={project.image}
                   width={500}
                   height={282}
-                  className="flex rounded-xl border shadow-lg dark:shadow-gray-800/20 md:h-[280px] md:w-[500px] md:basis-1/2 "
+                  className="flex w-[500px] rounded-xl border object-fill shadow-lg dark:shadow-gray-800/20 md:h-[282px] md:basis-1/2 "
                 />
               </span>
               <div className="flex w-full flex-col items-center justify-start gap-2 text-[var(--textColor)] md:basis-1/2">

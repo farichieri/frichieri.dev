@@ -82,7 +82,7 @@ export const myProjects: Projects = [
   {
     name: "almarichnutricion.com",
     slug: "almarich-nutricion",
-    image: "/images/projects/almarichnutricion/almarich-nutricion.png",
+    image: "/images/projects/almarich-nutricion/almarich-nutricion.png",
     githubUrl: "",
     websiteUrl: "https://www.almarichnutricion.com/",
     technologies: ["Next.js", "Typescript", "React.js", "Firebase"],
@@ -112,7 +112,7 @@ export const myProjects: Projects = [
   {
     name: "Pokemon PI",
     slug: "pokemon-pi",
-    image: "/images/projects/pokemon/pokemon-pi.png",
+    image: "/images/projects/pokemon-pi/pokemon-pi.png",
     githubUrl: "https://github.com/FARichieri/PI-Pokemon",
     websiteUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:6921812562049179649/",
@@ -207,7 +207,7 @@ export const myProjects: Projects = [
   {
     name: "Scatter Plot Graph",
     slug: "scatter-plot",
-    image: "/images/projects/scatterplot/scatter-plot.png",
+    image: "/images/projects/scatter-plot/scatter-plot.png",
     githubUrl:
       "https://github.com/farichieri/data-visualization__scatterplot-graph",
     websiteUrl: "https://data-visualization-scatterplot-graph.vercel.app/",
