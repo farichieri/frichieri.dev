@@ -25,6 +25,11 @@ export default function About() {
       url: "https://www.freecodecamp.org/frichieri",
       user: "@frichieri",
     },
+    {
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/frichieri",
+      user: "@frichieri",
+    },
   ];
 
   const technologies = [
