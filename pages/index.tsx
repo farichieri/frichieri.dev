@@ -54,6 +54,7 @@ const Page = ({
           </span>
         </div>
       </div>
+
       <div className="my-8 flex h-full w-full flex-col  text-left ">
         <div>
           <h2 className="my-0 py-0 font-semibold">Last Projects</h2>
@@ -85,7 +86,9 @@ const Page = ({
 export default Page;
 
 export const getStaticProps = async () => {
-  const allPostData = allPosts;
+  const allPostData = allPosts.sort(
+    (a, b) => Number(new Date(b.date)) - Number(new Date(a.date)),
+  );
   const projects = myProjects;
 
   return {
