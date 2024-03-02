@@ -89,10 +89,6 @@ export default function About() {
         </p>
         <p className="">
           I&apos;m currently working at{" "}
-          <ExternalLink href="https://tidalrise.uk" className="link">
-            tidalrise.uk
-          </ExternalLink>{" "}
-          as a Shopify Frontend Developer and at{" "}
           <ExternalLink
             href="https://www.upwork.com/freelancers/frichieri"
             className="link"
