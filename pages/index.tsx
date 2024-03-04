@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { ArrowRight } from "react-feather";
 
 import { Post, allPosts } from "@/.contentlayer/generated";
 import { Projects as ProjectsType } from "@/types";
 import { myProjects } from "@/utils/";
 import { ExternalLink, Projects } from "@/components/";
-import { ArrowRight } from "react-feather";
 
 const Posts = dynamic(() => import("../components/Posts"), {
   ssr: false,

@@ -5,6 +5,26 @@ const { FRONT_END, FULL_STACK, ACADEMIC } = STACKS;
 
 export const myProjects: Projects = [
   {
+    name: "Shield Virtual Card",
+    slug: "shield",
+    image: "/images/projects/shield/shield-debit.png",
+    githubUrl: "",
+    websiteUrl: "https://shield-debit.vercel.app/",
+    technologies: [
+      "Nextjs",
+      "React",
+      "Tailwindcss",
+      "Typescript",
+      "NodeJs",
+      "Express",
+      "MongoDB",
+      "JWT",
+    ],
+    stack: FULL_STACK,
+    description:
+      "MVP - Ongoing Freelance project for https://www.getshield.xyz/. Deposit crypto into your card at anytime and use your card just like any other: online or in-stores. Worked as a Full Stack Developer. All frontend and part of the backend (with a partner managing the crypto wallets and balances).",
+  },
+  {
     name: "Ecommerce w/ NextJs & GraphQL",
     slug: "ecommerce-template",
     image: "/images/projects/ecommerce-template/ecommerce-template.png",

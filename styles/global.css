@@ -255,13 +255,18 @@ ol {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .carousel-swiper .swiper-button-prev:hover,
 .carousel-swiper .swiper-button-next:hover {
-  background: var(--link-color);
+  background: #00000014;
   border: 2px solid var(--link-color);
+}
+
+.carousel-swiper .swiper-button-prev:active,
+.carousel-swiper .swiper-button-next:active {
+  background: #66666614;
 }
 
 .carousel-swiper .swiper-button-next:after,

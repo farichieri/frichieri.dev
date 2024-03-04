@@ -11,7 +11,7 @@ export default function Projects({
   projects: Projects;
   featured: boolean;
 }) {
-  const myProjects = featured ? projects.slice(0, 2) : projects;
+  const myProjects = featured ? projects.slice(0, 3) : projects;
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col divide-y ">

@@ -18,7 +18,7 @@ const Slug: React.FC<Props> = ({ project, images }) => {
       <Link
         href={project.websiteUrl}
         target={"_blank"}
-        className="link mb-4 flex w-fit items-center text-4xl"
+        className="link mb-10 flex w-fit items-center text-4xl font-bold"
       >
         {project.name}
       </Link>
@@ -35,13 +35,13 @@ const Slug: React.FC<Props> = ({ project, images }) => {
           See it live <ExternalLink className="h-4" />
         </Link>
         <div>
-          <h2 className="text-3xl font-semibold">Description:</h2>
-          <p>{project.description}</p>
+          <h2 className="text-2xl font-bold">Description:</h2>
+          <p className="">{project.description}</p>
           <br />
-          <h2 className="mb-4 text-3xl font-semibold">Technologies:</h2>
+          <h2 className="mb-4 text-2xl font-bold">Technologies:</h2>
           <Technologies technologies={project.technologies} />
           <br />
-          <h2 className="flex items-center gap-2">
+          <h2 className="flex items-center gap-2 text-2xl font-bold">
             Code:
             {project.githubUrl ? (
               <Link
