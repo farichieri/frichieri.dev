@@ -1,5 +1,5 @@
 interface Props {
-  technologies: Array<string>;
+  technologies: string[];
 }
 
 const Technologies = ({ technologies }: Props) => {

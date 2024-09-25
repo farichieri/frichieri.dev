@@ -1,14 +1,14 @@
 import Image from "next/image";
-
-import { Projects } from "../types";
-import Technologies from "./Technologies";
 import Link from "next/link";
+
+import Technologies from "./Technologies";
+import { Project } from "@/types";
 
 export default function Projects({
   projects,
   featured,
 }: {
-  projects: Projects;
+  projects: Project[];
   featured: boolean;
 }) {
   const myProjects = featured ? projects.slice(0, 3) : projects;

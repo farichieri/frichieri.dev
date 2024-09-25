@@ -4,21 +4,15 @@ import dynamic from "next/dynamic";
 import { ArrowRight } from "react-feather";
 
 import { Post, allPosts } from "@/.contentlayer/generated";
-import { Projects as ProjectsType } from "@/types";
 import { myProjects } from "@/utils/";
 import { ExternalLink, Projects } from "@/components/";
+import { Project } from "@/types";
 
 const Posts = dynamic(() => import("../components/Posts"), {
   ssr: false,
 });
 
-const Page = ({
-  posts,
-  projects,
-}: {
-  posts: Post[];
-  projects: ProjectsType;
-}) => {
+const Page = ({ posts, projects }: { posts: Post[]; projects: Project[] }) => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center pb-24">
       <div className="relative flex h-auto w-full items-center overflow-hidden rounded-3xl text-left ">

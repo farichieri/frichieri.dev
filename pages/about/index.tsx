@@ -41,20 +41,21 @@ export default function About() {
     "TailwindCSS",
     "HTML",
     "CSS",
-    "Shopify",
-    "Liquid",
     "React Native",
     "Node",
     "NestJS",
     "Firebase",
     "MongoDB",
     "PostgreSQL",
+    "MySQL",
     "Express",
+    "Prisma",
     "Jest",
     "Git",
     "REST APIs",
     "Vercel",
     "Docker",
+    "AWS",
   ];
 
   return (

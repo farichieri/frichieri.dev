@@ -1,9 +1,9 @@
-import { Projects } from "../types";
+import { Project } from "@/types";
 import { STACKS } from "./stacks";
 
 const { FRONT_END, FULL_STACK, ACADEMIC } = STACKS;
 
-export const myProjects: Projects = [
+export const myProjects: Project[] = [
   {
     name: "Shield Virtual Card",
     slug: "shield",
